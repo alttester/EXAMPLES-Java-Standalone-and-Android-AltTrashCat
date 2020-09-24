@@ -1,0 +1,46 @@
+<component name="libraryTable">
+  <library name="org.apache.maven.plugins:maven-compiler-plugin:2.1" type="repository">
+    <properties maven-id="org.apache.maven.plugins:maven-compiler-plugin:2.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/plugins/maven-compiler-plugin/2.1/maven-compiler-plugin-2.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-api/2.0/maven-plugin-api-2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact/2.0/maven-artifact-2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-api/1.6/plexus-compiler-api-1.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.0/commons-cli-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-manager/1.6/plexus-compiler-manager-1.6.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/codehaus/plexus/plexus-compiler-javac/1.6/plexus-compiler-javac-1.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
