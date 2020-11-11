@@ -76,18 +76,6 @@ public class ShopTest {
     }
 
     @Test
-    public void testBuySomething(){
-        getAllObjectsShopPage();
-        shopPage.storeTitle.tap();
-        int indexOfElement = 0;
-        Integer beforeBuy = shopPage.getShopItemCount(indexOfElement);
-        shopPage.clickBuyButton(0);
-        Integer afterBuy = shopPage.getShopItemCount(indexOfElement);
-        assertTrue(beforeBuy + 1 == afterBuy);
-
-    }
-
-    @Test
     public void testPremiumPopUpOpen(){
         shopPage.getPremiumButton();
         shopPage.pressPremiumPopUp();

@@ -15571,3 +15571,1229 @@ Scene Loaded
 09-24-2020 10:30:25 : response received : {"name":"StartText","id":32158,"x":960,"y":615,"z":0,"mobileY":465,"type":"","enabled":true,"worldX":960.0,"worldY":615.4666,"worldZ":0.0,"idCamera":32566,"parentId":32890,"transformId":32892}
 9/24/2020 10:30:25 AM:findActiveObjectByName for: StartButton
 09-24-2020 10:30:25 : response received : {"name":"StartButton","id":32154,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":32566,"parentId":32888,"transformId":32890}
+11/11/2020 2:47:51 PM:Logging is set to True
+11-11-2020 14:47:51 : response received : Ok
+11/11/2020 2:47:51 PM:LoadScene Main
+11-11-2020 14:47:51 : response received : Ok
+Scene Loaded
+11-11-2020 14:47:51 : response received : Scene Loaded
+11/11/2020 2:47:51 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"CharName","id":12866,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":13480,"parentId":14426,"transformId":14170}
+11/11/2020 2:47:51 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:47:51 : response received : {"name":"OpenLeaderboard","id":13086,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14376}
+11/11/2020 2:47:51 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"MissionButton","id":12840,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14144}
+11/11/2020 2:47:51 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"StartButton","id":13072,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14364}
+11/11/2020 2:47:51 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"SettingButton","id":12998,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14294}
+11/11/2020 2:47:51 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"StoreButton","id":12982,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14278}
+11/11/2020 2:47:51 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"ThemeZone","id":13156,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14444}
+11/11/2020 2:47:51 PM:tapped object by name StartButton11/11/2020 2:47:51 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 14:47:51 : response received : {"name":"StartButton","id":13072,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":13480,"parentId":14246,"transformId":14364}
+11/11/2020 2:47:51 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 14:47:51 : response received : {"name":"pauseButton","id":12954,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":13480,"parentId":14268,"transformId":14248}
+11/11/2020 2:47:52 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 14:47:52 : response received : {"name":"PlayerPivot","id":13222,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":13480,"parentId":0,"transformId":13446}
+11/11/2020 2:47:52 PM:LoadScene Main
+11-11-2020 14:47:52 : response received : Ok
+Scene Loaded
+11-11-2020 14:47:52 : response received : Scene Loaded
+11/11/2020 2:47:52 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"CharName","id":15638,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":16252,"parentId":17198,"transformId":16942}
+11/11/2020 2:47:52 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:47:52 : response received : {"name":"OpenLeaderboard","id":15858,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17148}
+11/11/2020 2:47:52 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"MissionButton","id":15612,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":16916}
+11/11/2020 2:47:52 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"StartButton","id":15844,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17136}
+11/11/2020 2:47:52 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"SettingButton","id":15770,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17066}
+11/11/2020 2:47:52 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"StoreButton","id":15754,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17050}
+11/11/2020 2:47:52 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"ThemeZone","id":15928,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17216}
+11/11/2020 2:47:52 PM:tapped object by name StartButton11/11/2020 2:47:52 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 14:47:52 : response received : {"name":"StartButton","id":15844,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17136}
+11/11/2020 2:47:52 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 14:47:52 : response received : {"name":"PlayerPivot","id":15994,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":16252,"parentId":0,"transformId":16218}
+11/11/2020 2:47:52 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 14:47:52 : response received : {"name":"pauseButton","id":15726,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":16252,"parentId":17040,"transformId":17020}
+11/11/2020 2:47:52 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:52 : response received : error:notFound
+11/11/2020 2:47:52 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:52 : response received : error:notFound
+11/11/2020 2:47:53 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:53 : response received : error:notFound
+11/11/2020 2:47:53 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:53 : response received : error:notFound
+11/11/2020 2:47:54 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:54 : response received : error:notFound
+11/11/2020 2:47:54 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:54 : response received : error:notFound
+11/11/2020 2:47:55 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:55 : response received : error:notFound
+11/11/2020 2:47:55 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:55 : response received : error:notFound
+11/11/2020 2:47:56 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:56 : response received : error:notFound
+11/11/2020 2:47:57 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:57 : response received : error:notFound
+11/11/2020 2:47:57 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:57 : response received : error:notFound
+11/11/2020 2:47:58 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:58 : response received : error:notFound
+11/11/2020 2:47:58 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:58 : response received : error:notFound
+11/11/2020 2:47:59 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:59 : response received : error:notFound
+11/11/2020 2:47:59 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:47:59 : response received : error:notFound
+11/11/2020 2:48:00 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:00 : response received : error:notFound
+11/11/2020 2:48:00 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:00 : response received : error:notFound
+11/11/2020 2:48:01 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:01 : response received : error:notFound
+11/11/2020 2:48:01 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:01 : response received : error:notFound
+11/11/2020 2:48:02 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:02 : response received : error:notFound
+11/11/2020 2:48:02 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:02 : response received : error:notFound
+11/11/2020 2:48:03 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:03 : response received : error:notFound
+11/11/2020 2:48:03 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:03 : response received : error:notFound
+11/11/2020 2:48:04 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:04 : response received : error:notFound
+11/11/2020 2:48:05 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:05 : response received : error:notFound
+11/11/2020 2:48:05 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:05 : response received : error:notFound
+11/11/2020 2:48:06 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:06 : response received : error:notFound
+11/11/2020 2:48:06 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:06 : response received : error:notFound
+11/11/2020 2:48:07 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:07 : response received : error:notFound
+11/11/2020 2:48:07 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:07 : response received : error:notFound
+11/11/2020 2:48:08 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:08 : response received : error:notFound
+11/11/2020 2:48:08 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:08 : response received : error:notFound
+11/11/2020 2:48:09 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:09 : response received : error:notFound
+11/11/2020 2:48:09 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:09 : response received : error:notFound
+11/11/2020 2:48:10 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:10 : response received : error:notFound
+11/11/2020 2:48:10 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:10 : response received : error:notFound
+11/11/2020 2:48:11 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"GameOver","id":15802,"x":960,"y":167,"z":0,"mobileY":913,"type":"","enabled":true,"worldX":960.0,"worldY":167.0625,"worldZ":0.0,"idCamera":16252,"parentId":17214,"transformId":17096}
+11/11/2020 2:48:11 PM:findObject for: //Game/DeathPopup/PremiumDisplay/PremiumOwnCount;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"PremiumOwnCount","id":15646,"x":1083,"y":591,"z":0,"mobileY":489,"type":"","enabled":true,"worldX":1083.10315,"worldY":591.46875,"worldZ":0.0,"idCamera":16252,"parentId":17002,"transformId":16950}
+11/11/2020 2:48:11 PM:findObject for: //Game/DeathPopup/ButtonLayout/Premium Button;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"Premium Button","id":15936,"x":960,"y":432,"z":0,"mobileY":648,"type":"","enabled":true,"worldX":960.0,"worldY":432.0,"worldZ":0.0,"idCamera":16252,"parentId":17046,"transformId":17224}
+11/11/2020 2:48:11 PM:LoadScene Main
+11-11-2020 14:48:11 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:11 : response received : Scene Loaded
+11/11/2020 2:48:11 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"CharName","id":18410,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":19024,"parentId":19970,"transformId":19714}
+11/11/2020 2:48:11 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:48:11 : response received : {"name":"OpenLeaderboard","id":18630,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19920}
+11/11/2020 2:48:11 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"MissionButton","id":18384,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19688}
+11/11/2020 2:48:11 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"StartButton","id":18616,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19908}
+11/11/2020 2:48:11 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:48:11 : response received : {"name":"SettingButton","id":18542,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19838}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"StoreButton","id":18526,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19822}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"ThemeZone","id":18700,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19988}
+11/11/2020 2:48:12 PM:tapped object by name StartButton11/11/2020 2:48:12 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 14:48:12 : response received : {"name":"StartButton","id":18616,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19908}
+11/11/2020 2:48:12 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 14:48:12 : response received : {"name":"PlayerPivot","id":18766,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":19024,"parentId":0,"transformId":18990}
+11/11/2020 2:48:12 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"pauseButton","id":18498,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":19024,"parentId":19812,"transformId":19792}
+11/11/2020 2:48:12 PM:tapped object by name pauseButton11/11/2020 2:48:12 PM:GameObject: pauseButton (UnityEngine.GameObject)
+11-11-2020 14:48:12 : response received : {"name":"pauseButton","id":18498,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":false,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":19024,"parentId":19812,"transformId":19792}
+11/11/2020 2:48:12 PM:findObject for: //Game/PauseMenu/Text;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"Text","id":18350,"x":960,"y":1032,"z":0,"mobileY":48,"type":"","enabled":true,"worldX":960.0005,"worldY":1031.90625,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19658}
+11/11/2020 2:48:12 PM:findObject for: //Game/PauseMenu/Exit;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"Exit","id":18600,"x":960,"y":496,"z":0,"mobileY":584,"type":"","enabled":true,"worldX":960.0,"worldY":495.618744,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19892}
+11/11/2020 2:48:12 PM:findObject for: //Game/PauseMenu/Resume;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"Resume","id":18444,"x":960,"y":540,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19742}
+11/11/2020 2:48:12 PM:tapped object by name Resume11/11/2020 2:48:12 PM:GameObject: Resume (UnityEngine.GameObject)
+11-11-2020 14:48:12 : response received : {"name":"Resume","id":18444,"x":960,"y":540,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19742}
+11/11/2020 2:48:12 PM:LoadScene Main
+11-11-2020 14:48:12 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:12 : response received : Scene Loaded
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"CharName","id":21182,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":21796,"parentId":22742,"transformId":22486}
+11/11/2020 2:48:12 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:48:12 : response received : {"name":"OpenLeaderboard","id":21402,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22692}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"MissionButton","id":21156,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22460}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"StartButton","id":21388,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22680}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"SettingButton","id":21314,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22610}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"StoreButton","id":21298,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22594}
+11/11/2020 2:48:12 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"ThemeZone","id":21472,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22760}
+11/11/2020 2:48:12 PM:tapped object by name StartButton11/11/2020 2:48:12 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 14:48:12 : response received : {"name":"StartButton","id":21388,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22680}
+11/11/2020 2:48:12 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 14:48:12 : response received : {"name":"PlayerPivot","id":21538,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":21796,"parentId":0,"transformId":21762}
+11/11/2020 2:48:12 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 14:48:12 : response received : {"name":"pauseButton","id":21270,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":21796,"parentId":22584,"transformId":22564}
+11/11/2020 2:48:12 PM:call action {"component":"CharacterInputController","method":"get_currentLife","parameters":"","typeOfParameters":"","assembly":""} for object {"name":"PlayerPivot","id":21538,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":21796,"parentId":0,"tranformId":0}
+11-11-2020 14:48:12 : response received : 3
+11/11/2020 2:48:13 PM:LoadScene Main
+11-11-2020 14:48:13 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:13 : response received : Scene Loaded
+11/11/2020 2:48:13 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"CharName","id":23954,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":24568,"parentId":25514,"transformId":25258}
+11/11/2020 2:48:13 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:48:13 : response received : {"name":"OpenLeaderboard","id":24174,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25464}
+11/11/2020 2:48:13 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"MissionButton","id":23928,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25232}
+11/11/2020 2:48:13 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"StartButton","id":24160,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25452}
+11/11/2020 2:48:13 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"SettingButton","id":24086,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25382}
+11/11/2020 2:48:13 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"StoreButton","id":24070,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25366}
+11/11/2020 2:48:13 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"ThemeZone","id":24244,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25532}
+11/11/2020 2:48:13 PM:tapped object by name StartButton11/11/2020 2:48:13 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 14:48:13 : response received : {"name":"StartButton","id":24160,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25452}
+11/11/2020 2:48:13 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 14:48:13 : response received : {"name":"PlayerPivot","id":24310,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":24568,"parentId":0,"transformId":24534}
+11/11/2020 2:48:13 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"pauseButton","id":24042,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":24568,"parentId":25356,"transformId":25336}
+11/11/2020 2:48:13 PM:tapped object by name pauseButton11/11/2020 2:48:13 PM:GameObject: pauseButton (UnityEngine.GameObject)
+11-11-2020 14:48:13 : response received : {"name":"pauseButton","id":24042,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":false,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":24568,"parentId":25356,"transformId":25336}
+11/11/2020 2:48:13 PM:findObject for: //Game/PauseMenu/Text;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"Text","id":23894,"x":960,"y":1032,"z":0,"mobileY":48,"type":"","enabled":true,"worldX":960.0005,"worldY":1031.90625,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25202}
+11/11/2020 2:48:13 PM:findObject for: //Game/PauseMenu/Exit;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"Exit","id":24144,"x":960,"y":496,"z":0,"mobileY":584,"type":"","enabled":true,"worldX":960.0,"worldY":495.618744,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25436}
+11/11/2020 2:48:13 PM:findObject for: //Game/PauseMenu/Resume;NAME;//;true
+11-11-2020 14:48:13 : response received : {"name":"Resume","id":23988,"x":960,"y":540,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25286}
+11/11/2020 2:48:13 PM:tapped object by name Exit11/11/2020 2:48:13 PM:GameObject: Exit (UnityEngine.GameObject)
+11-11-2020 14:48:13 : response received : {"name":"Exit","id":24144,"x":-6413,"y":-3053,"z":-122,"mobileY":4133,"type":"","enabled":true,"worldX":960.0,"worldY":487.4,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25436}
+11/11/2020 2:48:14 PM:Server version is: 1.5.7
+11-11-2020 14:48:14 : response received : 1.5.7
+11/11/2020 2:48:14 PM:Logging is set to True
+11-11-2020 14:48:14 : response received : Ok
+11/11/2020 2:48:14 PM:LoadScene Main
+11-11-2020 14:48:14 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:14 : response received : Scene Loaded
+11/11/2020 2:48:14 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:48:14 : response received : {"name":"CharName","id":26726,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":27340,"parentId":28286,"transformId":28030}
+11/11/2020 2:48:14 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:48:14 : response received : {"name":"OpenLeaderboard","id":26946,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28236}
+11/11/2020 2:48:14 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:48:14 : response received : {"name":"MissionButton","id":26700,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28004}
+11/11/2020 2:48:14 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:48:14 : response received : {"name":"StartButton","id":26932,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28224}
+11/11/2020 2:48:14 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:48:14 : response received : {"name":"SettingButton","id":26858,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28154}
+11/11/2020 2:48:14 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:48:14 : response received : {"name":"StoreButton","id":26842,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28138}
+11/11/2020 2:48:14 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:48:14 : response received : {"name":"ThemeZone","id":27016,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28304}
+11/11/2020 2:48:15 PM:Server version is: 1.5.7
+11-11-2020 14:48:15 : response received : 1.5.7
+11/11/2020 2:48:15 PM:Logging is set to True
+11-11-2020 14:48:15 : response received : Ok
+11/11/2020 2:48:15 PM:LoadScene Shop
+11-11-2020 14:48:15 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:15 : response received : Scene Loaded
+11/11/2020 2:48:15 PM:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"StoreTitle","id":29634,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":936.2667,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29858}
+11/11/2020 2:48:15 PM:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Accesories","id":29598,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1190.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29822}
+11/11/2020 2:48:15 PM:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Character","id":29694,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":730.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29916}
+11/11/2020 2:48:15 PM:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Item","id":29684,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":270.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29906}
+11/11/2020 2:48:15 PM:findObject for: //Background/Button;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Button","id":29654,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29876}
+11/11/2020 2:48:15 PM:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Themes","id":29692,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1650.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29914}
+11/11/2020 2:48:15 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Button","id":29666,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":29910,"transformId":29888}
+11/11/2020 2:48:15 PM:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 14:48:15 : response received : {"name":"Premium","id":29688,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1880.0,"worldY":764.5867,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29910}
+11/11/2020 2:48:15 PM:tapped object by name Button11/11/2020 2:48:15 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 14:48:16 : response received : {"name":"Button","id":29654,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29876}
+11/11/2020 2:48:16 PM:LoadScene Main
+11-11-2020 14:48:16 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:16 : response received : Scene Loaded
+11/11/2020 2:48:16 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"StoreButton","id":30306,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31602}
+11/11/2020 2:48:16 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"ThemeZone","id":30480,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31768}
+11/11/2020 2:48:16 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"SettingButton","id":30322,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31618}
+11/11/2020 2:48:16 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"StartButton","id":30396,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31688}
+11/11/2020 2:48:16 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"MissionButton","id":30164,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31468}
+11/11/2020 2:48:16 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:48:16 : response received : {"name":"OpenLeaderboard","id":30410,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31700}
+11/11/2020 2:48:16 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"CharName","id":30190,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":30804,"parentId":31750,"transformId":31494}
+11/11/2020 2:48:16 PM:LoadScene Shop
+11-11-2020 14:48:16 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:16 : response received : Scene Loaded
+11/11/2020 2:48:16 PM:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"StoreTitle","id":32934,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":936.2667,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33158}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Accesories","id":32898,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1190.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33122}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Character","id":32994,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":730.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33216}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Item","id":32984,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":270.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33206}
+11/11/2020 2:48:16 PM:findObject for: //Background/Button;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Button","id":32954,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33176}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Themes","id":32992,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1650.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33214}
+11/11/2020 2:48:16 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Button","id":32966,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":33210,"transformId":33188}
+11/11/2020 2:48:16 PM:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Premium","id":32988,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1880.0,"worldY":764.5867,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33210}
+11/11/2020 2:48:16 PM:tapped object by name StoreTitle11/11/2020 2:48:16 PM:GameObject: StoreTitle (UnityEngine.GameObject)
+11-11-2020 14:48:16 : response received : {"name":"StoreTitle","id":32934,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":936.2667,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33158}
+11/11/2020 2:48:16 PM:findObjects for: //Icon/Count
+11-11-2020 14:48:16 : response received : [{"name":"Count","id":-42256,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-66.1134644,"worldZ":0.0,"idCamera":-1,"parentId":-42248,"transformId":-42258},{"name":"Count","id":-42392,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-639.4468,"worldZ":0.0,"idCamera":-1,"parentId":-42384,"transformId":-42394},{"name":"Count","id":-42528,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-1212.78027,"worldZ":0.0,"idCamera":-1,"parentId":-42520,"transformId":-42530},{"name":"Count","id":-42664,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-1786.11377,"worldZ":0.0,"idCamera":-1,"parentId":-42656,"transformId":-42666}]
+11/11/2020 2:48:16 PM:Get text from object by name Count11/11/2020 2:48:16 PM:assembly name UnityEngine.UI11/11/2020 2:48:16 PM:assembly name UnityEngine.UI
+11-11-2020 14:48:16 : response received : 0
+11/11/2020 2:48:16 PM:findObjects for: //NamePriceButtonZone/PriceButtonZone/BuyButton
+11-11-2020 14:48:16 : response received : [{"name":"BuyButton","id":-42346,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1573.33337,"worldY":-30.824585,"worldZ":0.0,"idCamera":-1,"parentId":-42284,"transformId":-42348},{"name":"BuyButton","id":-42482,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1573.33337,"worldY":-604.157959,"worldZ":0.0,"idCamera":-1,"parentId":-42420,"transformId":-42484},{"name":"BuyButton","id":-42618,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1573.33337,"worldY":-1163.86169,"worldZ":0.0,"idCamera":-1,"parentId":-42556,"transformId":-42620},{"name":"BuyButton","id":-42754,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1573.33337,"worldY":-1737.19507,"worldZ":0.0,"idCamera":-1,"parentId":-42692,"transformId":-42756}]
+11/11/2020 2:48:16 PM:tapped object by name BuyButton11/11/2020 2:48:16 PM:GameObject: BuyButton (UnityEngine.GameObject)
+11-11-2020 14:48:16 : response received : {"name":"BuyButton","id":-42346,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1573.33337,"worldY":-30.824585,"worldZ":0.0,"idCamera":-1,"parentId":-42284,"transformId":-42348}
+11/11/2020 2:48:16 PM:findObjects for: //Icon/Count
+11-11-2020 14:48:16 : response received : [{"name":"Count","id":-42256,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-66.1134644,"worldZ":0.0,"idCamera":-1,"parentId":-42248,"transformId":-42258},{"name":"Count","id":-42392,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-639.4468,"worldZ":0.0,"idCamera":-1,"parentId":-42384,"transformId":-42394},{"name":"Count","id":-42528,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-1212.78027,"worldZ":0.0,"idCamera":-1,"parentId":-42520,"transformId":-42530},{"name":"Count","id":-42664,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":488.9333,"worldY":-1786.11377,"worldZ":0.0,"idCamera":-1,"parentId":-42656,"transformId":-42666}]
+11/11/2020 2:48:16 PM:Get text from object by name Count11/11/2020 2:48:16 PM:assembly name UnityEngine.UI11/11/2020 2:48:16 PM:assembly name UnityEngine.UI
+11-11-2020 14:48:16 : response received : 0
+11/11/2020 2:48:16 PM:LoadScene Shop
+11-11-2020 14:48:16 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:16 : response received : Scene Loaded
+11/11/2020 2:48:16 PM:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"StoreTitle","id":33462,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":936.2667,"worldZ":0.0,"idCamera":-1,"parentId":33732,"transformId":33686}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Accesories","id":33426,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1190.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33694,"transformId":33650}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Character","id":33522,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":730.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33694,"transformId":33744}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Item","id":33512,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":270.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33694,"transformId":33734}
+11/11/2020 2:48:16 PM:findObject for: //Background/Button;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Button","id":33482,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":33732,"transformId":33704}
+11/11/2020 2:48:16 PM:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Themes","id":33520,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1650.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33694,"transformId":33742}
+11/11/2020 2:48:16 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Button","id":33494,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":33738,"transformId":33716}
+11/11/2020 2:48:16 PM:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Premium","id":33516,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1880.0,"worldY":764.5867,"worldZ":0.0,"idCamera":-1,"parentId":33732,"transformId":33738}
+11/11/2020 2:48:16 PM:tapped object by name Button11/11/2020 2:48:16 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 14:48:16 : response received : {"name":"Button","id":33482,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":33732,"transformId":33704}
+11/11/2020 2:48:16 PM:LoadScene Shop
+11-11-2020 14:48:16 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:16 : response received : Scene Loaded
+11/11/2020 2:48:16 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Button","id":34022,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":34266,"transformId":34244}
+11/11/2020 2:48:16 PM:tapped object by name Button11/11/2020 2:48:16 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 14:48:16 : response received : {"name":"Button","id":34022,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":34266,"transformId":34244}
+11/11/2020 2:48:16 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"IAPPopup","id":33988,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":-1,"parentId":34260,"transformId":34212}
+11/11/2020 2:48:16 PM:findObject for: //Background/IAPPopup/Image/Close;NAME;//;true
+11-11-2020 14:48:16 : response received : {"name":"Close","id":34006,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":346.666626,"worldY":773.3334,"worldZ":0.0,"idCamera":-1,"parentId":34242,"transformId":34228}
+11/11/2020 2:48:16 PM:tapped object by name Close11/11/2020 2:48:16 PM:GameObject: Close (UnityEngine.GameObject)
+11-11-2020 14:48:16 : response received : {"name":"Close","id":34006,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":346.666626,"worldY":773.3334,"worldZ":0.0,"idCamera":-1,"parentId":34242,"transformId":34228}
+11/11/2020 2:48:16 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:16 : response received : error:notFound
+11/11/2020 2:48:17 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:17 : response received : error:notFound
+11/11/2020 2:48:18 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:18 : response received : error:notFound
+11/11/2020 2:48:18 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:18 : response received : error:notFound
+11/11/2020 2:48:19 PM:LoadScene Shop
+11-11-2020 14:48:19 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:19 : response received : Scene Loaded
+11/11/2020 2:48:19 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 14:48:19 : response received : {"name":"Button","id":34550,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":34794,"transformId":34772}
+11/11/2020 2:48:19 PM:tapped object by name Button11/11/2020 2:48:19 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 14:48:19 : response received : {"name":"Button","id":34550,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":34794,"transformId":34772}
+11/11/2020 2:48:19 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:19 : response received : {"name":"IAPPopup","id":34516,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":-1,"parentId":34788,"transformId":34740}
+11/11/2020 2:48:19 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 14:48:19 : response received : {"name":"IAPPopup","id":34516,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":-1,"parentId":34788,"transformId":34740}
+11/11/2020 2:48:20 PM:Server version is: 1.5.7
+11-11-2020 14:48:20 : response received : 1.5.7
+11/11/2020 2:48:20 PM:Logging is set to True
+11-11-2020 14:48:20 : response received : Ok
+11/11/2020 2:48:20 PM:LoadScene Start
+11-11-2020 14:48:20 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:20 : response received : Scene Loaded
+11/11/2020 2:48:20 PM:findActiveObjectByName for: UnityURLButton
+11-11-2020 14:48:20 : response received : {"name":"UnityURLButton","id":35206,"x":960,"y":32,"z":0,"mobileY":1048,"type":"","enabled":true,"worldX":960.0,"worldY":32.0,"worldZ":0.0,"idCamera":35986,"parentId":36308,"transformId":36304}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: LogoImage
+11-11-2020 14:48:20 : response received : {"name":"LogoImage","id":35208,"x":960,"y":120,"z":0,"mobileY":960,"type":"","enabled":true,"worldX":960.0,"worldY":120.0,"worldZ":0.0,"idCamera":35986,"parentId":36308,"transformId":36306}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: StartText
+11-11-2020 14:48:20 : response received : {"name":"StartText","id":35578,"x":960,"y":615,"z":0,"mobileY":465,"type":"","enabled":true,"worldX":960.0,"worldY":615.4666,"worldZ":0.0,"idCamera":35986,"parentId":36310,"transformId":36312}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: StartButton
+11-11-2020 14:48:20 : response received : {"name":"StartButton","id":35574,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":35986,"parentId":36308,"transformId":36310}
+11/11/2020 2:48:20 PM:tapped object by name StartButton11/11/2020 2:48:20 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 14:48:20 : response received : {"name":"StartButton","id":35574,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":35986,"parentId":36308,"transformId":36310}
+11/11/2020 2:48:20 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 14:48:20 : response received : {"name":"CharName","id":36422,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":37036,"parentId":37982,"transformId":37726}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 14:48:20 : response received : {"name":"OpenLeaderboard","id":36642,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":37036,"parentId":37802,"transformId":37932}
+11/11/2020 2:48:20 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 14:48:20 : response received : {"name":"MissionButton","id":36396,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":37036,"parentId":37802,"transformId":37700}
+11/11/2020 2:48:20 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 14:48:20 : response received : {"name":"StartButton","id":36628,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":37036,"parentId":37802,"transformId":37920}
+11/11/2020 2:48:20 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 14:48:20 : response received : {"name":"SettingButton","id":36554,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":37036,"parentId":37802,"transformId":37850}
+11/11/2020 2:48:20 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 14:48:20 : response received : {"name":"StoreButton","id":36538,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":37036,"parentId":37802,"transformId":37834}
+11/11/2020 2:48:20 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 14:48:20 : response received : {"name":"ThemeZone","id":36712,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":37036,"parentId":37802,"transformId":38000}
+11/11/2020 2:48:20 PM:LoadScene Start
+11-11-2020 14:48:20 : response received : Ok
+Scene Loaded
+11-11-2020 14:48:20 : response received : Scene Loaded
+11/11/2020 2:48:20 PM:findActiveObjectByName for: UnityURLButton
+11-11-2020 14:48:20 : response received : {"name":"UnityURLButton","id":39130,"x":960,"y":32,"z":0,"mobileY":1048,"type":"","enabled":true,"worldX":960.0,"worldY":32.0,"worldZ":0.0,"idCamera":39910,"parentId":40232,"transformId":40228}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: LogoImage
+11-11-2020 14:48:20 : response received : {"name":"LogoImage","id":39132,"x":960,"y":120,"z":0,"mobileY":960,"type":"","enabled":true,"worldX":960.0,"worldY":120.0,"worldZ":0.0,"idCamera":39910,"parentId":40232,"transformId":40230}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: StartText
+11-11-2020 14:48:20 : response received : {"name":"StartText","id":39502,"x":960,"y":615,"z":0,"mobileY":465,"type":"","enabled":true,"worldX":960.0,"worldY":615.4666,"worldZ":0.0,"idCamera":39910,"parentId":40234,"transformId":40236}
+11/11/2020 2:48:20 PM:findActiveObjectByName for: StartButton
+11-11-2020 14:48:20 : response received : {"name":"StartButton","id":39498,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":39910,"parentId":40232,"transformId":40234}
+11/11/2020 3:25:47 PM:Logging is set to True
+11-11-2020 15:25:47 : response received : Ok
+11/11/2020 3:25:47 PM:LoadScene Main
+11-11-2020 15:25:47 : response received : Ok
+Scene Loaded
+11-11-2020 15:25:47 : response received : Scene Loaded
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"CharName","id":8738,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":9352,"parentId":10298,"transformId":10042}
+11/11/2020 3:25:47 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:25:47 : response received : {"name":"OpenLeaderboard","id":8958,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10248}
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"MissionButton","id":8712,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10016}
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"StartButton","id":8944,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10236}
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"SettingButton","id":8870,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10166}
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"StoreButton","id":8854,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10150}
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"ThemeZone","id":9028,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10316}
+11/11/2020 3:25:47 PM:tapped object by name StartButton11/11/2020 3:25:47 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 15:25:47 : response received : {"name":"StartButton","id":8944,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":9352,"parentId":10118,"transformId":10236}
+11/11/2020 3:25:47 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"pauseButton","id":8826,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":9352,"parentId":10140,"transformId":10120}
+11/11/2020 3:25:47 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 15:25:47 : response received : {"name":"PlayerPivot","id":9094,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":9352,"parentId":0,"transformId":9318}
+11/11/2020 3:25:47 PM:LoadScene Main
+11-11-2020 15:25:47 : response received : Ok
+Scene Loaded
+11-11-2020 15:25:47 : response received : Scene Loaded
+11/11/2020 3:25:47 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:25:47 : response received : {"name":"CharName","id":15638,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":16252,"parentId":17198,"transformId":16942}
+11/11/2020 3:25:48 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:25:48 : response received : {"name":"OpenLeaderboard","id":15858,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17148}
+11/11/2020 3:25:48 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:25:48 : response received : {"name":"MissionButton","id":15612,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":16916}
+11/11/2020 3:25:48 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:25:48 : response received : {"name":"StartButton","id":15844,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17136}
+11/11/2020 3:25:48 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:25:48 : response received : {"name":"SettingButton","id":15770,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17066}
+11/11/2020 3:25:48 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:25:48 : response received : {"name":"StoreButton","id":15754,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17050}
+11/11/2020 3:25:48 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:25:48 : response received : {"name":"ThemeZone","id":15928,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17216}
+11/11/2020 3:25:48 PM:tapped object by name StartButton11/11/2020 3:25:48 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 15:25:48 : response received : {"name":"StartButton","id":15844,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":16252,"parentId":17018,"transformId":17136}
+11/11/2020 3:25:48 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 15:25:48 : response received : {"name":"PlayerPivot","id":15994,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":16252,"parentId":0,"transformId":16218}
+11/11/2020 3:25:48 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 15:25:48 : response received : {"name":"pauseButton","id":15726,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":16252,"parentId":17040,"transformId":17020}
+11/11/2020 3:25:48 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:48 : response received : error:notFound
+11/11/2020 3:25:48 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:48 : response received : error:notFound
+11/11/2020 3:25:49 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:49 : response received : error:notFound
+11/11/2020 3:25:49 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:49 : response received : error:notFound
+11/11/2020 3:25:50 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:50 : response received : error:notFound
+11/11/2020 3:25:50 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:50 : response received : error:notFound
+11/11/2020 3:25:51 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:51 : response received : error:notFound
+11/11/2020 3:25:51 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:51 : response received : error:notFound
+11/11/2020 3:25:52 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:52 : response received : error:notFound
+11/11/2020 3:25:52 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:52 : response received : error:notFound
+11/11/2020 3:25:53 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:53 : response received : error:notFound
+11/11/2020 3:25:54 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:54 : response received : error:notFound
+11/11/2020 3:25:54 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:54 : response received : error:notFound
+11/11/2020 3:25:55 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:55 : response received : error:notFound
+11/11/2020 3:25:55 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:55 : response received : error:notFound
+11/11/2020 3:25:56 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:56 : response received : error:notFound
+11/11/2020 3:25:56 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:56 : response received : error:notFound
+11/11/2020 3:25:57 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:57 : response received : error:notFound
+11/11/2020 3:25:57 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:57 : response received : error:notFound
+11/11/2020 3:25:58 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:58 : response received : error:notFound
+11/11/2020 3:25:58 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:58 : response received : error:notFound
+11/11/2020 3:25:59 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:59 : response received : error:notFound
+11/11/2020 3:25:59 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:25:59 : response received : error:notFound
+11/11/2020 3:26:00 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:00 : response received : error:notFound
+11/11/2020 3:26:01 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:01 : response received : error:notFound
+11/11/2020 3:26:01 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:01 : response received : error:notFound
+11/11/2020 3:26:02 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:02 : response received : error:notFound
+11/11/2020 3:26:02 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:02 : response received : error:notFound
+11/11/2020 3:26:03 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:03 : response received : error:notFound
+11/11/2020 3:26:03 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:03 : response received : error:notFound
+11/11/2020 3:26:04 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:04 : response received : error:notFound
+11/11/2020 3:26:04 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:04 : response received : error:notFound
+11/11/2020 3:26:05 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:05 : response received : error:notFound
+11/11/2020 3:26:05 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:05 : response received : error:notFound
+11/11/2020 3:26:06 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:06 : response received : error:notFound
+11/11/2020 3:26:06 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:06 : response received : error:notFound
+11/11/2020 3:26:07 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:07 : response received : error:notFound
+11/11/2020 3:26:08 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:08 : response received : error:notFound
+11/11/2020 3:26:08 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:08 : response received : error:notFound
+11/11/2020 3:26:09 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:09 : response received : error:notFound
+11/11/2020 3:26:09 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:09 : response received : error:notFound
+11/11/2020 3:26:10 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:10 : response received : error:notFound
+11/11/2020 3:26:10 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:10 : response received : error:notFound
+11/11/2020 3:26:11 PM:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"GameOver","id":15802,"x":960,"y":167,"z":0,"mobileY":913,"type":"","enabled":true,"worldX":960.0,"worldY":167.0625,"worldZ":0.0,"idCamera":16252,"parentId":17214,"transformId":17096}
+11/11/2020 3:26:11 PM:findObject for: //Game/DeathPopup/PremiumDisplay/PremiumOwnCount;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"PremiumOwnCount","id":15646,"x":1083,"y":591,"z":0,"mobileY":489,"type":"","enabled":true,"worldX":1083.10315,"worldY":591.46875,"worldZ":0.0,"idCamera":16252,"parentId":17002,"transformId":16950}
+11/11/2020 3:26:11 PM:findObject for: //Game/DeathPopup/ButtonLayout/Premium Button;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"Premium Button","id":15936,"x":960,"y":432,"z":0,"mobileY":648,"type":"","enabled":true,"worldX":960.0,"worldY":432.0,"worldZ":0.0,"idCamera":16252,"parentId":17046,"transformId":17224}
+11/11/2020 3:26:11 PM:LoadScene Main
+11-11-2020 15:26:11 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:11 : response received : Scene Loaded
+11/11/2020 3:26:11 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"CharName","id":18410,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":19024,"parentId":19970,"transformId":19714}
+11/11/2020 3:26:11 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:26:11 : response received : {"name":"OpenLeaderboard","id":18630,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19920}
+11/11/2020 3:26:11 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"MissionButton","id":18384,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19688}
+11/11/2020 3:26:11 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"StartButton","id":18616,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19908}
+11/11/2020 3:26:11 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"SettingButton","id":18542,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19838}
+11/11/2020 3:26:11 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"StoreButton","id":18526,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19822}
+11/11/2020 3:26:11 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"ThemeZone","id":18700,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19988}
+11/11/2020 3:26:11 PM:tapped object by name StartButton11/11/2020 3:26:11 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 15:26:11 : response received : {"name":"StartButton","id":18616,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":19024,"parentId":19790,"transformId":19908}
+11/11/2020 3:26:11 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 15:26:11 : response received : {"name":"PlayerPivot","id":18766,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":19024,"parentId":0,"transformId":18990}
+11/11/2020 3:26:11 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"pauseButton","id":18498,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":19024,"parentId":19812,"transformId":19792}
+11/11/2020 3:26:11 PM:tapped object by name pauseButton11/11/2020 3:26:11 PM:GameObject: pauseButton (UnityEngine.GameObject)
+11-11-2020 15:26:11 : response received : {"name":"pauseButton","id":18498,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":false,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":19024,"parentId":19812,"transformId":19792}
+11/11/2020 3:26:11 PM:findObject for: //Game/PauseMenu/Text;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"Text","id":18350,"x":960,"y":1032,"z":0,"mobileY":48,"type":"","enabled":true,"worldX":960.0005,"worldY":1031.90625,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19658}
+11/11/2020 3:26:11 PM:findObject for: //Game/PauseMenu/Exit;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"Exit","id":18600,"x":960,"y":496,"z":0,"mobileY":584,"type":"","enabled":true,"worldX":960.0,"worldY":495.618744,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19892}
+11/11/2020 3:26:11 PM:findObject for: //Game/PauseMenu/Resume;NAME;//;true
+11-11-2020 15:26:11 : response received : {"name":"Resume","id":18444,"x":960,"y":540,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19742}
+11/11/2020 3:26:11 PM:tapped object by name Resume11/11/2020 3:26:11 PM:GameObject: Resume (UnityEngine.GameObject)
+11-11-2020 15:26:11 : response received : {"name":"Resume","id":18444,"x":960,"y":540,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":19024,"parentId":19972,"transformId":19742}
+11/11/2020 3:26:11 PM:LoadScene Main
+11-11-2020 15:26:11 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:12 : response received : Scene Loaded
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"CharName","id":21182,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":21796,"parentId":22742,"transformId":22486}
+11/11/2020 3:26:12 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:26:12 : response received : {"name":"OpenLeaderboard","id":21402,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22692}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"MissionButton","id":21156,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22460}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"StartButton","id":21388,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22680}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"SettingButton","id":21314,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22610}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"StoreButton","id":21298,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22594}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"ThemeZone","id":21472,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22760}
+11/11/2020 3:26:12 PM:tapped object by name StartButton11/11/2020 3:26:12 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 15:26:12 : response received : {"name":"StartButton","id":21388,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":21796,"parentId":22562,"transformId":22680}
+11/11/2020 3:26:12 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 15:26:12 : response received : {"name":"PlayerPivot","id":21538,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":21796,"parentId":0,"transformId":21762}
+11/11/2020 3:26:12 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"pauseButton","id":21270,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":21796,"parentId":22584,"transformId":22564}
+11/11/2020 3:26:12 PM:call action {"component":"CharacterInputController","method":"get_currentLife","parameters":"","typeOfParameters":"","assembly":""} for object {"name":"PlayerPivot","id":21538,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":21796,"parentId":0,"tranformId":0}
+11-11-2020 15:26:12 : response received : 3
+11/11/2020 3:26:12 PM:LoadScene Main
+11-11-2020 15:26:12 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:12 : response received : Scene Loaded
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"CharName","id":23954,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":24568,"parentId":25514,"transformId":25258}
+11/11/2020 3:26:12 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:26:12 : response received : {"name":"OpenLeaderboard","id":24174,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25464}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"MissionButton","id":23928,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25232}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"StartButton","id":24160,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25452}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"SettingButton","id":24086,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25382}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"StoreButton","id":24070,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25366}
+11/11/2020 3:26:12 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"ThemeZone","id":24244,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25532}
+11/11/2020 3:26:12 PM:tapped object by name StartButton11/11/2020 3:26:12 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 15:26:12 : response received : {"name":"StartButton","id":24160,"x":-12507,"y":-3127,"z":-67,"mobileY":4207,"type":"","enabled":true,"worldX":961.0,"worldY":274.0,"worldZ":0.0,"idCamera":24568,"parentId":25334,"transformId":25452}
+11/11/2020 3:26:12 PM:findActiveObjectByName for: PlayerPivot
+11-11-2020 15:26:12 : response received : {"name":"PlayerPivot","id":24310,"x":960,"y":129,"z":6,"mobileY":951,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":24568,"parentId":0,"transformId":24534}
+11/11/2020 3:26:12 PM:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"pauseButton","id":24042,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":true,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":24568,"parentId":25356,"transformId":25336}
+11/11/2020 3:26:12 PM:tapped object by name pauseButton11/11/2020 3:26:12 PM:GameObject: pauseButton (UnityEngine.GameObject)
+11-11-2020 15:26:12 : response received : {"name":"pauseButton","id":24042,"x":8,"y":1072,"z":0,"mobileY":8,"type":"","enabled":false,"worldX":8.437439,"worldY":1071.5625,"worldZ":0.0,"idCamera":24568,"parentId":25356,"transformId":25336}
+11/11/2020 3:26:12 PM:findObject for: //Game/PauseMenu/Text;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"Text","id":23894,"x":960,"y":1032,"z":0,"mobileY":48,"type":"","enabled":true,"worldX":960.0005,"worldY":1031.90625,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25202}
+11/11/2020 3:26:12 PM:findObject for: //Game/PauseMenu/Exit;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"Exit","id":24144,"x":960,"y":496,"z":0,"mobileY":584,"type":"","enabled":true,"worldX":960.0,"worldY":495.618744,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25436}
+11/11/2020 3:26:12 PM:findObject for: //Game/PauseMenu/Resume;NAME;//;true
+11-11-2020 15:26:12 : response received : {"name":"Resume","id":23988,"x":960,"y":540,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25286}
+11/11/2020 3:26:12 PM:tapped object by name Exit11/11/2020 3:26:12 PM:GameObject: Exit (UnityEngine.GameObject)
+11-11-2020 15:26:12 : response received : {"name":"Exit","id":24144,"x":-6413,"y":-3053,"z":-122,"mobileY":4133,"type":"","enabled":true,"worldX":960.0,"worldY":487.4,"worldZ":0.0,"idCamera":24568,"parentId":25516,"transformId":25436}
+11/11/2020 3:26:13 PM:Server version is: 1.5.7
+11-11-2020 15:26:13 : response received : 1.5.7
+11/11/2020 3:26:13 PM:Logging is set to True
+11-11-2020 15:26:13 : response received : Ok
+11/11/2020 3:26:13 PM:LoadScene Main
+11-11-2020 15:26:13 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:14 : response received : Scene Loaded
+11/11/2020 3:26:14 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:26:14 : response received : {"name":"CharName","id":26726,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":27340,"parentId":28286,"transformId":28030}
+11/11/2020 3:26:14 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:26:14 : response received : {"name":"OpenLeaderboard","id":26946,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28236}
+11/11/2020 3:26:14 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:26:14 : response received : {"name":"MissionButton","id":26700,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28004}
+11/11/2020 3:26:14 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:26:14 : response received : {"name":"StartButton","id":26932,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28224}
+11/11/2020 3:26:14 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:26:14 : response received : {"name":"SettingButton","id":26858,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28154}
+11/11/2020 3:26:14 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:26:14 : response received : {"name":"StoreButton","id":26842,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28138}
+11/11/2020 3:26:14 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:26:14 : response received : {"name":"ThemeZone","id":27016,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":27340,"parentId":28106,"transformId":28304}
+11/11/2020 3:26:15 PM:Server version is: 1.5.7
+11-11-2020 15:26:15 : response received : 1.5.7
+11/11/2020 3:26:15 PM:Logging is set to True
+11-11-2020 15:26:15 : response received : Ok
+11/11/2020 3:26:15 PM:LoadScene Shop
+11-11-2020 15:26:15 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:15 : response received : Scene Loaded
+11/11/2020 3:26:15 PM:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"StoreTitle","id":29634,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":936.2667,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29858}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Accesories","id":29598,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1190.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29822}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Character","id":29694,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":730.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29916}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Item","id":29684,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":270.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29906}
+11/11/2020 3:26:15 PM:findObject for: //Background/Button;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Button","id":29654,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29876}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Themes","id":29692,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1650.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":29866,"transformId":29914}
+11/11/2020 3:26:15 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Button","id":29666,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":29910,"transformId":29888}
+11/11/2020 3:26:15 PM:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Premium","id":29688,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1880.0,"worldY":764.5867,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29910}
+11/11/2020 3:26:15 PM:tapped object by name Button11/11/2020 3:26:15 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 15:26:15 : response received : {"name":"Button","id":29654,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":29904,"transformId":29876}
+11/11/2020 3:26:15 PM:LoadScene Main
+11-11-2020 15:26:15 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:15 : response received : Scene Loaded
+11/11/2020 3:26:15 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"StoreButton","id":30306,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31602}
+11/11/2020 3:26:15 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"ThemeZone","id":30480,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31768}
+11/11/2020 3:26:15 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"SettingButton","id":30322,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31618}
+11/11/2020 3:26:15 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"StartButton","id":30396,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31688}
+11/11/2020 3:26:15 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"MissionButton","id":30164,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31468}
+11/11/2020 3:26:15 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:26:15 : response received : {"name":"OpenLeaderboard","id":30410,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":30804,"parentId":31570,"transformId":31700}
+11/11/2020 3:26:15 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"CharName","id":30190,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":30804,"parentId":31750,"transformId":31494}
+11/11/2020 3:26:15 PM:LoadScene Shop
+11-11-2020 15:26:15 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:15 : response received : Scene Loaded
+11/11/2020 3:26:15 PM:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"StoreTitle","id":32934,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":936.2667,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33158}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Accesories","id":32898,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1190.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33122}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Character","id":32994,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":730.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33216}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Item","id":32984,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":270.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33206}
+11/11/2020 3:26:15 PM:findObject for: //Background/Button;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Button","id":32954,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33176}
+11/11/2020 3:26:15 PM:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Themes","id":32992,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1650.0,"worldY":513.066467,"worldZ":0.0,"idCamera":-1,"parentId":33166,"transformId":33214}
+11/11/2020 3:26:15 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Button","id":32966,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":33210,"transformId":33188}
+11/11/2020 3:26:15 PM:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 15:26:15 : response received : {"name":"Premium","id":32988,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1880.0,"worldY":764.5867,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33210}
+11/11/2020 3:26:15 PM:tapped object by name Button11/11/2020 3:26:15 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 15:26:15 : response received : {"name":"Button","id":32954,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":31.52002,"worldY":1039.22681,"worldZ":0.0,"idCamera":-1,"parentId":33204,"transformId":33176}
+11/11/2020 3:26:15 PM:LoadScene Shop
+11-11-2020 15:26:15 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:15 : response received : Scene Loaded
+11/11/2020 3:26:16 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 15:26:16 : response received : {"name":"Button","id":33494,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":33738,"transformId":33716}
+11/11/2020 3:26:16 PM:tapped object by name Button11/11/2020 3:26:16 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 15:26:16 : response received : {"name":"Button","id":33494,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":33738,"transformId":33716}
+11/11/2020 3:26:16 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:16 : response received : {"name":"IAPPopup","id":33460,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":-1,"parentId":33732,"transformId":33684}
+11/11/2020 3:26:16 PM:findObject for: //Background/IAPPopup/Image/Close;NAME;//;true
+11-11-2020 15:26:16 : response received : {"name":"Close","id":33478,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":346.666626,"worldY":773.3334,"worldZ":0.0,"idCamera":-1,"parentId":33714,"transformId":33700}
+11/11/2020 3:26:16 PM:tapped object by name Close11/11/2020 3:26:16 PM:GameObject: Close (UnityEngine.GameObject)
+11-11-2020 15:26:16 : response received : {"name":"Close","id":33478,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":346.666626,"worldY":773.3334,"worldZ":0.0,"idCamera":-1,"parentId":33714,"transformId":33700}
+11/11/2020 3:26:16 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:16 : response received : error:notFound
+11/11/2020 3:26:16 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:16 : response received : error:notFound
+11/11/2020 3:26:17 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:17 : response received : error:notFound
+11/11/2020 3:26:17 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:17 : response received : error:notFound
+11/11/2020 3:26:18 PM:LoadScene Shop
+11-11-2020 15:26:18 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:18 : response received : Scene Loaded
+11/11/2020 3:26:18 PM:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 15:26:18 : response received : {"name":"Button","id":34022,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":34266,"transformId":34244}
+11/11/2020 3:26:18 PM:tapped object by name Button11/11/2020 3:26:18 PM:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 15:26:18 : response received : {"name":"Button","id":34022,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":1314.4,"worldY":764.587,"worldZ":0.0,"idCamera":-1,"parentId":34266,"transformId":34244}
+11/11/2020 3:26:18 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:18 : response received : {"name":"IAPPopup","id":33988,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":-1,"parentId":34260,"transformId":34212}
+11/11/2020 3:26:18 PM:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 15:26:18 : response received : {"name":"IAPPopup","id":33988,"x":-1,"y":-1,"z":-1,"mobileY":1081,"type":"","enabled":true,"worldX":960.0,"worldY":540.0,"worldZ":0.0,"idCamera":-1,"parentId":34260,"transformId":34212}
+11/11/2020 3:26:19 PM:Server version is: 1.5.7
+11-11-2020 15:26:19 : response received : 1.5.7
+11/11/2020 3:26:19 PM:Logging is set to True
+11-11-2020 15:26:19 : response received : Ok
+11/11/2020 3:26:19 PM:LoadScene Start
+11-11-2020 15:26:19 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:19 : response received : Scene Loaded
+11/11/2020 3:26:19 PM:findActiveObjectByName for: UnityURLButton
+11-11-2020 15:26:19 : response received : {"name":"UnityURLButton","id":34678,"x":960,"y":32,"z":0,"mobileY":1048,"type":"","enabled":true,"worldX":960.0,"worldY":32.0,"worldZ":0.0,"idCamera":35458,"parentId":35780,"transformId":35776}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: LogoImage
+11-11-2020 15:26:19 : response received : {"name":"LogoImage","id":34680,"x":960,"y":120,"z":0,"mobileY":960,"type":"","enabled":true,"worldX":960.0,"worldY":120.0,"worldZ":0.0,"idCamera":35458,"parentId":35780,"transformId":35778}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: StartText
+11-11-2020 15:26:19 : response received : {"name":"StartText","id":35050,"x":960,"y":615,"z":0,"mobileY":465,"type":"","enabled":true,"worldX":960.0,"worldY":615.4666,"worldZ":0.0,"idCamera":35458,"parentId":35782,"transformId":35784}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: StartButton
+11-11-2020 15:26:19 : response received : {"name":"StartButton","id":35046,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":35458,"parentId":35780,"transformId":35782}
+11/11/2020 3:26:19 PM:tapped object by name StartButton11/11/2020 3:26:19 PM:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 15:26:19 : response received : {"name":"StartButton","id":35046,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":35458,"parentId":35780,"transformId":35782}
+11/11/2020 3:26:19 PM:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 15:26:19 : response received : {"name":"CharName","id":35894,"x":962,"y":998,"z":0,"mobileY":82,"type":"","enabled":true,"worldX":961.6875,"worldY":998.15625,"worldZ":0.0,"idCamera":36508,"parentId":37454,"transformId":37198}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 15:26:19 : response received : {"name":"OpenLeaderboard","id":36114,"x":749,"y":95,"z":0,"mobileY":985,"type":"","enabled":true,"worldX":749.0625,"worldY":94.75311,"worldZ":0.0,"idCamera":36508,"parentId":37274,"transformId":37404}
+11/11/2020 3:26:19 PM:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 15:26:19 : response received : {"name":"MissionButton","id":35868,"x":1028,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1027.5,"worldY":97.03125,"worldZ":0.0,"idCamera":36508,"parentId":37274,"transformId":37172}
+11/11/2020 3:26:19 PM:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 15:26:19 : response received : {"name":"StartButton","id":36100,"x":961,"y":231,"z":0,"mobileY":849,"type":"","enabled":true,"worldX":960.84375,"worldY":231.1875,"worldZ":0.0,"idCamera":36508,"parentId":37274,"transformId":37392}
+11/11/2020 3:26:19 PM:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 15:26:19 : response received : {"name":"SettingButton","id":36026,"x":1179,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":1179.375,"worldY":97.03125,"worldZ":0.0,"idCamera":36508,"parentId":37274,"transformId":37322}
+11/11/2020 3:26:19 PM:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 15:26:19 : response received : {"name":"StoreButton","id":36010,"x":892,"y":97,"z":0,"mobileY":983,"type":"","enabled":true,"worldX":892.5,"worldY":97.03125,"worldZ":0.0,"idCamera":36508,"parentId":37274,"transformId":37306}
+11/11/2020 3:26:19 PM:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 15:26:19 : response received : {"name":"ThemeZone","id":36184,"x":961,"y":386,"z":0,"mobileY":694,"type":"","enabled":true,"worldX":960.84375,"worldY":385.59375,"worldZ":0.0,"idCamera":36508,"parentId":37274,"transformId":37472}
+11/11/2020 3:26:19 PM:LoadScene Start
+11-11-2020 15:26:19 : response received : Ok
+Scene Loaded
+11-11-2020 15:26:19 : response received : Scene Loaded
+11/11/2020 3:26:19 PM:findActiveObjectByName for: UnityURLButton
+11-11-2020 15:26:19 : response received : {"name":"UnityURLButton","id":38602,"x":960,"y":32,"z":0,"mobileY":1048,"type":"","enabled":true,"worldX":960.0,"worldY":32.0,"worldZ":0.0,"idCamera":39382,"parentId":39704,"transformId":39700}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: LogoImage
+11-11-2020 15:26:19 : response received : {"name":"LogoImage","id":38604,"x":960,"y":120,"z":0,"mobileY":960,"type":"","enabled":true,"worldX":960.0,"worldY":120.0,"worldZ":0.0,"idCamera":39382,"parentId":39704,"transformId":39702}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: StartText
+11-11-2020 15:26:19 : response received : {"name":"StartText","id":38974,"x":960,"y":615,"z":0,"mobileY":465,"type":"","enabled":true,"worldX":960.0,"worldY":615.4666,"worldZ":0.0,"idCamera":39382,"parentId":39706,"transformId":39708}
+11/11/2020 3:26:19 PM:findActiveObjectByName for: StartButton
+11-11-2020 15:26:19 : response received : {"name":"StartButton","id":38970,"x":960,"y":600,"z":0,"mobileY":480,"type":"","enabled":true,"worldX":960.0,"worldY":599.999939,"worldZ":0.0,"idCamera":39382,"parentId":39704,"transformId":39706}
+11/11/2020 16:17:12:Logging is set to True
+11-11-2020 16:17:13 : response received : Ok
+11/11/2020 16:17:12:LoadScene Main
+11-11-2020 16:17:13 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:13 : response received : Scene Loaded
+11/11/2020 16:17:12:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:13 : response received : {"name":"CharName","id":12908,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":13522,"parentId":14468,"transformId":14212}
+11/11/2020 16:17:12:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:13 : response received : {"name":"OpenLeaderboard","id":13128,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14418}
+11/11/2020 16:17:12:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:13 : response received : {"name":"MissionButton","id":12882,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14186}
+11/11/2020 16:17:12:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:13 : response received : {"name":"StartButton","id":13114,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14406}
+11/11/2020 16:17:12:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:13 : response received : {"name":"SettingButton","id":13040,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14336}
+11/11/2020 16:17:12:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:13 : response received : {"name":"StoreButton","id":13024,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14320}
+11/11/2020 16:17:12:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:13 : response received : {"name":"ThemeZone","id":13198,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14486}
+11/11/2020 16:17:12:tapped object by name StartButton11/11/2020 16:17:12:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 16:17:13 : response received : {"name":"StartButton","id":13114,"x":-15227,"y":-6502,"z":-67,"mobileY":8748,"type":"","enabled":true,"worldX":541.0,"worldY":274.0,"worldZ":0.0,"idCamera":13522,"parentId":14288,"transformId":14406}
+11/11/2020 16:17:12:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"pauseButton","id":12996,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":true,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":13522,"parentId":14310,"transformId":14290}
+11/11/2020 16:17:12:findActiveObjectByName for: PlayerPivot
+11-11-2020 16:17:14 : response received : {"name":"PlayerPivot","id":13264,"x":540,"y":269,"z":6,"mobileY":1977,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":13522,"parentId":0,"transformId":13488}
+11/11/2020 16:17:12:LoadScene Main
+11-11-2020 16:17:14 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:14 : response received : Scene Loaded
+11/11/2020 16:17:13:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"CharName","id":15680,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":16294,"parentId":17240,"transformId":16984}
+11/11/2020 16:17:13:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:14 : response received : {"name":"OpenLeaderboard","id":15900,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":17190}
+11/11/2020 16:17:13:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"MissionButton","id":15654,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":16958}
+11/11/2020 16:17:13:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"StartButton","id":15886,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":17178}
+11/11/2020 16:17:13:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"SettingButton","id":15812,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":17108}
+11/11/2020 16:17:13:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"StoreButton","id":15796,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":17092}
+11/11/2020 16:17:13:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"ThemeZone","id":15970,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":17258}
+11/11/2020 16:17:13:tapped object by name StartButton11/11/2020 16:17:13:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 16:17:14 : response received : {"name":"StartButton","id":15886,"x":-15227,"y":-6502,"z":-67,"mobileY":8748,"type":"","enabled":true,"worldX":541.0,"worldY":274.0,"worldZ":0.0,"idCamera":16294,"parentId":17060,"transformId":17178}
+11/11/2020 16:17:13:findActiveObjectByName for: PlayerPivot
+11-11-2020 16:17:14 : response received : {"name":"PlayerPivot","id":16036,"x":540,"y":269,"z":6,"mobileY":1977,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":16294,"parentId":0,"transformId":16260}
+11/11/2020 16:17:13:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 16:17:14 : response received : {"name":"pauseButton","id":15768,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":true,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":16294,"parentId":17082,"transformId":17062}
+11/11/2020 16:17:13:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:14 : response received : error:notFound
+11/11/2020 16:17:13:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:15 : response received : error:notFound
+11/11/2020 16:17:14:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:15 : response received : error:notFound
+11/11/2020 16:17:15:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:16 : response received : error:notFound
+11/11/2020 16:17:15:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:16 : response received : error:notFound
+11/11/2020 16:17:16:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:17 : response received : error:notFound
+11/11/2020 16:17:16:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:17 : response received : error:notFound
+11/11/2020 16:17:17:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:18 : response received : error:notFound
+11/11/2020 16:17:17:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:18 : response received : error:notFound
+11/11/2020 16:17:18:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:19 : response received : error:notFound
+11/11/2020 16:17:18:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:19 : response received : error:notFound
+11/11/2020 16:17:19:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:20 : response received : error:notFound
+11/11/2020 16:17:19:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:21 : response received : error:notFound
+11/11/2020 16:17:20:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:21 : response received : error:notFound
+11/11/2020 16:17:20:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:22 : response received : error:notFound
+11/11/2020 16:17:21:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:22 : response received : error:notFound
+11/11/2020 16:17:22:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:23 : response received : error:notFound
+11/11/2020 16:17:22:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:23 : response received : error:notFound
+11/11/2020 16:17:23:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:24 : response received : error:notFound
+11/11/2020 16:17:23:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:24 : response received : error:notFound
+11/11/2020 16:17:24:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:25 : response received : error:notFound
+11/11/2020 16:17:24:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:25 : response received : error:notFound
+11/11/2020 16:17:25:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:26 : response received : error:notFound
+11/11/2020 16:17:25:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:27 : response received : error:notFound
+11/11/2020 16:17:26:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:27 : response received : error:notFound
+11/11/2020 16:17:26:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:28 : response received : error:notFound
+11/11/2020 16:17:27:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:28 : response received : error:notFound
+11/11/2020 16:17:28:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:29 : response received : error:notFound
+11/11/2020 16:17:28:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:29 : response received : error:notFound
+11/11/2020 16:17:29:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:30 : response received : error:notFound
+11/11/2020 16:17:29:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:30 : response received : error:notFound
+11/11/2020 16:17:30:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:31 : response received : error:notFound
+11/11/2020 16:17:30:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:31 : response received : error:notFound
+11/11/2020 16:17:31:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:32 : response received : error:notFound
+11/11/2020 16:17:31:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:33 : response received : error:notFound
+11/11/2020 16:17:32:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:33 : response received : error:notFound
+11/11/2020 16:17:33:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:34 : response received : error:notFound
+11/11/2020 16:17:33:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:34 : response received : error:notFound
+11/11/2020 16:17:34:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:35 : response received : error:notFound
+11/11/2020 16:17:34:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:35 : response received : error:notFound
+11/11/2020 16:17:35:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:36 : response received : error:notFound
+11/11/2020 16:17:35:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:36 : response received : error:notFound
+11/11/2020 16:17:36:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:37 : response received : error:notFound
+11/11/2020 16:17:36:findObject for: //Game/DeathPopup/GameOver;NAME;//;true
+11-11-2020 16:17:37 : response received : {"name":"GameOver","id":15844,"x":540,"y":347,"z":0,"mobileY":1899,"type":"","enabled":true,"worldX":540.0,"worldY":347.4281,"worldZ":0.0,"idCamera":16294,"parentId":17256,"transformId":17138}
+11/11/2020 16:17:36:findObject for: //Game/DeathPopup/PremiumDisplay/PremiumOwnCount;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"PremiumOwnCount","id":15688,"x":796,"y":1230,"z":0,"mobileY":1016,"type":"","enabled":true,"worldX":796.0089,"worldY":1230.03589,"worldZ":0.0,"idCamera":16294,"parentId":17044,"transformId":16992}
+11/11/2020 16:17:36:findObject for: //Game/DeathPopup/ButtonLayout/Premium Button;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"Premium Button","id":15978,"x":540,"y":898,"z":0,"mobileY":1348,"type":"","enabled":true,"worldX":540.0,"worldY":898.4,"worldZ":0.0,"idCamera":16294,"parentId":17088,"transformId":17266}
+11/11/2020 16:17:36:LoadScene Main
+11-11-2020 16:17:38 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:38 : response received : Scene Loaded
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"CharName","id":18452,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":19066,"parentId":20012,"transformId":19756}
+11/11/2020 16:17:37:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:38 : response received : {"name":"OpenLeaderboard","id":18672,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":19962}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"MissionButton","id":18426,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":19730}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"StartButton","id":18658,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":19950}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"SettingButton","id":18584,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":19880}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"StoreButton","id":18568,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":19864}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"ThemeZone","id":18742,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":20030}
+11/11/2020 16:17:37:tapped object by name StartButton11/11/2020 16:17:37:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 16:17:38 : response received : {"name":"StartButton","id":18658,"x":-15227,"y":-6502,"z":-67,"mobileY":8748,"type":"","enabled":true,"worldX":541.0,"worldY":274.0,"worldZ":0.0,"idCamera":19066,"parentId":19832,"transformId":19950}
+11/11/2020 16:17:37:findActiveObjectByName for: PlayerPivot
+11-11-2020 16:17:38 : response received : {"name":"PlayerPivot","id":18808,"x":540,"y":269,"z":6,"mobileY":1977,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":19066,"parentId":0,"transformId":19032}
+11/11/2020 16:17:37:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"pauseButton","id":18540,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":true,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":19066,"parentId":19854,"transformId":19834}
+11/11/2020 16:17:37:tapped object by name pauseButton11/11/2020 16:17:37:GameObject: pauseButton (UnityEngine.GameObject)
+11-11-2020 16:17:38 : response received : {"name":"pauseButton","id":18540,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":false,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":19066,"parentId":19854,"transformId":19834}
+11/11/2020 16:17:37:findObject for: //Game/PauseMenu/Text;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"Text","id":18392,"x":540,"y":2146,"z":0,"mobileY":100,"type":"","enabled":true,"worldX":540.0011,"worldY":2145.983,"worldZ":0.0,"idCamera":19066,"parentId":20014,"transformId":19700}
+11/11/2020 16:17:37:findObject for: //Game/PauseMenu/Exit;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"Exit","id":18642,"x":540,"y":1031,"z":0,"mobileY":1215,"type":"","enabled":true,"worldX":540.0,"worldY":1030.70349,"worldZ":0.0,"idCamera":19066,"parentId":20014,"transformId":19934}
+11/11/2020 16:17:37:findObject for: //Game/PauseMenu/Resume;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"Resume","id":18486,"x":540,"y":1123,"z":0,"mobileY":1123,"type":"","enabled":true,"worldX":540.0,"worldY":1123.0,"worldZ":0.0,"idCamera":19066,"parentId":20014,"transformId":19784}
+11/11/2020 16:17:37:tapped object by name Resume11/11/2020 16:17:37:GameObject: Resume (UnityEngine.GameObject)
+11-11-2020 16:17:38 : response received : {"name":"Resume","id":18486,"x":540,"y":1123,"z":0,"mobileY":1123,"type":"","enabled":true,"worldX":540.0,"worldY":1123.0,"worldZ":0.0,"idCamera":19066,"parentId":20014,"transformId":19784}
+11/11/2020 16:17:37:LoadScene Main
+11-11-2020 16:17:38 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:38 : response received : Scene Loaded
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"CharName","id":21224,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":21838,"parentId":22784,"transformId":22528}
+11/11/2020 16:17:37:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:38 : response received : {"name":"OpenLeaderboard","id":21444,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22734}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"MissionButton","id":21198,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22502}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"StartButton","id":21430,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22722}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"SettingButton","id":21356,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22652}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"StoreButton","id":21340,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22636}
+11/11/2020 16:17:37:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:38 : response received : {"name":"ThemeZone","id":21514,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22802}
+11/11/2020 16:17:37:tapped object by name StartButton11/11/2020 16:17:37:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 16:17:38 : response received : {"name":"StartButton","id":21430,"x":-15227,"y":-6502,"z":-67,"mobileY":8748,"type":"","enabled":true,"worldX":541.0,"worldY":274.0,"worldZ":0.0,"idCamera":21838,"parentId":22604,"transformId":22722}
+11/11/2020 16:17:37:findActiveObjectByName for: PlayerPivot
+11-11-2020 16:17:38 : response received : {"name":"PlayerPivot","id":21580,"x":540,"y":269,"z":6,"mobileY":1977,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":21838,"parentId":0,"transformId":21804}
+11/11/2020 16:17:37:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"pauseButton","id":21312,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":true,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":21838,"parentId":22626,"transformId":22606}
+11/11/2020 16:17:37:call action {"component":"CharacterInputController","method":"get_currentLife","parameters":"","typeOfParameters":"","assembly":""} for object {"name":"PlayerPivot","id":21580,"x":540,"y":269,"z":6,"mobileY":1977,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":21838,"parentId":0,"tranformId":0}
+11-11-2020 16:17:39 : response received : 3
+11/11/2020 16:17:37:LoadScene Main
+11-11-2020 16:17:39 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:39 : response received : Scene Loaded
+11/11/2020 16:17:38:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"CharName","id":23996,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":24610,"parentId":25556,"transformId":25300}
+11/11/2020 16:17:38:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:39 : response received : {"name":"OpenLeaderboard","id":24216,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25506}
+11/11/2020 16:17:38:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"MissionButton","id":23970,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25274}
+11/11/2020 16:17:38:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"StartButton","id":24202,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25494}
+11/11/2020 16:17:38:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"SettingButton","id":24128,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25424}
+11/11/2020 16:17:38:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"StoreButton","id":24112,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25408}
+11/11/2020 16:17:38:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"ThemeZone","id":24286,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25574}
+11/11/2020 16:17:38:tapped object by name StartButton11/11/2020 16:17:38:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 16:17:39 : response received : {"name":"StartButton","id":24202,"x":-15227,"y":-6502,"z":-67,"mobileY":8748,"type":"","enabled":true,"worldX":541.0,"worldY":274.0,"worldZ":0.0,"idCamera":24610,"parentId":25376,"transformId":25494}
+11/11/2020 16:17:38:findActiveObjectByName for: PlayerPivot
+11-11-2020 16:17:39 : response received : {"name":"PlayerPivot","id":24352,"x":540,"y":269,"z":6,"mobileY":1977,"type":"","enabled":true,"worldX":0.0,"worldY":0.0,"worldZ":2.0,"idCamera":24610,"parentId":0,"transformId":24576}
+11/11/2020 16:17:38:findObject for: //Game/WholeUI/pauseButton;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"pauseButton","id":24084,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":true,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":24610,"parentId":25398,"transformId":25378}
+11/11/2020 16:17:38:tapped object by name pauseButton11/11/2020 16:17:38:GameObject: pauseButton (UnityEngine.GameObject)
+11-11-2020 16:17:39 : response received : {"name":"pauseButton","id":24084,"x":18,"y":2228,"z":0,"mobileY":18,"type":"","enabled":false,"worldX":17.546875,"worldY":2228.45313,"worldZ":0.0,"idCamera":24610,"parentId":25398,"transformId":25378}
+11/11/2020 16:17:38:findObject for: //Game/PauseMenu/Text;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"Text","id":23936,"x":540,"y":2146,"z":0,"mobileY":100,"type":"","enabled":true,"worldX":540.0011,"worldY":2145.983,"worldZ":0.0,"idCamera":24610,"parentId":25558,"transformId":25244}
+11/11/2020 16:17:38:findObject for: //Game/PauseMenu/Exit;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"Exit","id":24186,"x":540,"y":1031,"z":0,"mobileY":1215,"type":"","enabled":true,"worldX":540.0,"worldY":1030.70349,"worldZ":0.0,"idCamera":24610,"parentId":25558,"transformId":25478}
+11/11/2020 16:17:38:findObject for: //Game/PauseMenu/Resume;NAME;//;true
+11-11-2020 16:17:39 : response received : {"name":"Resume","id":24030,"x":540,"y":1123,"z":0,"mobileY":1123,"type":"","enabled":true,"worldX":540.0,"worldY":1123.0,"worldZ":0.0,"idCamera":24610,"parentId":25558,"transformId":25328}
+11/11/2020 16:17:38:tapped object by name Exit11/11/2020 16:17:38:GameObject: Exit (UnityEngine.GameObject)
+11-11-2020 16:17:39 : response received : {"name":"Exit","id":24186,"x":-3319,"y":-6246,"z":-272,"mobileY":8492,"type":"","enabled":true,"worldX":540.0,"worldY":1070.4,"worldZ":0.0,"idCamera":24610,"parentId":25558,"transformId":25478}
+11/11/2020 16:17:39:Server version is: 1.5.7
+11-11-2020 16:17:40 : response received : 1.5.7
+11/11/2020 16:17:39:Logging is set to True
+11-11-2020 16:17:40 : response received : Ok
+11/11/2020 16:17:39:LoadScene Main
+11-11-2020 16:17:40 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:40 : response received : Scene Loaded
+11/11/2020 16:17:39:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:40 : response received : {"name":"CharName","id":26768,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":27382,"parentId":28328,"transformId":28072}
+11/11/2020 16:17:39:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:40 : response received : {"name":"OpenLeaderboard","id":26988,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":27382,"parentId":28148,"transformId":28278}
+11/11/2020 16:17:39:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:40 : response received : {"name":"MissionButton","id":26742,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":27382,"parentId":28148,"transformId":28046}
+11/11/2020 16:17:39:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:40 : response received : {"name":"StartButton","id":26974,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":27382,"parentId":28148,"transformId":28266}
+11/11/2020 16:17:39:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:40 : response received : {"name":"SettingButton","id":26900,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":27382,"parentId":28148,"transformId":28196}
+11/11/2020 16:17:39:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:40 : response received : {"name":"StoreButton","id":26884,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":27382,"parentId":28148,"transformId":28180}
+11/11/2020 16:17:39:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:40 : response received : {"name":"ThemeZone","id":27058,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":27382,"parentId":28148,"transformId":28346}
+11/11/2020 16:17:40:Server version is: 1.5.7
+11-11-2020 16:17:41 : response received : 1.5.7
+11/11/2020 16:17:40:Logging is set to True
+11-11-2020 16:17:41 : response received : Ok
+11/11/2020 16:17:40:LoadScene Shop
+11-11-2020 16:17:41 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:42 : response received : Scene Loaded
+11/11/2020 16:17:40:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"StoreTitle","id":29676,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":540.0,"worldY":2165.15015,"worldZ":0.0,"idCamera":-1,"parentId":29948,"transformId":29902}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Accesories","id":29640,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":669.375,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":29910,"transformId":29866}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Character","id":29736,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":410.625,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":29910,"transformId":29960}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Item","id":29726,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":151.875,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":29910,"transformId":29950}
+11/11/2020 16:17:41:findObject for: //Background/Button;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Button","id":29696,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":17.72998,"worldY":2223.065,"worldZ":0.0,"idCamera":-1,"parentId":29948,"transformId":29920}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Themes","id":29734,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":928.125,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":29910,"transformId":29958}
+11/11/2020 16:17:41:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Button","id":29708,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":739.35,"worldY":2068.58032,"worldZ":0.0,"idCamera":-1,"parentId":29954,"transformId":29932}
+11/11/2020 16:17:41:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Premium","id":29730,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":1057.5,"worldY":2068.58,"worldZ":0.0,"idCamera":-1,"parentId":29948,"transformId":29954}
+11/11/2020 16:17:41:tapped object by name Button11/11/2020 16:17:41:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 16:17:42 : response received : {"name":"Button","id":29696,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":17.72998,"worldY":2223.065,"worldZ":0.0,"idCamera":-1,"parentId":29948,"transformId":29920}
+11/11/2020 16:17:41:LoadScene Main
+11-11-2020 16:17:42 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:42 : response received : Scene Loaded
+11/11/2020 16:17:41:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"StoreButton","id":30350,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":30848,"parentId":31614,"transformId":31646}
+11/11/2020 16:17:41:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"ThemeZone","id":30524,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":30848,"parentId":31614,"transformId":31812}
+11/11/2020 16:17:41:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"SettingButton","id":30366,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":30848,"parentId":31614,"transformId":31662}
+11/11/2020 16:17:41:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"StartButton","id":30440,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":30848,"parentId":31614,"transformId":31732}
+11/11/2020 16:17:41:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"MissionButton","id":30208,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":30848,"parentId":31614,"transformId":31512}
+11/11/2020 16:17:41:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:42 : response received : {"name":"OpenLeaderboard","id":30454,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":30848,"parentId":31614,"transformId":31744}
+11/11/2020 16:17:41:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"CharName","id":30234,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":30848,"parentId":31794,"transformId":31538}
+11/11/2020 16:17:41:LoadScene Shop
+11-11-2020 16:17:42 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:42 : response received : Scene Loaded
+11/11/2020 16:17:41:findObject for: //Background/StoreTitle;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"StoreTitle","id":32978,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":540.0,"worldY":2165.15015,"worldZ":0.0,"idCamera":-1,"parentId":33250,"transformId":33204}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Accesories;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Accesories","id":32942,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":669.375,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":33212,"transformId":33168}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Character;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Character","id":33038,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":410.625,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":33212,"transformId":33262}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Item;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Item","id":33028,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":151.875,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":33212,"transformId":33252}
+11/11/2020 16:17:41:findObject for: //Background/Button;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Button","id":32998,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":17.72998,"worldY":2223.065,"worldZ":0.0,"idCamera":-1,"parentId":33250,"transformId":33222}
+11/11/2020 16:17:41:findObject for: //Background/TabsSwitch/Themes;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Themes","id":33036,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":928.125,"worldY":1927.09985,"worldZ":0.0,"idCamera":-1,"parentId":33212,"transformId":33260}
+11/11/2020 16:17:41:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Button","id":33010,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":739.35,"worldY":2068.58032,"worldZ":0.0,"idCamera":-1,"parentId":33256,"transformId":33234}
+11/11/2020 16:17:41:findObject for: //Background/Premium;NAME;//;true
+11-11-2020 16:17:42 : response received : {"name":"Premium","id":33032,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":1057.5,"worldY":2068.58,"worldZ":0.0,"idCamera":-1,"parentId":33250,"transformId":33256}
+11/11/2020 16:17:41:tapped object by name Button11/11/2020 16:17:41:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 16:17:42 : response received : {"name":"Button","id":32998,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":17.72998,"worldY":2223.065,"worldZ":0.0,"idCamera":-1,"parentId":33250,"transformId":33222}
+11/11/2020 16:17:41:LoadScene Shop
+11-11-2020 16:17:42 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:42 : response received : Scene Loaded
+11/11/2020 16:17:41:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 16:17:43 : response received : {"name":"Button","id":33540,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":739.35,"worldY":2068.58032,"worldZ":0.0,"idCamera":-1,"parentId":33786,"transformId":33764}
+11/11/2020 16:17:41:tapped object by name Button11/11/2020 16:17:41:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 16:17:43 : response received : {"name":"Button","id":33540,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":739.35,"worldY":2068.58032,"worldZ":0.0,"idCamera":-1,"parentId":33786,"transformId":33764}
+11/11/2020 16:17:41:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:43 : response received : {"name":"IAPPopup","id":33506,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":540.0,"worldY":1123.0,"worldZ":0.0,"idCamera":-1,"parentId":33780,"transformId":33732}
+11/11/2020 16:17:41:findObject for: //Background/IAPPopup/Image/Close;NAME;//;true
+11-11-2020 16:17:43 : response received : {"name":"Close","id":33524,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":195.0,"worldY":2073.5,"worldZ":0.0,"idCamera":-1,"parentId":33762,"transformId":33748}
+11/11/2020 16:17:41:tapped object by name Close11/11/2020 16:17:41:GameObject: Close (UnityEngine.GameObject)
+11-11-2020 16:17:43 : response received : {"name":"Close","id":33524,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":195.0,"worldY":2073.5,"worldZ":0.0,"idCamera":-1,"parentId":33762,"transformId":33748}
+11/11/2020 16:17:42:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:43 : response received : error:notFound
+11/11/2020 16:17:42:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:43 : response received : error:notFound
+11/11/2020 16:17:43:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:44 : response received : error:notFound
+11/11/2020 16:17:43:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:44 : response received : error:notFound
+11/11/2020 16:17:44:LoadScene Shop
+11-11-2020 16:17:45 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:45 : response received : Scene Loaded
+11/11/2020 16:17:44:findObject for: //Background/Premium/Button;NAME;//;true
+11-11-2020 16:17:45 : response received : {"name":"Button","id":34070,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":739.35,"worldY":2068.58032,"worldZ":0.0,"idCamera":-1,"parentId":34316,"transformId":34294}
+11/11/2020 16:17:44:tapped object by name Button11/11/2020 16:17:44:GameObject: Button (UnityEngine.GameObject)
+11-11-2020 16:17:45 : response received : {"name":"Button","id":34070,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":739.35,"worldY":2068.58032,"worldZ":0.0,"idCamera":-1,"parentId":34316,"transformId":34294}
+11/11/2020 16:17:44:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:45 : response received : {"name":"IAPPopup","id":34036,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":540.0,"worldY":1123.0,"worldZ":0.0,"idCamera":-1,"parentId":34310,"transformId":34262}
+11/11/2020 16:17:44:findObject for: //Background/IAPPopup;NAME;//;true
+11-11-2020 16:17:45 : response received : {"name":"IAPPopup","id":34036,"x":-1,"y":-1,"z":-1,"mobileY":2247,"type":"","enabled":true,"worldX":540.0,"worldY":1123.0,"worldZ":0.0,"idCamera":-1,"parentId":34310,"transformId":34262}
+11/11/2020 16:17:45:Server version is: 1.5.7
+11-11-2020 16:17:46 : response received : 1.5.7
+11/11/2020 16:17:45:Logging is set to True
+11-11-2020 16:17:46 : response received : Ok
+11/11/2020 16:17:45:LoadScene Start
+11-11-2020 16:17:46 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:46 : response received : Scene Loaded
+11/11/2020 16:17:45:findActiveObjectByName for: UnityURLButton
+11-11-2020 16:17:46 : response received : {"name":"UnityURLButton","id":34728,"x":540,"y":18,"z":0,"mobileY":2228,"type":"","enabled":true,"worldX":540.0,"worldY":18.0,"worldZ":0.0,"idCamera":35508,"parentId":35830,"transformId":35826}
+11/11/2020 16:17:45:findActiveObjectByName for: LogoImage
+11-11-2020 16:17:46 : response received : {"name":"LogoImage","id":34730,"x":540,"y":1706,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":540.0,"worldY":1706.0,"worldZ":0.0,"idCamera":35508,"parentId":35830,"transformId":35828}
+11/11/2020 16:17:45:findActiveObjectByName for: StartText
+11-11-2020 16:17:46 : response received : {"name":"StartText","id":35100,"x":540,"y":346,"z":0,"mobileY":1900,"type":"","enabled":true,"worldX":540.0,"worldY":346.199951,"worldZ":0.0,"idCamera":35508,"parentId":35832,"transformId":35834}
+11/11/2020 16:17:45:findActiveObjectByName for: StartButton
+11-11-2020 16:17:46 : response received : {"name":"StartButton","id":35096,"x":540,"y":338,"z":0,"mobileY":1908,"type":"","enabled":true,"worldX":540.0,"worldY":337.5,"worldZ":0.0,"idCamera":35508,"parentId":35830,"transformId":35832}
+11/11/2020 16:17:45:tapped object by name StartButton11/11/2020 16:17:45:GameObject: StartButton (UnityEngine.GameObject)
+11-11-2020 16:17:46 : response received : {"name":"StartButton","id":35096,"x":540,"y":338,"z":0,"mobileY":1908,"type":"","enabled":true,"worldX":540.0,"worldY":337.5,"worldZ":0.0,"idCamera":35508,"parentId":35830,"transformId":35832}
+11/11/2020 16:17:45:findObject for: //UICamera/Loadout/CharZone/CharName;NAME;//;true
+11-11-2020 16:17:46 : response received : {"name":"CharName","id":35944,"x":544,"y":2076,"z":0,"mobileY":170,"type":"","enabled":true,"worldX":543.5094,"worldY":2075.79541,"worldZ":0.0,"idCamera":36558,"parentId":37504,"transformId":37248}
+11/11/2020 16:17:45:findActiveObjectByName for: OpenLeaderboard
+11-11-2020 16:17:46 : response received : {"name":"OpenLeaderboard","id":36164,"x":101,"y":197,"z":0,"mobileY":2049,"type":"","enabled":true,"worldX":101.328125,"worldY":197.051331,"worldZ":0.0,"idCamera":36558,"parentId":37324,"transformId":37454}
+11/11/2020 16:17:45:findObject for: //UICamera/Loadout/MissionButton;NAME;//;true
+11-11-2020 16:17:47 : response received : {"name":"MissionButton","id":35918,"x":680,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":680.375,"worldY":201.789063,"worldZ":0.0,"idCamera":36558,"parentId":37324,"transformId":37222}
+11/11/2020 16:17:45:findObject for: //UICamera/Loadout/StartButton;NAME;//;true
+11-11-2020 16:17:47 : response received : {"name":"StartButton","id":36150,"x":542,"y":481,"z":0,"mobileY":1765,"type":"","enabled":true,"worldX":541.7547,"worldY":480.784363,"worldZ":0.0,"idCamera":36558,"parentId":37324,"transformId":37442}
+11/11/2020 16:17:45:findObject for: //UICamera/Loadout/SettingButton;NAME;//;true
+11-11-2020 16:17:47 : response received : {"name":"SettingButton","id":36076,"x":996,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":996.21875,"worldY":201.789063,"worldZ":0.0,"idCamera":36558,"parentId":37324,"transformId":37372}
+11/11/2020 16:17:45:findObject for: //UICamera/Loadout/StoreButton;NAME;//;true
+11-11-2020 16:17:47 : response received : {"name":"StoreButton","id":36060,"x":400,"y":202,"z":0,"mobileY":2044,"type":"","enabled":true,"worldX":399.625,"worldY":201.789063,"worldZ":0.0,"idCamera":36558,"parentId":37324,"transformId":37356}
+11/11/2020 16:17:46:findObject for: //UICamera/Loadout/ThemeZone;NAME;//;true
+11-11-2020 16:17:47 : response received : {"name":"ThemeZone","id":36234,"x":542,"y":802,"z":0,"mobileY":1444,"type":"","enabled":true,"worldX":541.7547,"worldY":801.8922,"worldZ":0.0,"idCamera":36558,"parentId":37324,"transformId":37522}
+11/11/2020 16:17:46:LoadScene Start
+11-11-2020 16:17:47 : response received : Ok
+Scene Loaded
+11-11-2020 16:17:47 : response received : Scene Loaded
+11/11/2020 16:17:46:findActiveObjectByName for: UnityURLButton
+11-11-2020 16:17:47 : response received : {"name":"UnityURLButton","id":38652,"x":540,"y":18,"z":0,"mobileY":2228,"type":"","enabled":true,"worldX":540.0,"worldY":18.0,"worldZ":0.0,"idCamera":39432,"parentId":39754,"transformId":39750}
+11/11/2020 16:17:46:findActiveObjectByName for: LogoImage
+11-11-2020 16:17:47 : response received : {"name":"LogoImage","id":38654,"x":540,"y":1706,"z":0,"mobileY":540,"type":"","enabled":true,"worldX":540.0,"worldY":1706.0,"worldZ":0.0,"idCamera":39432,"parentId":39754,"transformId":39752}
+11/11/2020 16:17:46:findActiveObjectByName for: StartText
+11-11-2020 16:17:47 : response received : {"name":"StartText","id":39024,"x":540,"y":346,"z":0,"mobileY":1900,"type":"","enabled":true,"worldX":540.0,"worldY":346.199951,"worldZ":0.0,"idCamera":39432,"parentId":39756,"transformId":39758}
+11/11/2020 16:17:46:findActiveObjectByName for: StartButton
+11-11-2020 16:17:47 : response received : {"name":"StartButton","id":39020,"x":540,"y":338,"z":0,"mobileY":1908,"type":"","enabled":true,"worldX":540.0,"worldY":337.5,"worldZ":0.0,"idCamera":39432,"parentId":39754,"transformId":39756}

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="AppTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="AppTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
     <property name="sun.boot.library.path" value="C:\Users\Andra Cardas\.jdks\openjdk-14.0.2\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Andra Cardas/IdeaProjects/JavaStandaloneAndroidiOS"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Andra Cardas/Desktop/New folder/standalone-and-android-build-with-java-tests/JavaStandaloneAndroidiOS"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Andra Cardas\IdeaProjects\JavaStandaloneAndroidiOS"/>
+    <property name="user.dir" value="C:\Users\Andra Cardas\Desktop\New folder\standalone-and-android-build-with-java-tests\JavaStandaloneAndroidiOS"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
     <property name="os.arch" value="amd64"/>
@@ -58,5 +58,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="AppTest" name="testApp" time="0.003"/>
+  <testcase classname="AppTest" name="testApp" time="0"/>
 </testsuite>

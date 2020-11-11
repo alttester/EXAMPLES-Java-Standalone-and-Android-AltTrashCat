@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="GamePlayTest" time="168.823" errors="2" skipped="0">
+<testsuite tests="5" failures="0" name="GamePlayTest" time="26.235" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
     <property name="sun.boot.library.path" value="C:\Users\Andra Cardas\.jdks\openjdk-14.0.2\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Andra Cardas/IdeaProjects/JavaStandaloneAndroidiOS"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/Users/Andra Cardas/Desktop/New folder/standalone-and-android-build-with-java-tests/JavaStandaloneAndroidiOS"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Andra Cardas\IdeaProjects\JavaStandaloneAndroidiOS"/>
+    <property name="user.dir" value="C:\Users\Andra Cardas\Desktop\New folder\standalone-and-android-build-with-java-tests\JavaStandaloneAndroidiOS"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
     <property name="os.arch" value="amd64"/>
@@ -58,113 +58,9 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="GamePlayTest" name="GamePlayTest" time="84.411">
-    <error message="Could not create connection to 127.0.0.1:13000" type="ro.altom.altunitytester.altUnityTesterExceptions.ConnectionException">ro.altom.altunitytester.altUnityTesterExceptions.ConnectionException: Could not create connection to 127.0.0.1:13000
-	at ro.altom.altunitytester.AltUnityDriver.&lt;init&gt;(AltUnityDriver.java:92)
-	at GamePlayTest.setUp(GamePlayTest.java:27)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.lang.Throwable
-	... 26 more
-</error>
-    <system-out>2020-09-24 10:40:44 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-0 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 60 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 60 secs)...
-2020-09-24 10:40:51 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-7025 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 55 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 55 secs)...
-2020-09-24 10:40:58 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-14033 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 50 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 50 secs)...
-2020-09-24 10:41:05 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-21037 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 45 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 45 secs)...
-2020-09-24 10:41:12 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-28046 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 40 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 40 secs)...
-2020-09-24 10:41:19 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-35055 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 35 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 35 secs)...
-2020-09-24 10:41:26 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-42061 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 30 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 30 secs)...
-2020-09-24 10:41:33 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-49068 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 25 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 25 secs)...
-2020-09-24 10:41:40 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-56074 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 20 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 20 secs)...
-2020-09-24 10:41:47 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-63079 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 15 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 15 secs)...
-2020-09-24 10:41:54 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-70086 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 10 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 10 secs)...
-2020-09-24 10:42:01 INFO  AltUnityDriver:63    -   Initializing connection to 127.0.0.1:13000
-77092 [main] INFO ro.altom.altunitytester.AltUnityDriver  - Initializing connection to 127.0.0.1:13000
-AltUnityServer not running on port 13000,retrying (timing out in 5 secs)...
-AltUnityServer not running on port 13000, retrying (timing out in 5 secs)...
-</system-out>
-  </testcase>
-  <testcase classname="GamePlayTest" name="GamePlayTest" time="84.412">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at GamePlayTest.tearDown(GamePlayTest.java:50)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.RunAfters.invokeMethod(RunAfters.java:46)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</error>
-  </testcase>
+  <testcase classname="GamePlayTest" name="testGamePlayDisplayedCorrectly" time="0.703"/>
+  <testcase classname="GamePlayTest" name="testPlayerDiesWhenObstacleNotAvoided" time="23.965"/>
+  <testcase classname="GamePlayTest" name="testGameCanBePausedAndResumed" time="0.517"/>
+  <testcase classname="GamePlayTest" name="testAvoidingObstacles" time="0.517"/>
+  <testcase classname="GamePlayTest" name="testGameCanBePausedAndStopped" time="0.533"/>
 </testsuite>
