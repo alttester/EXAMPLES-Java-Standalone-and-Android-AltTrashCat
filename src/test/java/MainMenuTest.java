@@ -1,4 +1,3 @@
-//import altunity.alttrashcatj.configreader.PropFileReader;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -6,7 +5,7 @@ import org.junit.Test;
 import configreader.PropFileReader;
 import pages.MainMenuPage;
 import pages.StartPage;
-import ro.altom.altunitytester.AltUnityDriver;
+import ro.altom.alttester.AltDriver;
 
 import java.io.IOException;
 
@@ -14,14 +13,14 @@ import static org.junit.Assert.assertTrue;
 
 public class MainMenuTest {
 
-    private static AltUnityDriver driver;
+    private static AltDriver driver;
     private static StartPage startPage;
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
     public static void setUp() throws IOException {
         PropFileReader properties = new PropFileReader();
-        driver = new AltUnityDriver();
+        driver = new AltDriver();
     }
 
     @Before

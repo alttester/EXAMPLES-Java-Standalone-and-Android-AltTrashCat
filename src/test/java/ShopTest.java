@@ -6,7 +6,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.altunitytester.AltUnityDriver;
+import ro.altom.alttester.AltDriver;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 
 public class ShopTest {
 
-    private static AltUnityDriver driver;
+    private static AltDriver driver;
     private static MainMenuPage mainMenuPage;
     private static ShopPage shopPage;
 
@@ -43,7 +43,7 @@ public class ShopTest {
     @BeforeClass
     public static void setUp() throws IOException {
         PropFileReader properties = new PropFileReader();
-        driver = new AltUnityDriver();
+        driver = new AltDriver();
     }
 
     @Before

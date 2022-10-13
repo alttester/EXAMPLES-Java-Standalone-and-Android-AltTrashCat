@@ -6,8 +6,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.altunitytester.AltUnityDriver;
-import ro.altom.altunitytester.Commands.UnityCommand.AltLoadSceneParams;
+import ro.altom.alttester.AltDriver;
+import ro.altom.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
 
 import java.io.IOException;
@@ -16,14 +16,14 @@ import static org.junit.Assert.assertTrue;
 
 public class StartPageTest {
 
-    private static AltUnityDriver driver;
+    private static AltDriver driver;
     private static StartPage startPage;
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
     public static void setUp() throws IOException {
         PropFileReader properties = new PropFileReader();
-        driver = new AltUnityDriver();
+        driver = new AltDriver();
     }
 
     @Before

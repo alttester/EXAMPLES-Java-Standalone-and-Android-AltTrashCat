@@ -1,5 +1,4 @@
 
-//import altunity.alttrashcatj.pages.*;
 import configreader.PropFileReader;
 
 import pages.*;
@@ -7,7 +6,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.altunitytester.AltUnityDriver;
+import ro.altom.alttester.AltDriver;
 
 import java.io.IOException;
 
@@ -15,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 
 public class GamePlayTest {
 
-    private static AltUnityDriver driver;
+    private static AltDriver driver;
     private static MainMenuPage mainMenuPage;
     private static PauseOverlayPage pauseOverlayPage;
     private static GetAnotherChancePage getAntoherChancePage;
@@ -23,7 +22,7 @@ public class GamePlayTest {
 
     @BeforeClass
     public static void setUp() throws IOException {
-        driver = new AltUnityDriver();
+        driver = new AltDriver();
     }
 
     @Before

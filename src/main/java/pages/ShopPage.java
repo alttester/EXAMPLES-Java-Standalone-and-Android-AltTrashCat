@@ -1,10 +1,10 @@
 package pages;
 
-import ro.altom.altunitytester.AltUnityDriver;
-import ro.altom.altunitytester.AltUnityObject;
-import ro.altom.altunitytester.Commands.FindObject.AltFindObjectsParams;
-import ro.altom.altunitytester.Commands.FindObject.AltWaitForObjectsParams;
-import ro.altom.altunitytester.Commands.UnityCommand.AltLoadSceneParams;
+import ro.altom.alttester.AltDriver;
+import ro.altom.alttester.AltObject;
+import ro.altom.alttester.Commands.FindObject.AltFindObjectsParams;
+import ro.altom.alttester.Commands.FindObject.AltWaitForObjectsParams;
+import ro.altom.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
 
 import java.util.ArrayList;
@@ -13,19 +13,19 @@ import java.util.List;
 
 public class ShopPage extends BasePage {
 
-    public AltUnityObject storeTitle;
-    public AltUnityObject itemsButton;
-    public AltUnityObject charactersButton;
-    public AltUnityObject accessoriesButton;
-    public AltUnityObject themesButton;
-    public AltUnityObject premiumButton;
-    public AltUnityObject coinSection;
-    public AltUnityObject closeButton;
+    public AltObject storeTitle;
+    public AltObject itemsButton;
+    public AltObject charactersButton;
+    public AltObject accessoriesButton;
+    public AltObject themesButton;
+    public AltObject premiumButton;
+    public AltObject coinSection;
+    public AltObject closeButton;
 
-    public AltUnityObject premiumPopup;
-    public AltUnityObject closePremiumPopup;
+    public AltObject premiumPopup;
+    public AltObject closePremiumPopup;
 
-    public ShopPage(AltUnityDriver driver) {
+    public ShopPage(AltDriver driver) {
         super(driver);
     }
 
@@ -34,49 +34,49 @@ public class ShopPage extends BasePage {
     }
 
     public void getStoreTitle() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/StoreTitle").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/StoreTitle").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         storeTitle = getDriver().waitForObject(params);
     }
 
     public void getItemsButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/TabsSwitch/Item").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Item").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         itemsButton = getDriver().waitForObject(params);
     }
 
     public void getCharactersButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/TabsSwitch/Character").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Character").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         charactersButton = getDriver().waitForObject(params);
     }
 
     public void getAccessoriesButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/TabsSwitch/Accesories").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Accesories").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         accessoriesButton = getDriver().waitForObject(params);
     }
 
     public void getThemesButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/TabsSwitch/Themes").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Themes").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         themesButton = getDriver().waitForObject(params);
     }
 
     public void getPremiumButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/Premium/Button").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Premium/Button").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         premiumButton = getDriver().waitForObject(params);
     }
 
     public void getCoinSection() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/Premium").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Premium").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         coinSection = getDriver().waitForObject(params);
     }
 
     public void getCloseButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/Button").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Button").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         closeButton = getDriver().waitForObject(params);
     }
@@ -90,26 +90,26 @@ public class ShopPage extends BasePage {
 
     public Integer getShopItemCount(int itemIndex){
 
-        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Icon/Count").build();
-        List<AltUnityObject> shopItemsCounts = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Icon/Count").build();
+        List<AltObject> shopItemsCounts = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
 
         return Integer.parseInt(shopItemsCounts.get(itemIndex).getText());
     }
 
     public void clickBuyButton(int index){
-        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//NamePriceButtonZone/PriceButtonZone/BuyButton").build();
-        List<AltUnityObject> itemsBuyButtons = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//NamePriceButtonZone/PriceButtonZone/BuyButton").build();
+        List<AltObject> itemsBuyButtons = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
         itemsBuyButtons.get(index).tap();
     }
 
     public void getPopup(){
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/IAPPopup").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         premiumPopup = getDriver().waitForObject(params);
     }
 
     public void getClosePopupButton(){
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/IAPPopup/Image/Close").build();
+        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup/Image/Close").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         closePremiumPopup = getDriver().waitForObject(params);
     }
@@ -124,7 +124,7 @@ public class ShopPage extends BasePage {
 
     public boolean checkPopupOpen(){
         try{
-            AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltUnityDriver.By.PATH, "//Background/IAPPopup").build();
+            AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup").build();
             AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
             premiumPopup = getDriver().waitForObject(params);
             return true;
