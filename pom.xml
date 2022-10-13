@@ -22,11 +22,10 @@
     </build>
 
     <dependencies>
-
         <dependency>
-            <groupId>com.altom</groupId>
-            <artifactId>altunitytester-java-client</artifactId>
-            <version>1.7.0</version>
+            <artifactId>alttester</artifactId>
+            <packaging>jar</packaging>
+            <version>1.8.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
