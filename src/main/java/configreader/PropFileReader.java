@@ -1,4 +1,3 @@
-//package altunity.alttrashcatj.configreader;
 package configreader;
 
 import java.io.FileNotFoundException;

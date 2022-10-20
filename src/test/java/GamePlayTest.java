@@ -1,16 +1,18 @@
+import static org.junit.Assert.assertTrue;
 
-import configreader.PropFileReader;
+import java.io.IOException;
 
-import pages.*;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.alttester.AltDriver;
 
-import java.io.IOException;
+import com.alttester.AltDriver;
 
-import static org.junit.Assert.assertTrue;
+import pages.GamePlayPage;
+import pages.GetAnotherChancePage;
+import pages.MainMenuPage;
+import pages.PauseOverlayPage;
 
 public class GamePlayTest {
 

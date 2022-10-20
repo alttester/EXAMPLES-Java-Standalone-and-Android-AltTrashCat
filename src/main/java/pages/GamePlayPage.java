@@ -1,15 +1,14 @@
 package pages;
 
-import ro.altom.alttester.AltAltDriver;
-import ro.altom.alttester.AltObject;
-import ro.altom.alttester.Commands.FindObject.AltFindObjectsParams;
-import ro.altom.alttester.Commands.FindObject.AltWaitForObjectsParams;
-import ro.altom.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
-
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import com.alttester.AltDriver;
+import com.alttester.AltObject;
+import com.alttester.Commands.FindObject.AltFindObjectsParams;
+import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
+import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
 
 public class GamePlayPage extends BasePage {
 
@@ -45,10 +44,11 @@ public class GamePlayPage extends BasePage {
     }
 
     public int getCurrentLife() throws Exception {
-        AltCallComponentMethodParams altCallComponentMethodParams = new AltCallComponentMethodParams.Builder("CharacterInputController","get_currentLife",new Object[] {}).build();
-
-        return character.callComponentMethod(altCallComponentMethodParams,Integer.class);
+                                
+        return character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController",
+                                "get_currentLife", "Assembly-CSharp", new Object[] {}).build(), Integer.class);
     }
+
 
     public void avoidObstacles(int nrOfObstacles) throws Exception {
         AltObject character1 = character;
@@ -85,29 +85,29 @@ public class GamePlayPage extends BasePage {
             }
 
             if(obstacle.name.contains("ObstacleHighBarrier")){
-                character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","Slide",new Object[] {}).build(),Void.class);
+                character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","Slide", "Assembly-CSharp", new Object[] {}).build(),Void.class);
             }
             else if (obstacle.name.contains("ObstacleLowBarrier") || obstacle.name.contains("Rat")){
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","Jump",new Object[] {}).build(),Void.class);
+                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","Jump", "Assembly-CSharp", new Object[] {}).build(),Void.class);
 
             }
             else {
                 if (obstacle.worldZ == allObstacles.get(1).worldZ) {
                     if (obstacle.worldX == character1.worldX) {
                         if (allObstacles.get(1).worldX == -1.5f) {
-                            character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {1}).build(),Void.class);
+                            character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {1}).build(),Void.class);
                             movedRight = true;
                         } else {
-                            character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {-1}).build(),Void.class);
+                            character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {-1}).build(),Void.class);
                             movedLeft = true;
                         }
                     } else {
                         if (allObstacles.get(1).worldX == character1.worldX) {
                             if (obstacle.worldX == -1.5f) {
-                                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {1}).build(),Void.class);
+                                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {1}).build(),Void.class);
                                 movedRight = true;
                             } else {
-                                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {-1}).build(),Void.class);
+                                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {-1}).build(),Void.class);
                                 movedLeft = true;
                             }
                         }
@@ -115,7 +115,7 @@ public class GamePlayPage extends BasePage {
                 }
                 else{
                     if(obstacle.worldX == character1.worldX){
-                        character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {1}).build(),Void.class);
+                        character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {1}).build(),Void.class);
                         movedRight = true;
                     }
                 }
@@ -129,12 +129,12 @@ public class GamePlayPage extends BasePage {
             }
 
             if(movedRight){
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {-1}).build(),Void.class);
+                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {-1}).build(),Void.class);
                 movedRight = false;
             }
 
             if(movedLeft){
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane",new Object[] {1}).build(),Void.class);
+                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController","ChangeLane", "Assembly-CSharp", new Object[] {1}).build(),Void.class);
                 movedLeft = false;
             }
         }

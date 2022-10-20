@@ -20,13 +20,13 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <dependency>
-            <artifactId>alttester</artifactId>
+        <groupId>com.alttester</groupId>
+        <artifactId>alttester</artifactId>
             <packaging>jar</packaging>
             <version>1.8.0</version>
-        </dependency>
+    </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

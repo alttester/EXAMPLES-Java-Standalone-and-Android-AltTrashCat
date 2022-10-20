@@ -1,9 +1,9 @@
 package pages;
 
-import ro.altom.alttester.AltDriver;
-import ro.altom.alttester.AltObject;
-import ro.altom.alttester.Commands.FindObject.AltFindObjectsParams;
-import ro.altom.alttester.Commands.FindObject.AltWaitForObjectsParams;
+import com.alttester.AltDriver;
+import com.alttester.AltObject;
+import com.alttester.Commands.FindObject.AltFindObjectsParams;
+import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 
 public class GetAnotherChancePage extends BasePage{
 

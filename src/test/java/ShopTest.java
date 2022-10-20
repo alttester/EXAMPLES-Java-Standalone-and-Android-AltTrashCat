@@ -1,17 +1,19 @@
 
-import pages.*;
-import configreader.PropFileReader;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.alttester.AltDriver;
 
-import java.io.IOException;
+import com.alttester.AltDriver;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import configreader.PropFileReader;
+import pages.MainMenuPage;
+import pages.ShopPage;
 
 public class ShopTest {
 

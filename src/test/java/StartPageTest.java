@@ -1,18 +1,19 @@
 
-import pages.*;
-import configreader.PropFileReader;
+import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.alttester.AltDriver;
-import ro.altom.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
+import com.alttester.AltDriver;
+import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
-import java.io.IOException;
-
-import static org.junit.Assert.assertTrue;
+import configreader.PropFileReader;
+import pages.MainMenuPage;
+import pages.StartPage;
 
 public class StartPageTest {
 

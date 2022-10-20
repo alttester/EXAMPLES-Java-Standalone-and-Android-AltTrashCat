@@ -1,9 +1,9 @@
 package pages;
 
-import ro.altom.alttester.AltDriver;
+import com.alttester.AltDriver;
 
 public class BasePage {
-    private AltUDriver driver;
+    private AltDriver driver;
 
     public BasePage(AltDriver driver) {
         this.driver = driver;
