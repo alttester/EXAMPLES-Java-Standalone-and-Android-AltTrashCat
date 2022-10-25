@@ -15,10 +15,9 @@ To start the tests, depending of your OS run:
     The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatWindows.zip and need to be included under the windows/ folder.
 
 ### Running the tests on Android
-The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatAndroid.zip and needs to be included under the android/ folder.
-
 To start the tests, run:
 - ./start_tests_android.sh on Windows
+    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatAndroid.zip and needs to be included under the android/ folder.
 
 This script will:
 
