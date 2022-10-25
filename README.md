@@ -9,10 +9,10 @@ The tests are meant to be run on an Windows or MacOS device.
 To start the tests, depending of your OS run:
 
 - ./start_tests_mac.sh on MacOS/Linux
-    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatMacOS.zip and need to be included under the mac/ folder.
+    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatMacOS.zip and needs to be included under the mac/ folder.
 
 - ./start_tests_windows.sh on Windows
-    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatWindows.zip and need to be included under the windows/ folder.
+    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatWindows.zip and needs to be included under the windows/ folder.
 
 ### Running the tests on Android
 To start the tests, run:
