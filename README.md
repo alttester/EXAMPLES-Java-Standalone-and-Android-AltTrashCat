@@ -4,7 +4,7 @@ This repository shows a few Java tests that use the page object model and AltTes
 https://assetstore.unity.com/packages/essentials/tutorial-projects/endless-runner-sample-game-87901
 
 ### Running the tests on Windows or MacOS
-The tests are meant to be run on an Windows or MacOS device. The app is provided in this repository, under the mac/  and windows/ folder.
+The tests are meant to be run on an Windows or MacOS device. 
 
 To start the tests, depending of your OS run:
 
