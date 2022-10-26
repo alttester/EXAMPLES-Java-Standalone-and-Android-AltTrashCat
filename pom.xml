@@ -22,11 +22,10 @@
     </build>
     <dependencies>
         <dependency>
-        <groupId>com.alttester</groupId>
-        <artifactId>alttester</artifactId>
-            <packaging>jar</packaging>
+            <groupId>com.alttester</groupId>
+            <artifactId>alttester</artifactId>
             <version>1.8.0</version>
-    </dependency>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
