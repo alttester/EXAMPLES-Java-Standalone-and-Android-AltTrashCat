@@ -1,7 +1,7 @@
 
 echo " Start the app "
 
-open mac/TrashCatTest.app
+open mac/TrashCat.app
 
 echo "==> Run the tests ..."
 cd "/src"

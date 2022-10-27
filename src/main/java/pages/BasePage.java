@@ -1,19 +1,19 @@
 package pages;
 
-import ro.altom.altunitytester.AltUnityDriver;
+import com.alttester.AltDriver;
 
 public class BasePage {
-    private AltUnityDriver driver;
+    private AltDriver driver;
 
-    public BasePage(AltUnityDriver driver) {
+    public BasePage(AltDriver driver) {
         this.driver = driver;
     }
 
-    public AltUnityDriver getDriver() {
+    public AltDriver getDriver() {
         return driver;
     }
 
-    public void setDriver(AltUnityDriver driver) {
+    public void setDriver(AltDriver driver) {
         this.driver = driver;
     }
 }

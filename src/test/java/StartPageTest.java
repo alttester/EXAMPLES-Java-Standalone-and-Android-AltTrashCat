@@ -1,29 +1,30 @@
 
-import pages.*;
-import configreader.PropFileReader;
+import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.altunitytester.AltUnityDriver;
-import ro.altom.altunitytester.Commands.UnityCommand.AltLoadSceneParams;
 
+import com.alttester.AltDriver;
+import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
-import java.io.IOException;
-
-import static org.junit.Assert.assertTrue;
+import configreader.PropFileReader;
+import pages.MainMenuPage;
+import pages.StartPage;
 
 public class StartPageTest {
 
-    private static AltUnityDriver driver;
+    private static AltDriver driver;
     private static StartPage startPage;
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
     public static void setUp() throws IOException {
         PropFileReader properties = new PropFileReader();
-        driver = new AltUnityDriver();
+        driver = new AltDriver();
     }
 
     @Before

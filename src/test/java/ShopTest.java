@@ -1,21 +1,23 @@
 
-import pages.*;
-import configreader.PropFileReader;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+import java.io.IOException;
 
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import ro.altom.altunitytester.AltUnityDriver;
 
-import java.io.IOException;
+import com.alttester.AltDriver;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import configreader.PropFileReader;
+import pages.MainMenuPage;
+import pages.ShopPage;
 
 public class ShopTest {
 
-    private static AltUnityDriver driver;
+    private static AltDriver driver;
     private static MainMenuPage mainMenuPage;
     private static ShopPage shopPage;
 
@@ -43,7 +45,7 @@ public class ShopTest {
     @BeforeClass
     public static void setUp() throws IOException {
         PropFileReader properties = new PropFileReader();
-        driver = new AltUnityDriver();
+        driver = new AltDriver();
     }
 
     @Before
