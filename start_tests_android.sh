@@ -5,8 +5,8 @@ echo "==> Installing the app on the device..."
 adb install android/TrashCat.apk
 
 echo "==> Setup ADB port forwarding..."
-adb forward --remove-all 
-adb forward tcp:13000 tcp:13000
+adb reverse --remove-all 
+adb reverse tcp:13000 tcp:13000
 
 echo " Start the app "
 
@@ -19,3 +19,5 @@ mvn test
 echo "==>Kill app"
 adb shell am force-stop com.Altom.TrashCat
 
+echo "Remove reverse port forwaring"
+adb reverse --remove-all

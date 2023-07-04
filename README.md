@@ -16,7 +16,7 @@ To start the tests, depending of your OS run:
 - ./start_tests_windows.sh on Windows
 
     Create a folder `windows` under project.
-    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatWindows.zip and needs to be included under the windows/ folder.
+    The app is provided at https://alttester.com/app/uploads/AltTester/TrashCat/TrashCatStandAlone2_0_1.zip and needs to be included under the windows/ folder.
 
 ### Running the tests on Android
 Please make sure your android device is connected via USB before running the .sh script
@@ -25,7 +25,7 @@ To start the tests, run:
 - ./start_tests_android.sh on Windows
 
     Create a folder `android` under project.
-    The app is provided at https://altom.com/app/uploads/AltTester/TrashCat/TrashCatAndroid.zip and needs to be included under the android/ folder.
+    The app is provided at https://alttester.com/app/uploads/AltTester/TrashCat/TrashCatAndroid2_0_1.zip and needs to be included under the android/ folder.
 
 This script will:
 
