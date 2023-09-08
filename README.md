@@ -25,6 +25,7 @@ To start the tests, depending of your OS run:
 Please make sure your android device is connected via USB before running the .sh script
 
 To start the tests, run:
+
 ❗ Starting with version 2.0.0, the AltTester Desktop must be running on your PC while the tests are running.
 
 - ./start_tests_android.sh on Windows
