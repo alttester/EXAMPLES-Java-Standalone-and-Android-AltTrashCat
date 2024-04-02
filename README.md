@@ -18,8 +18,7 @@ MacOS/Linux:
     
 Windows:
 1. Install the [AltTesterDesktop](https://alttester.com/app/uploads/AltTester/desktop/AltTesterDesktopPackageMac__v2.0.1.zip), then open it.
-2. Create a folder `windows` under project.
-    The app is provided at https://alttester.com/app/uploads/AltTester/TrashCat/TrashCatStandAlone2_0_1.zip and needs to be included unzipped under the windows/ folder.
+2. Create a folder `windows` under project. The app is provided at https://alttester.com/app/uploads/AltTester/TrashCat/TrashCatStandAlone2_0_1.zip and needs to be included unzipped under the windows/ folder.
 3. Run `./start_tests_windows.sh` in your terminal.
     
 
