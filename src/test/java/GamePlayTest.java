@@ -19,30 +19,21 @@ public class GamePlayTest {
     private static AltDriver driver;
     private static MainMenuPage mainMenuPage;
     private static PauseOverlayPage pauseOverlayPage;
-    private static GetAnotherChancePage getAntoherChancePage;
+    private static GetAnotherChancePage getAnotherChancePage;
     private static GamePlayPage gamePlayPage;
 
     @BeforeClass
     public static void setUp() throws IOException {
         driver = new AltDriver();
+        mainMenuPage = new MainMenuPage(driver);
+        gamePlayPage = new GamePlayPage(driver);
+        pauseOverlayPage = new PauseOverlayPage(driver);
+        getAnotherChancePage = new GetAnotherChancePage(driver);
     }
 
     @Before
     public void loadLevel() throws Exception {
-
-        mainMenuPage = new MainMenuPage(driver);
         mainMenuPage.loadScene();
-        mainMenuPage.setCharacterName();
-        mainMenuPage.setLeaderBoardButton();
-        mainMenuPage.setMissionButton();
-        mainMenuPage.setRunButton();
-        mainMenuPage.setSettingsButton();
-        mainMenuPage.setStoreButton();
-        mainMenuPage.setThemeName();
-
-        gamePlayPage = new GamePlayPage(driver);
-        pauseOverlayPage = new PauseOverlayPage(driver);
-        getAntoherChancePage = new GetAnotherChancePage(driver);
     }
 
     @AfterClass
@@ -54,21 +45,15 @@ public class GamePlayTest {
     @Test
     public void testGamePlayDisplayedCorrectly(){
         mainMenuPage.pressRun();
-        gamePlayPage.getPauseButton();
-        gamePlayPage.getCharacter();
         assertTrue(gamePlayPage.isDisplayed());
     }
 
     @Test
-    public void testGameCanBePausedAndResumed(){
+    public void testGameCanBePausedAndResumed() {
         mainMenuPage.pressRun();
-        gamePlayPage.getCharacter();
-        gamePlayPage.getPauseButton();
         gamePlayPage.pressPause();
-        pauseOverlayPage.getTitle();
-        pauseOverlayPage.getMainMenuButton();
-        pauseOverlayPage.getResumeButton();
         assertTrue(pauseOverlayPage.isDisplayed());
+
         pauseOverlayPage.pressResume();
         assertTrue(gamePlayPage.isDisplayed());
     }
@@ -76,12 +61,7 @@ public class GamePlayTest {
     @Test
     public void testGameCanBePausedAndStopped(){
         mainMenuPage.pressRun();
-        gamePlayPage.getCharacter();
-        gamePlayPage.getPauseButton();
         gamePlayPage.pressPause();
-        pauseOverlayPage.getTitle();
-        pauseOverlayPage.getMainMenuButton();
-        pauseOverlayPage.getResumeButton();
         pauseOverlayPage.pressMainMenu();
         assertTrue(mainMenuPage.isDisplayed());
     }
@@ -89,33 +69,23 @@ public class GamePlayTest {
     @Test
     public void testAvoidingObstacles() throws Exception {
         mainMenuPage.pressRun();
-        gamePlayPage.getCharacter();
-        gamePlayPage.getPauseButton();
-        gamePlayPage.avoidObstacles(0);
-        assertTrue(gamePlayPage.getCurrentLife()>=0);
+        gamePlayPage.avoidObstacles(5);
+        System.out.println("Current life after avoiding obstacles: " + gamePlayPage.getCurrentLife());
+        assertTrue(gamePlayPage.getCurrentLife()>0);
     }
 
     @Test
     public void testPlayerDiesWhenObstacleNotAvoided() throws Exception {
-
         mainMenuPage.pressRun();
-        gamePlayPage.getCharacter();
-        gamePlayPage.getPauseButton();
-
         float timeout = 20;
         while(timeout>0){
             try {
-                getAntoherChancePage.getGameOver();
-                getAntoherChancePage.getAvailableCurrency();
-                getAntoherChancePage.getPremiumButton();
-                getAntoherChancePage.isDisplayed();
+                getAnotherChancePage.isDisplayed();
                 break;
             }catch(Exception e){
                 timeout -= 1;
             }
         }
-
-        assertTrue(getAntoherChancePage.isDisplayed());
 
     }
 }

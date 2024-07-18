@@ -2,7 +2,7 @@ package pages;
 
 import com.alttester.AltDriver;
 
-public class BasePage {
+public abstract class BasePage {
     private AltDriver driver;
 
     public BasePage(AltDriver driver) {
@@ -16,4 +16,7 @@ public class BasePage {
     public void setDriver(AltDriver driver) {
         this.driver = driver;
     }
+
+    public abstract boolean isDisplayed();
+
 }
