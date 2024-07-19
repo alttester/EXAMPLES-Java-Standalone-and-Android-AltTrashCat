@@ -32,13 +32,13 @@ public class GamePlayTest {
 
         mainMenuPage = new MainMenuPage(driver);
         mainMenuPage.loadScene();
-        mainMenuPage.setCharacterName();
-        mainMenuPage.setLeaderBoardButton();
-        mainMenuPage.setMissionButton();
-        mainMenuPage.setRunButton();
-        mainMenuPage.setSettingsButton();
-        mainMenuPage.setStoreButton();
-        mainMenuPage.setThemeName();
+        mainMenuPage.getCharacterName();
+        mainMenuPage.getLeaderBoardButton();
+        mainMenuPage.getMissionButton();
+        mainMenuPage.getRunButton();
+        mainMenuPage.getSettingsButton();
+        mainMenuPage.getStoreButton();
+        mainMenuPage.getThemeName();
 
         gamePlayPage = new GamePlayPage(driver);
         pauseOverlayPage = new PauseOverlayPage(driver);

@@ -10,73 +10,54 @@ import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 public class MainMenuPage extends BasePage{
 
     public AltObject storeButton;
-    //AltObject is a type from the AltTester framework used to interact with these elements.
-    public AltObject leaderBoardButton;
-    public AltObject settingsButton;
-    public AltObject missionButton;
-    public AltObject runButton;
-    public AltObject characterName;
-    public AltObject themeName;
 
     public MainMenuPage(AltDriver driver) {
         //constructor
         super(driver);
     }
 
-    public AltObject setStoreButton() {
+    public AltObject getStoreButton() {
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/StoreButton").build();
-        //Defines how to find the object
-        //AltFindObjectsParams: A class used to define how to locate an object in the application's UI.
-
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        //Combines the find parameters with a timeout to create the wait parameters
-
-        storeButton = getDriver().waitForObject(params);
-        return storeButton;
-        //Uses the combined parameters to wait for the object to appear in the UI and assigns it to the field.
+        return getDriver().waitForObject(params);
     }
 
-    public AltObject setLeaderBoardButton() {
+    public AltObject getLeaderBoardButton() {
         //AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.NAME, "OpenLeaderboard").build();
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/OpenLeaderboard").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        leaderBoardButton = getDriver().waitForObject(params);
-        return leaderBoardButton;
+        return getDriver().waitForObject(params);
     }
 
-    public AltObject setSettingsButton() {
+    public AltObject getSettingsButton() {
         AltFindObjectsParams par= new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/SettingButton").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        settingsButton = getDriver().waitForObject(params);
-        return settingsButton;
+        return getDriver().waitForObject(params);
     }
 
-    public AltObject setMissionButton() {
+    public AltObject getMissionButton() {
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/MissionButton").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        missionButton = getDriver().waitForObject(params);
-        return missionButton;
+        return getDriver().waitForObject(params);
     }
 
-    public AltObject setRunButton() {
+    public AltObject getRunButton() {
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/StartButton").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        runButton = getDriver().waitForObject(params);
-        return runButton;
+        return getDriver().waitForObject(params);
     }
 
-    public AltObject setCharacterName() {
+    public AltObject getCharacterName() {
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/CharZone/CharName").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        characterName = getDriver().waitForObject(params);
-        return characterName;
+        return getDriver().waitForObject(params);
     }
 
-    public AltObject setThemeName() {
+    public AltObject getThemeName() {
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/ThemeZone").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        themeName = getDriver().waitForObject(params);
-        return themeName;
+        return getDriver().waitForObject(params);
+
     }
 
     public void loadScene(){
@@ -85,23 +66,23 @@ public class MainMenuPage extends BasePage{
     }
 
     public void initializeElements() {
-        setStoreButton();
-        setLeaderBoardButton();
-        setSettingsButton();
-        setMissionButton();
-        setRunButton();
-        setCharacterName();
-        setThemeName();
+        getStoreButton();
+        getLeaderBoardButton();
+        getSettingsButton();
+        getMissionButton();
+        getRunButton();
+        getCharacterName();
+        getThemeName();
     }
     public boolean isDisplayed(){
-        if(storeButton != null && leaderBoardButton != null && settingsButton != null && missionButton != null && runButton != null && characterName != null && themeName != null){
+        if(getStoreButton()!= null && getLeaderBoardButton() != null && getSettingsButton() != null && getMissionButton() != null && getRunButton() != null && getCharacterName() != null && getThemeName() != null){
             return true;
         }
         return false;
     }
 
     public void pressRun(){
-        runButton.tap();
+        getRunButton().tap();
     }
 
     public void pressStore(){ storeButton.tap();}

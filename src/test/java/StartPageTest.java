@@ -37,7 +37,6 @@ public class StartPageTest {
     @Test
     public void testStartButtonLoadMainMenu() {
         startPage.pressStart();
-        mainMenuPage.initializeElements();
         assertTrue(mainMenuPage.isDisplayed());
     }
 

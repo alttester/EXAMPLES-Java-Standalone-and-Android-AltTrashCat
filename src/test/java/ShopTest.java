@@ -33,13 +33,13 @@ public class ShopTest {
     }
 
     private static void getAllObjectsMainMenuPage(){
-        mainMenuPage.setStoreButton();
-        mainMenuPage.setThemeName();
-        mainMenuPage.setSettingsButton();
-        mainMenuPage.setRunButton();
-        mainMenuPage.setMissionButton();
-        mainMenuPage.setLeaderBoardButton();
-        mainMenuPage.setCharacterName();
+        mainMenuPage.getStoreButton();
+        mainMenuPage.getThemeName();
+        mainMenuPage.getSettingsButton();
+        mainMenuPage.getRunButton();
+        mainMenuPage.getMissionButton();
+        mainMenuPage.getLeaderBoardButton();
+        mainMenuPage.getCharacterName();
     }
 
     @BeforeClass
