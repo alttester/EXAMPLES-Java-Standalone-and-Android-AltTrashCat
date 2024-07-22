@@ -21,37 +21,16 @@ public class ShopTest {
     private static MainMenuPage mainMenuPage;
     private static ShopPage shopPage;
 
-    private static void getAllObjectsShopPage(){
-        shopPage.getStoreTitle();
-        shopPage.getAccessoriesButton();
-        shopPage.getCharactersButton();
-        shopPage.getItemsButton();
-        shopPage.getCloseButton();
-        shopPage.getThemesButton();
-        shopPage.getPremiumButton();
-        shopPage.getCoinSection();
-    }
-
-    private static void getAllObjectsMainMenuPage(){
-        mainMenuPage.getStoreButton();
-        mainMenuPage.getThemeName();
-        mainMenuPage.getSettingsButton();
-        mainMenuPage.getRunButton();
-        mainMenuPage.getMissionButton();
-        mainMenuPage.getLeaderBoardButton();
-        mainMenuPage.getCharacterName();
-    }
-
     @BeforeClass
     public static void setUp() throws IOException {
-        PropFileReader properties = new PropFileReader();
         driver = new AltDriver();
+        mainMenuPage = new MainMenuPage(driver);
+        shopPage = new ShopPage(driver);
     }
 
     @Before
     public void loadLevel(){
-        mainMenuPage = new MainMenuPage(driver);
-        shopPage = new ShopPage(driver);
+        mainMenuPage.loadScene();
         shopPage.loadScene();
     }
 
@@ -62,36 +41,34 @@ public class ShopTest {
     }
 
     @Test
-    public void ShopPageLoadedCorrectly(){
-        getAllObjectsShopPage();
+    public void testShopPageLoadedCorrectly(){
         assertTrue(shopPage.isDisplayedCorrectly());
-        shopPage.pressClose();
     }
 
     @Test
     public void testShopPageCanBeClosed(){
-        getAllObjectsShopPage();
-        shopPage.pressClose();
-        mainMenuPage.loadScene();
-        getAllObjectsMainMenuPage();
+        shopPage.closeShopPage();
+        try {
+            // Adaugă o pauză scurtă pentru a aștepta încărcarea completă a scenei
+            Thread.sleep(3000); // Pauză de 3 secunde
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         assertTrue(mainMenuPage.isDisplayed());
     }
 
+
     @Test
     public void testPremiumPopUpOpen(){
-        shopPage.getPremiumButton();
         shopPage.pressPremiumPopUp();
-        shopPage.getPopup();
         assertTrue(shopPage.checkPopupOpen());
     }
 
     @Test
     public void testPremiumPopUpClosed(){
-        shopPage.getPremiumButton();
         shopPage.pressPremiumPopUp();
-        shopPage.getPopup();
-        shopPage.getClosePopupButton();
         shopPage.pressClosePremiumPopup();
+        assertTrue(shopPage.isDisplayedCorrectly());
         assertFalse(shopPage.checkPopupOpen());
     }
 }
