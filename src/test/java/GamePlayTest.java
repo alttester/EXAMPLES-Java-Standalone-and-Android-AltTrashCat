@@ -25,24 +25,16 @@ public class GamePlayTest {
     @BeforeClass
     public static void setUp() throws IOException {
         driver = new AltDriver();
+        mainMenuPage = new MainMenuPage(driver);
+        gamePlayPage = new GamePlayPage(driver);
+        pauseOverlayPage = new PauseOverlayPage(driver);
+        getAntoherChancePage = new GetAnotherChancePage(driver);
     }
 
     @Before
     public void loadLevel() throws Exception {
-
-        mainMenuPage = new MainMenuPage(driver);
         mainMenuPage.loadScene();
-        mainMenuPage.getCharacterName();
-        mainMenuPage.getLeaderBoardButton();
-        mainMenuPage.getMissionButton();
-        mainMenuPage.getRunButton();
-        mainMenuPage.getSettingsButton();
-        mainMenuPage.getStoreButton();
-        mainMenuPage.getThemeName();
-
-        gamePlayPage = new GamePlayPage(driver);
-        pauseOverlayPage = new PauseOverlayPage(driver);
-        getAntoherChancePage = new GetAnotherChancePage(driver);
+        mainMenuPage.pressRun();
     }
 
     @AfterClass
@@ -53,22 +45,14 @@ public class GamePlayTest {
 
     @Test
     public void testGamePlayDisplayedCorrectly(){
-        mainMenuPage.pressRun();
-        gamePlayPage.getPauseButton();
-        gamePlayPage.getCharacter();
         assertTrue(gamePlayPage.isDisplayed());
     }
 
     @Test
     public void testGameCanBePausedAndResumed(){
-        mainMenuPage.pressRun();
-        gamePlayPage.getCharacter();
-        gamePlayPage.getPauseButton();
         gamePlayPage.pressPause();
-        pauseOverlayPage.getTitle();
-        pauseOverlayPage.getMainMenuButton();
-        pauseOverlayPage.getResumeButton();
         assertTrue(pauseOverlayPage.isDisplayed());
+
         pauseOverlayPage.pressResume();
         assertTrue(gamePlayPage.isDisplayed());
     }

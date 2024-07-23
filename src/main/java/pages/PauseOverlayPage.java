@@ -16,26 +16,26 @@ public class PauseOverlayPage extends BasePage{
 
     }
 
-    public void getResumeButton(){
+    public AltObject getResumeButton(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/PauseMenu/Resume").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.resumeButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
-    public void getMainMenuButton(){
+    public AltObject getMainMenuButton(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/PauseMenu/Exit").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.mainMenuButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
-    public void getTitle(){
+    public AltObject getTitle(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/PauseMenu/Text").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.title = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
     public boolean isDisplayed(){
-        if(resumeButton != null && mainMenuButton != null && title != null){
+        if(getResumeButton() != null && getMainMenuButton() != null && getTitle() != null){
             return true;
         }
         return false;

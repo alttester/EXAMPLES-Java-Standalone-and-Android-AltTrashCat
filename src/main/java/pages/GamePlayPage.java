@@ -19,21 +19,21 @@ public class GamePlayPage extends BasePage {
         super(driver);
     }
 
-    public void getPauseButton(){
+    public AltObject getPauseButton(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/WholeUI/pauseButton").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        pauseButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
 
-    public void getCharacter(){
+    public AltObject getCharacter(){
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "PlayerPivot").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        this.character = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
     public boolean isDisplayed(){
-        if(pauseButton != null && character != null){
+        if(getPauseButton() != null && getCharacter() != null){
             return true;
         }
         return false;
