@@ -27,10 +27,9 @@ public class ShopTest {
 
     @Before
     public void loadLevel(){
-        mainMenuPage.loadScene(false);
+        mainMenuPage.loadScene(true);
         shopPage.loadScene(false);
     }
-
 
     @AfterClass
     public static void tearDown() throws Exception {
