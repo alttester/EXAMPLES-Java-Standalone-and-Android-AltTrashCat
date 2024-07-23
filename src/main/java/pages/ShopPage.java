@@ -20,6 +20,11 @@ public class ShopPage extends BasePage {
         getDriver().loadScene(new AltLoadSceneParams.Builder("Shop").build());
     }
 
+    public void loadScene(boolean loadSingle) {
+        getDriver().loadScene(new AltLoadSceneParams.Builder("Shop").
+                loadSingle(loadSingle).build());
+    }
+
     public AltObject getStoreTitle() {
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/StoreTitle").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
@@ -66,12 +71,7 @@ public class ShopPage extends BasePage {
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Button").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(5).build();
         AltObject closeButton = getDriver().waitForObject(params);
-        if (closeButton != null) {
-            System.out.println("Found close button with ID: " + closeButton.getId());
-            return closeButton;
-        } else {
-            throw new RuntimeException("Close button not found");
-        }
+        return closeButton;
     }
 
     public boolean isDisplayedCorrectly() {

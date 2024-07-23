@@ -60,9 +60,13 @@ public class MainMenuPage extends BasePage{
 
     }
 
-    public void loadScene(){
-
+    public void loadScene() {
         getDriver().loadScene(new AltLoadSceneParams.Builder("Main").build());
+    }
+
+    public void loadScene(boolean loadSingle) {
+        getDriver().loadScene(new AltLoadSceneParams.Builder("Main").
+                loadSingle(loadSingle).build());
     }
 
     public void initializeElements() {

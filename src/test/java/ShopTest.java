@@ -4,10 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import com.alttester.AltDriver;
 
@@ -30,9 +27,10 @@ public class ShopTest {
 
     @Before
     public void loadLevel(){
-        mainMenuPage.loadScene();
-        shopPage.loadScene();
+        mainMenuPage.loadScene(false);
+        shopPage.loadScene(false);
     }
+
 
     @AfterClass
     public static void tearDown() throws Exception {
@@ -48,12 +46,6 @@ public class ShopTest {
     @Test
     public void testShopPageCanBeClosed(){
         shopPage.closeShopPage();
-        try {
-            // Adaugă o pauză scurtă pentru a aștepta încărcarea completă a scenei
-            Thread.sleep(3000); // Pauză de 3 secunde
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         assertTrue(mainMenuPage.isDisplayed());
     }
 
@@ -68,7 +60,7 @@ public class ShopTest {
     public void testPremiumPopUpClosed(){
         shopPage.pressPremiumPopUp();
         shopPage.pressClosePremiumPopup();
-        assertTrue(shopPage.isDisplayedCorrectly());
         assertFalse(shopPage.checkPopupOpen());
+        assertTrue(shopPage.isDisplayedCorrectly());
     }
 }
