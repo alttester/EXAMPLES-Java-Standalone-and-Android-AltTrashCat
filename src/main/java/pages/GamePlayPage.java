@@ -40,7 +40,7 @@ public class GamePlayPage extends BasePage {
     }
 
     public void pressPause(){
-        pauseButton.tap();
+        getPauseButton().tap();
     }
 
     public int getCurrentLife() throws Exception {

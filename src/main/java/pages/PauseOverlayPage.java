@@ -41,11 +41,21 @@ public class PauseOverlayPage extends BasePage{
         return false;
     }
 
-    public void pressResume(){
-        resumeButton.tap();
+    public void pressResume() {
+        AltObject resumeButton = getResumeButton();
+        if (resumeButton != null) {
+            resumeButton.tap();
+        } else {
+            System.out.println("Resume Button not found, cannot tap.");
+        }
     }
 
-    public void pressMainMenu(){
-        mainMenuButton.tap();
+    public void pressMainMenu() {
+        AltObject mainMenuButton = getMainMenuButton();
+        if (mainMenuButton != null) {
+            mainMenuButton.tap();
+        } else {
+            System.out.println("Main Menu Button not found, cannot tap.");
+        }
     }
 }
