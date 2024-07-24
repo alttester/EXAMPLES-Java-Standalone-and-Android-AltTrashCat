@@ -58,8 +58,9 @@ public class GamePlayPage extends BasePage {
 
             AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Obstacle").build();
             List<AltObject> allObstacles = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+            System.out.println("toate obstacolele: " + allObstacles.size());
             allObstacles.sort((x,y) -> {
-                if(x.worldZ==y.worldY)
+                if(x.worldZ==y.worldZ)
                     return 0;
                 if (x.worldZ>y.worldZ){
                     return 1;
