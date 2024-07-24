@@ -51,7 +51,7 @@ public class GamePlayPage extends BasePage {
 
 
     public void avoidObstacles(int nrOfObstacles) throws Exception {
-        AltObject character1 = character;
+        AltObject character1 = getCharacter();
         boolean movedLeft = false;
         boolean movedRight = false;
         for(int i=0; i< nrOfObstacles; i++){

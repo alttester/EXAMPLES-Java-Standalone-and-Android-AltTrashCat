@@ -15,35 +15,37 @@ public class GetAnotherChancePage extends BasePage{
         super(driver);
     }
 
-    public void getGameOver(){
+    public AltObject getGameOver(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/DeathPopup/GameOver").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.gameOverButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
-    public void getPremiumButton(){
+    public AltObject getPremiumButton(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/DeathPopup/ButtonLayout/Premium Button").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.premiumButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
-    public void getAvailableCurrency(){
+    public AltObject getAvailableCurrency(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/DeathPopup/PremiumDisplay/PremiumOwnCount").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.availableCurrency = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
     public boolean isDisplayed(){
-        if(gameOverButton != null && premiumButton != null && availableCurrency != null)
+        if(getGameOver() != null && getPremiumButton () != null && getAvailableCurrency () != null)
             return true;
         return false;
     }
 
     public void pressGameOver(){
+        gameOverButton = getGameOver();
         gameOverButton.tap();
     }
 
-    public void pressPremiumBotton(){
+    public void pressPremiumButton(){
+        premiumButton= getPremiumButton ();
         premiumButton.tap();
     }
 }
