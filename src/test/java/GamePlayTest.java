@@ -71,14 +71,14 @@ public class GamePlayTest {
     @Test
     public void testAvoidingObstacles() throws Exception {
         mainMenuPage.pressRun();
-        gamePlayPage.avoidObstacles(2);
+        gamePlayPage.avoidObstacles(5);
         System.out.println("Current life after avoiding obstacles: " + gamePlayPage.getCurrentLife());
-        assertTrue(gamePlayPage.getCurrentLife()>=0);
+        assertTrue(gamePlayPage.getCurrentLife()>0);
     }
 
     @Test
     public void testPlayerDiesWhenObstacleNotAvoided() throws Exception {
-
+        mainMenuPage.pressRun();
         float timeout = 20;
         while(timeout>0){
             try {
