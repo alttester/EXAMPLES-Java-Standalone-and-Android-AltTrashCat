@@ -1,8 +1,6 @@
 import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
-import java.time.Duration;
-import java.time.Instant;
 
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -21,7 +19,7 @@ public class GamePlayTest {
     private static AltDriver driver;
     private static MainMenuPage mainMenuPage;
     private static PauseOverlayPage pauseOverlayPage;
-    private static GetAnotherChancePage getAntoherChancePage;
+    private static GetAnotherChancePage getAnotherChancePage;
     private static GamePlayPage gamePlayPage;
 
     @BeforeClass
@@ -30,7 +28,7 @@ public class GamePlayTest {
         mainMenuPage = new MainMenuPage(driver);
         gamePlayPage = new GamePlayPage(driver);
         pauseOverlayPage = new PauseOverlayPage(driver);
-        getAntoherChancePage = new GetAnotherChancePage(driver);
+        getAnotherChancePage = new GetAnotherChancePage(driver);
     }
 
     @Before
@@ -82,7 +80,7 @@ public class GamePlayTest {
         float timeout = 20;
         while(timeout>0){
             try {
-                getAntoherChancePage.isDisplayed();
+                getAnotherChancePage.isDisplayed();
                 break;
             }catch(Exception e){
                 timeout -= 1;
