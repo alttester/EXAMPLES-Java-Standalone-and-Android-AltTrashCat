@@ -78,6 +78,7 @@ public class MainMenuPage extends BasePage{
         getCharacterName();
         getThemeName();
     }
+    @Override
     public boolean isDisplayed(){
         if(getStoreButton()!= null && getLeaderBoardButton() != null && getSettingsButton() != null && getMissionButton() != null && getRunButton() != null && getCharacterName() != null && getThemeName() != null){
             return true;

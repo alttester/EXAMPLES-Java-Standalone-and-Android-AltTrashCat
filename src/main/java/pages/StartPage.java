@@ -15,7 +15,7 @@ public class StartPage extends BasePage {
     public void load() {
         getDriver().loadScene(new AltLoadSceneParams.Builder("Start").build());
     }
-
+    @Override
     public boolean isDisplayed() {
         return (getStartButton() != null && getStartText() != null && getLogoImage() != null && getUnityUrlButton() != null);
     }

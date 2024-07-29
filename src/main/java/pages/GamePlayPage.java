@@ -31,6 +31,7 @@ public class GamePlayPage extends BasePage {
         return getDriver().waitForObject(params);
     }
 
+    @Override
     public boolean isDisplayed(){
         if(getPauseButton() != null && getCharacter() != null){
             return true;

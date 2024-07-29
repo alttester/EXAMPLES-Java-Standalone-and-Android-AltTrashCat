@@ -16,6 +16,7 @@ public class ShopPage extends BasePage {
         super(driver);
     }
 
+
     public void loadScene() {
         getDriver().loadScene(new AltLoadSceneParams.Builder("Shop").build());
     }
@@ -73,8 +74,8 @@ public class ShopPage extends BasePage {
         AltObject closeButton = getDriver().waitForObject(params);
         return closeButton;
     }
-
-    public boolean isDisplayedCorrectly() {
+    @Override
+    public boolean isDisplayed() {
         if (getStoreTitle() != null && getItemsButton() != null && getCharactersButton() != null &&
                 getAccessoriesButton() != null && getThemesButton() != null && getPremiumButton() != null && getCoinSection() != null && getCloseButton() != null) {
             return true;

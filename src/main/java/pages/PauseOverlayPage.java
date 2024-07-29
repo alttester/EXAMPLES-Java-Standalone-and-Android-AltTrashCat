@@ -33,7 +33,7 @@ public class PauseOverlayPage extends BasePage{
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
         return getDriver().waitForObject(params);
     }
-
+    @Override
     public boolean isDisplayed(){
         if(getResumeButton() != null && getMainMenuButton() != null && getTitle() != null){
             return true;

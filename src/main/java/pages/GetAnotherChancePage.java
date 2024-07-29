@@ -33,6 +33,8 @@ public class GetAnotherChancePage extends BasePage{
         return getDriver().waitForObject(params);
     }
 
+
+    @Override
     public boolean isDisplayed(){
         if(getGameOver() != null && getPremiumButton () != null && getAvailableCurrency () != null)
             return true;

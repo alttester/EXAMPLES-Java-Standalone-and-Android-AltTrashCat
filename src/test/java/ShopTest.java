@@ -39,7 +39,7 @@ public class ShopTest {
 
     @Test
     public void testShopPageLoadedCorrectly(){
-        assertTrue(shopPage.isDisplayedCorrectly());
+        assertTrue(shopPage.isDisplayed());
     }
 
     @Test
@@ -60,6 +60,6 @@ public class ShopTest {
         shopPage.pressPremiumPopUp();
         shopPage.pressClosePremiumPopup();
         assertFalse(shopPage.checkPopupOpen());
-        assertTrue(shopPage.isDisplayedCorrectly());
+        assertTrue(shopPage.isDisplayed());
     }
 }
