@@ -2,7 +2,7 @@ package pages;
 
 import com.alttester.AltDriver;
 
-public abstract class BasePage implements Displayable {
+public abstract class BasePage {
     private AltDriver driver;
 
     public BasePage(AltDriver driver) {
@@ -17,7 +17,6 @@ public abstract class BasePage implements Displayable {
         this.driver = driver;
     }
 
-    @Override
     public abstract boolean isDisplayed();
 
 }
