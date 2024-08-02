@@ -13,3 +13,6 @@ allure serve allure-results &
 echo "==>Kill app"
 taskkill //PID $(tasklist | grep TrashCat.exe | awk '{print $2}' ) //T //F
 
+# Keep the terminal open
+echo "Script execution completed. Press any key to exit."
+read -n 1 -s
