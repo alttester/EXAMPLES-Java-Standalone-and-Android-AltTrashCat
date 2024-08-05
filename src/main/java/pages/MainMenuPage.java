@@ -12,7 +12,6 @@ public class MainMenuPage extends BasePage{
     public AltObject storeButton;
 
     public MainMenuPage(AltDriver driver) {
-        //constructor
         super(driver);
     }
 
@@ -23,7 +22,6 @@ public class MainMenuPage extends BasePage{
     }
 
     public AltObject getLeaderBoardButton() {
-        //AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.NAME, "OpenLeaderboard").build();
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/OpenLeaderboard").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
         return getDriver().waitForObject(params);
@@ -69,15 +67,6 @@ public class MainMenuPage extends BasePage{
                 loadSingle(loadSingle).build());
     }
 
-    public void initializeElements() {
-        getStoreButton();
-        getLeaderBoardButton();
-        getSettingsButton();
-        getMissionButton();
-        getRunButton();
-        getCharacterName();
-        getThemeName();
-    }
     @Override
     public boolean isDisplayed(){
         if(getStoreButton()!= null && getLeaderBoardButton() != null && getSettingsButton() != null && getMissionButton() != null && getRunButton() != null && getCharacterName() != null && getThemeName() != null){

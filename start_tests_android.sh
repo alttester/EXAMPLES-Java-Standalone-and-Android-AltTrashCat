@@ -24,3 +24,6 @@ adb shell am force-stop com.Altom.TrashCat
 
 echo "Remove reverse port forwarding"
 adb reverse --remove-all
+
+echo "Script execution completed. Press any key to exit."
+read -n 1 -s
