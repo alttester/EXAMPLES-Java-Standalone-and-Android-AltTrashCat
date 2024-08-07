@@ -16,36 +16,46 @@ public class PauseOverlayPage extends BasePage{
 
     }
 
-    public void getResumeButton(){
+    public AltObject getResumeButton(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/PauseMenu/Resume").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.resumeButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
-    public void getMainMenuButton(){
+    public AltObject getMainMenuButton(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/PauseMenu/Exit").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.mainMenuButton = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
 
-    public void getTitle(){
+    public AltObject getTitle(){
         AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Game/PauseMenu/Text").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        this.title = getDriver().waitForObject(params);
+        return getDriver().waitForObject(params);
     }
-
+    @Override
     public boolean isDisplayed(){
-        if(resumeButton != null && mainMenuButton != null && title != null){
+        if(getResumeButton() != null && getMainMenuButton() != null && getTitle() != null){
             return true;
         }
         return false;
     }
 
-    public void pressResume(){
-        resumeButton.tap();
+    public void pressResume() {
+        AltObject resumeButton = getResumeButton();
+        if (resumeButton != null) {
+            resumeButton.tap();
+        } else {
+            System.out.println("Resume Button not found, cannot tap.");
+        }
     }
 
-    public void pressMainMenu(){
-        mainMenuButton.tap();
+    public void pressMainMenu() {
+        AltObject mainMenuButton = getMainMenuButton();
+        if (mainMenuButton != null) {
+            mainMenuButton.tap();
+        } else {
+            System.out.println("Main Menu Button not found, cannot tap.");
+        }
     }
 }
