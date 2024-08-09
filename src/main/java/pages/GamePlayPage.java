@@ -206,10 +206,6 @@ public class GamePlayPage extends BasePage {
             return x.worldZ > y.worldZ ? 1 : -1;
         });
 
-        System.out.println("Lista completă de pești detectați (cu posibile duplicate):");
-        for (AltObject fish : allFishbones) {
-            System.out.println("Pește detectat: ID = " + fish.getId() + ", X = " + fish.worldX + ", Z = " + fish.worldZ);
-        }
 
         Set<Integer> uniqueFishIds = new HashSet<>();
         List<AltObject> middleLaneFishbones = new ArrayList<>();
@@ -223,6 +219,7 @@ public class GamePlayPage extends BasePage {
                 if (fish.worldZ < lastFishZ) {
                     fishResetCounter++;
                     fishZOffset = fishResetCounter * 200; // Adjust offset based on fishbones' reset points
+                    System.out.println("Reset detected!");
                 }
                 lastFishZ = fish.worldZ;
 
@@ -234,7 +231,7 @@ public class GamePlayPage extends BasePage {
             }
         }
 
-        System.out.println("Numărul total de pești detectați (cu duplicate): " + allFishbones.size());
+       //System.out.println("Numărul total de pești detectați (cu duplicate): " + allFishbones.size());
         System.out.println("Numărul total de pești unici pe banda din mijloc: " + middleLaneFishbones.size());
         return middleLaneFishbones;
     }

@@ -158,7 +158,7 @@ public class GamePlayTest {
             if (fish.worldZ <= lastCatZ + catZOffset + tolerance && !collectedFishIds.contains(fish.id)) {
                 collectedFishCount++;
                 collectedFishIds.add(fish.id);
-                System.out.println("4a   Pește colectat la Z: " + fish.worldZ + ", X: " + fish.worldX);
+                System.out.println("    Pește "+ fish.getId() +" colectat la Z: " + fish.worldZ + ", X: " + fish.worldX);
             }
         }
 
