@@ -201,7 +201,6 @@ public class GamePlayPage extends BasePage {
         // Căutăm toate obiectele de tip Fishbone
         AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
         List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
-        System.out.println("Toți peștii sunt în număr de " + allFishbones.size());
 
         // Sortare folosind expresii lambda
         allFishbones.sort((x, y) -> {
@@ -209,9 +208,39 @@ public class GamePlayPage extends BasePage {
             return x.worldZ > y.worldZ ? 1 : -1;
         });
 
-        // Returnăm lista de pești
-        return allFishbones;
+
+        // Return only fishbones on the middle lane
+        List<AltObject> middleLaneFishbones = new ArrayList<>();
+        float lastFishZ = 0.0f;
+        float fishZOffset = 0.0f;
+        int fishResetCounter = 0;
+
+        for (AltObject fish : allFishbones) {
+
+            // Strictly check if the fish is in the middle lane
+            if (fish.worldX == 0.0f) {
+                // Detect reset for the fish by checking if current Z is much smaller than the last Z
+                System.out.println("   Fishbone " + fish.getId()+ " detected at X: " + fish.worldX + ", Z: " + fish.worldZ);
+                if (fish.worldZ < lastFishZ) {
+                    fishResetCounter++;
+                    fishZOffset = fishResetCounter * 200; // Adjust offset based on fishbones' reset points
+
+                }
+                lastFishZ = fish.worldZ;
+
+                float adjustedFishZ = fish.worldZ + fishZOffset;
+                fish.worldZ = adjustedFishZ; // Update fish Z to the adjusted value
+
+                middleLaneFishbones.add(fish);
+                System.out.println("      -> Fishbone " + fish.getId() + " detected at X: " + fish.worldX + ", Z: " + adjustedFishZ + " corectat");
+
+            }
+        }
+
+        System.out.println("Numărul de pești pe mijloc după filtrare: " + middleLaneFishbones.size());
+        return middleLaneFishbones;
     }
+
 
     public int getCollectedCoinsNumber() throws Exception {
         AltObject character = getCharacter();
@@ -226,10 +255,6 @@ public class GamePlayPage extends BasePage {
         if (coinsUI == null) {
             throw new NullPointerException("CoinText object not found");
         }
-
-        System.out.println("CoinText object found name: " + coinsUI.getName());
-        System.out.println("CoinText object found id: " + coinsUI.getId());
-        System.out.println("CoinText object found text: " + coinsUI.getText());
 
         return Integer.parseInt(coinsUI.getText());
     }
