@@ -3,7 +3,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.alttester.AltObject;
 import com.alttester.AltDriver;
@@ -106,13 +108,18 @@ public class GamePlayTest {
         float catZOffset = 0.0f;
         int catResetCounter = 0;
 
+        Set<Integer> uniqueFishIds = new HashSet<>();
+        List<AltObject> middleLaneFishbones = new ArrayList<>();
+
+        AltObject character = null;  // Declared outside the loop to access after the loop ends
+
         while (System.currentTimeMillis() - startTime < duration) {
             try {
                 getAnotherChancePage.isDisplayed();
                 break;
             } catch (Exception e) {
                 if (System.currentTimeMillis() >= nextTimestamp) {
-                    AltObject character = gamePlayPage.getCharacter();
+                    character = gamePlayPage.getCharacter();
 
                     System.out.println("Timestamp= " + (System.currentTimeMillis() - startTime) + "ms" +  "; Pisica se află la X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + character.worldZ);
 
@@ -120,39 +127,46 @@ public class GamePlayTest {
                     if (character.worldZ < lastCatZ) {
                         catResetCounter++;
                         catZOffset = catResetCounter * 100;
+                        System.out.println("Origin reset detected! New Z Offset: " + catZOffset);
                         // Adjust offset based on cat's reset points
                     }
                     lastCatZ = character.worldZ;
 
                     float adjustedCatZ = character.worldZ + catZOffset;
 
-
-                    List<AltObject> allFishbones = gamePlayPage.findAllFish();  // Fishbones are already adjusted here
-
-                 /*   for (AltObject fish : allFishbones) {
-                        // Assuming middle lane fishbones have X close to 0.0
-                        if (Math.abs(fish.worldX) < 0.1 && !collectedFishIds.contains(fish.id)) {
-                            // Check if the cat has passed this fishbone (with tolerance)
-                            if (fish.worldZ < adjustedCatZ + tolerance) {
-                                collectedFishCount++;
-                                collectedFishIds.add(fish.id);
-                                System.out.println("4a   Pește colectat la Z: " + fish.worldZ + ", X: " + fish.worldX);
-                            }
+                    // Update middleLaneFishbones by adding new fishbones spawned during the game
+                    List<AltObject> currentFishbones = gamePlayPage.findAllFish();
+                    for (AltObject fish : currentFishbones) {
+                        if (uniqueFishIds.add(fish.getId())) { // Add only unique fishbones
+                            middleLaneFishbones.add(fish);
+                            System.out.println("Pește nou detectat și adăugat: ID = " + fish.getId() + ", Z = " + fish.worldZ);
                         }
-                    }*/
+                    }
 
                     nextTimestamp += interval;
                 }
             }
         }
 
-        int gameReportedCoins = gamePlayPage.getCollectedCoinsNumber();
-        System.out.println("Numărul total de pești colectați: " + collectedFishCount);
-        System.out.println("Numărul total afișat de joc: " + gameReportedCoins);
+        // Log cat's final position when it dies
+        if (character != null) {
+            System.out.println("Pisica a murit. Coordonatele finale sunt: X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + (character.worldZ + catZOffset));
+        }
 
-        // Optional: Assert to ensure the counts match
-       // assertEquals("Numărul de pești colectați nu corespunde cu numărul afișat de joc!", collectedFishCount, gameReportedCoins);
+        // After the loop, when the cat has died, check how many fishbones were passed
+        for (AltObject fish : middleLaneFishbones) {
+            if (fish.worldZ <= lastCatZ + catZOffset + tolerance && !collectedFishIds.contains(fish.id)) {
+                collectedFishCount++;
+                collectedFishIds.add(fish.id);
+                System.out.println("4a   Pește colectat la Z: " + fish.worldZ + ", X: " + fish.worldX);
+            }
+        }
+
+        System.out.println("Numărul total de pești colectați: " + collectedFishCount);
+        int collectedCoins = gamePlayPage.getCollectedCoinsNumber();
+        assertEquals(collectedFishCount, collectedCoins );
     }
+
 
 
     @Test

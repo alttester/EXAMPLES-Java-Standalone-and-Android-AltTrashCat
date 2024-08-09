@@ -1,8 +1,6 @@
 package pages;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import com.alttester.AltDriver;
 import com.alttester.AltObject;
@@ -208,23 +206,23 @@ public class GamePlayPage extends BasePage {
             return x.worldZ > y.worldZ ? 1 : -1;
         });
 
+        System.out.println("Lista completă de pești detectați (cu posibile duplicate):");
+        for (AltObject fish : allFishbones) {
+            System.out.println("Pește detectat: ID = " + fish.getId() + ", X = " + fish.worldX + ", Z = " + fish.worldZ);
+        }
 
-        // Return only fishbones on the middle lane
+        Set<Integer> uniqueFishIds = new HashSet<>();
         List<AltObject> middleLaneFishbones = new ArrayList<>();
         float lastFishZ = 0.0f;
         float fishZOffset = 0.0f;
         int fishResetCounter = 0;
 
         for (AltObject fish : allFishbones) {
-
-            // Strictly check if the fish is in the middle lane
-            if (fish.worldX == 0.0f) {
+            if (fish.worldX == 0.0f && uniqueFishIds.add(fish.getId())) { // Doar pești unici de pe banda din mijloc
                 // Detect reset for the fish by checking if current Z is much smaller than the last Z
-                System.out.println("   Fishbone " + fish.getId()+ " detected at X: " + fish.worldX + ", Z: " + fish.worldZ);
                 if (fish.worldZ < lastFishZ) {
                     fishResetCounter++;
                     fishZOffset = fishResetCounter * 200; // Adjust offset based on fishbones' reset points
-
                 }
                 lastFishZ = fish.worldZ;
 
@@ -232,15 +230,14 @@ public class GamePlayPage extends BasePage {
                 fish.worldZ = adjustedFishZ; // Update fish Z to the adjusted value
 
                 middleLaneFishbones.add(fish);
-                System.out.println("      -> Fishbone " + fish.getId() + " detected at X: " + fish.worldX + ", Z: " + adjustedFishZ + " corectat");
-
+                System.out.println("Pește adăugat în middleLaneFishbones: ID = " + fish.getId() + ", Z = " + adjustedFishZ);
             }
         }
 
-        System.out.println("Numărul de pești pe mijloc după filtrare: " + middleLaneFishbones.size());
+        System.out.println("Numărul total de pești detectați (cu duplicate): " + allFishbones.size());
+        System.out.println("Numărul total de pești unici pe banda din mijloc: " + middleLaneFishbones.size());
         return middleLaneFishbones;
     }
-
 
     public int getCollectedCoinsNumber() throws Exception {
         AltObject character = getCharacter();
