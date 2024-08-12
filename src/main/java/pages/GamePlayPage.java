@@ -196,16 +196,13 @@ public class GamePlayPage extends BasePage {
         }
     }
     public List<AltObject> findAllFish() throws Exception {
-        // Căutăm toate obiectele de tip Fishbone
         AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
         List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
 
-        // Sortare folosind expresii lambda
         allFishbones.sort((x, y) -> {
             if (x.worldZ == y.worldZ) return 0;
             return x.worldZ > y.worldZ ? 1 : -1;
         });
-
 
         Set<Integer> uniqueFishIds = new HashSet<>();
         List<AltObject> middleLaneFishbones = new ArrayList<>();
@@ -218,7 +215,7 @@ public class GamePlayPage extends BasePage {
                 // Detect reset for the fish by checking if current Z is much smaller than the last Z
                 if (fish.worldZ < lastFishZ) {
                     fishResetCounter++;
-                    fishZOffset = fishResetCounter * 200; // Adjust offset based on fishbones' reset points
+                    fishZOffset = fishResetCounter * 100; // Adjust offset by 100 for each reset
                     System.out.println("Reset detected!");
                 }
                 lastFishZ = fish.worldZ;
@@ -231,10 +228,10 @@ public class GamePlayPage extends BasePage {
             }
         }
 
-       //System.out.println("Numărul total de pești detectați (cu duplicate): " + allFishbones.size());
         System.out.println("Numărul total de pești unici pe banda din mijloc: " + middleLaneFishbones.size());
         return middleLaneFishbones;
     }
+
 
     public int getCollectedCoinsNumber() throws Exception {
         AltObject character = getCharacter();

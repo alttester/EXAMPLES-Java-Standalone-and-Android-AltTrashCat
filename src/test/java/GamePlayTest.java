@@ -94,6 +94,7 @@ public class GamePlayTest {
     @Test
     public void testCollectFishesOnMiddleLane() throws Exception {
         mainMenuPage.pressRun();
+        AltObject character = null;
 
         int collectedFishCount = 0;  // Counter for the number of fishbones collected
         long startTime = System.currentTimeMillis();
@@ -101,17 +102,15 @@ public class GamePlayTest {
         long interval = 20; // 20 milliseconds
         long nextTimestamp = startTime + interval;
 
-        double tolerance = 0.3;  // Tolerance for checking if the cat has passed the fishbone
-        List<Integer> collectedFishIds = new ArrayList<>();
-
         float lastCatZ = 0.0f;
         float catZOffset = 0.0f;
         int catResetCounter = 0;
 
+        double tolerance = 0.3;  // Tolerance for checking if the cat has passed the fishbone
+        List<Integer> collectedFishIds = new ArrayList<>();
         Set<Integer> uniqueFishIds = new HashSet<>();
         List<AltObject> middleLaneFishbones = new ArrayList<>();
 
-        AltObject character = null;  // Declared outside the loop to access after the loop ends
 
         while (System.currentTimeMillis() - startTime < duration) {
             try {
