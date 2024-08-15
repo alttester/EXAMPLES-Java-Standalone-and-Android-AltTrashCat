@@ -10,8 +10,8 @@ import java.util.Set;
 import com.alttester.AltObject;
 import com.alttester.AltDriver;
 import org.junit.*;
-
-import com.alttester.AltDriver;
+import java.util.Map;
+import java.util.HashMap;
 
 import pages.GamePlayPage;
 import pages.GetAnotherChancePage;
@@ -91,26 +91,33 @@ public class GamePlayTest {
             }
         }
     }
+
+    @Test
+    public void testFishCollectMultipleTimes() throws Exception {
+
+        for (int i = 0; i < 5; i++) {
+            mainMenuPage.loadScene();
+            testCollectFishesOnMiddleLane();
+        }
+    }
     @Test
     public void testCollectFishesOnMiddleLane() throws Exception {
         mainMenuPage.pressRun();
-        AltObject character = null;
 
-        int collectedFishCount = 0;  // Counter for the number of fishbones collected
+        int collectedFishCount = 0;  // Counter for the number of fish bones collected
         long startTime = System.currentTimeMillis();
         long duration = 25000; // 25 seconds
         long interval = 20; // 20 milliseconds
         long nextTimestamp = startTime + interval;
 
-        float lastCatZ = 0.0f;
-        float catZOffset = 0.0f;
+        int lastCatZ = 0;
+        int catZOffset = 0;
         int catResetCounter = 0;
 
-        double tolerance = 0.3;  // Tolerance for checking if the cat has passed the fishbone
         List<Integer> collectedFishIds = new ArrayList<>();
-        Set<Integer> uniqueFishIds = new HashSet<>();
         List<AltObject> middleLaneFishbones = new ArrayList<>();
 
+        AltObject character = null;  // Declared outside the loop to access after the loop ends
 
         while (System.currentTimeMillis() - startTime < duration) {
             try {
@@ -120,25 +127,25 @@ public class GamePlayTest {
                 if (System.currentTimeMillis() >= nextTimestamp) {
                     character = gamePlayPage.getCharacter();
 
-                    System.out.println("Timestamp= " + (System.currentTimeMillis() - startTime) + "ms" +  "; Pisica se află la X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + character.worldZ);
+                    int currentCatZ = (int) character.worldZ;
+                    int adjustedCatZ = currentCatZ + catZOffset;
+                    System.out.println("@test Timestamp= " + (System.currentTimeMillis() - startTime) + "ms" +  "; Pisica se află la X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + adjustedCatZ);
 
-                    // Detect reset for the cat by checking if current Z is much smaller than the last Z
-                    if (character.worldZ < lastCatZ) {
+                    // Detect reset for the cat by checking if current Z is smaller than the last Z
+                    if (currentCatZ < lastCatZ) {
                         catResetCounter++;
                         catZOffset = catResetCounter * 100;
-                        System.out.println("Origin reset detected! New Z Offset: " + catZOffset);
-                        // Adjust offset based on cat's reset points
+                        System.out.println("@test Origin reset detected! New cat Z Offset: " + catZOffset);
                     }
-                    lastCatZ = character.worldZ;
+                    lastCatZ = currentCatZ;
 
-                    float adjustedCatZ = character.worldZ + catZOffset;
-
-                    // Update middleLaneFishbones by adding new fishbones spawned during the game
+                    // Retrieve all fishbones on the middle lane
                     List<AltObject> currentFishbones = gamePlayPage.findAllFish();
+
                     for (AltObject fish : currentFishbones) {
-                        if (uniqueFishIds.add(fish.getId())) { // Add only unique fishbones
+                        if (!collectedFishIds.contains(fish.getId())) {
+                            collectedFishIds.add(fish.getId());
                             middleLaneFishbones.add(fish);
-                            System.out.println("Pește nou detectat și adăugat: ID = " + fish.getId() + ", Z = " + fish.worldZ);
                         }
                     }
 
@@ -149,27 +156,32 @@ public class GamePlayTest {
 
         // Log cat's final position when it dies
         if (character != null) {
-            System.out.println("Pisica a murit. Coordonatele finale sunt: X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + (character.worldZ + catZOffset));
-        }
+            int finalAdjustedCatZ = (int) character.worldZ + catZOffset;
+            System.out.println("Pisica a murit. Coordonatele finale sunt: X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + finalAdjustedCatZ);
 
-        // After the loop, when the cat has died, check how many fishbones were passed
-        for (AltObject fish : middleLaneFishbones) {
-            if (fish.worldZ <= lastCatZ + catZOffset + tolerance && !collectedFishIds.contains(fish.id)) {
-                collectedFishCount++;
-                collectedFishIds.add(fish.id);
-                System.out.println("    Pește "+ fish.getId() +" colectat la Z: " + fish.worldZ + ", X: " + fish.worldX);
+            System.out.println("Toti pestii din lista colectati:" );
+            for (AltObject fish : middleLaneFishbones) {
+
+                System.out.println("            Pește in middleLaneFishbones: ID = " + fish.getId() + ", Z = " + fish.worldZ );
+
+            }
+
+            for (AltObject fish : middleLaneFishbones) {
+                int fishZ = (int) fish.worldZ;
+                if (fishZ < finalAdjustedCatZ) {
+                    collectedFishCount++;
+                    System.out.println("    @test Pește "+ fish.getId() +" colectat la Z: " + fishZ + ", X: " + fish.worldX);
+                }
             }
         }
 
-        System.out.println("Numărul total de pești colectați: " + collectedFishCount);
+        //System.out.println("@test Numărul total de pești colectați: " + collectedFishCount);
         int collectedCoins = gamePlayPage.getCollectedCoinsNumber();
-        assertEquals(collectedFishCount, collectedCoins );
+        assertEquals(collectedCoins, collectedFishCount);
     }
 
-
-
     @Test
-     public void testDistanceRun() throws Exception {
+    public void testDistanceRun() throws Exception {
          mainMenuPage.pressRun();
 
          AltObject characterStart = gamePlayPage.getCharacter();
@@ -242,7 +254,7 @@ public class GamePlayTest {
          assertEquals("!!!Discrepanță între distanța calculată și cea afișată în joc.", distanceRun, Math.round(zDistance), 1);
  }
 
-   @Test @Ignore
+    @Test @Ignore
     public void testDistanceRunMultipleTimes() throws Exception {
 
         for (int i = 0; i < 15; i++) {

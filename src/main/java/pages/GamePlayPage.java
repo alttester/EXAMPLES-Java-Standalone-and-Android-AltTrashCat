@@ -7,6 +7,7 @@ import com.alttester.AltObject;
 import com.alttester.Commands.FindObject.AltFindObjectsParams;
 import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
+import org.glassfish.grizzly.utils.Pair;
 
 import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
 import static org.apache.logging.log4j.core.util.Integers.parseInt;
@@ -195,43 +196,27 @@ public class GamePlayPage extends BasePage {
             }
         }
     }
+
+
+
     public List<AltObject> findAllFish() throws Exception {
         AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
         List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
 
         allFishbones.sort((x, y) -> {
-            if (x.worldZ == y.worldZ) return 0;
-            return x.worldZ > y.worldZ ? 1 : -1;
-        });
+            int xZ = (int) x.worldZ;
+            int yZ = (int) y.worldZ;
+            return Integer.compare(xZ, yZ);
+        }); //Lista allFishbones va fi sortată în ordine crescătoare în funcție de coordonatele worldZ ale fiecărui obiect, ceea ce înseamnă că obiectele cu valorile worldZ cele mai mici vor fi la începutul listei, iar cele cu valorile worldZ mai mari vor fi la sfârșit.
 
-        Set<Integer> uniqueFishIds = new HashSet<>();
         List<AltObject> middleLaneFishbones = new ArrayList<>();
-        float lastFishZ = 0.0f;
-        float fishZOffset = 0.0f;
-        int fishResetCounter = 0;
 
-        for (AltObject fish : allFishbones) {
-            if (fish.worldX == 0.0f && uniqueFishIds.add(fish.getId())) { // Doar pești unici de pe banda din mijloc
-                // Detect reset for the fish by checking if current Z is much smaller than the last Z
-                if (fish.worldZ < lastFishZ) {
-                    fishResetCounter++;
-                    fishZOffset = fishResetCounter * 100; // Adjust offset by 100 for each reset
-                    System.out.println("Reset detected!");
-                }
-                lastFishZ = fish.worldZ;
+        for (AltObject fish : allFishbones)
+            if (fish.worldX == 0.0f) { // Doar pești de pe banda din mijloc
+                middleLaneFishbones.add(fish);            }
+            return middleLaneFishbones;
 
-                float adjustedFishZ = fish.worldZ + fishZOffset;
-                fish.worldZ = adjustedFishZ; // Update fish Z to the adjusted value
-
-                middleLaneFishbones.add(fish);
-                System.out.println("Pește adăugat în middleLaneFishbones: ID = " + fish.getId() + ", Z = " + adjustedFishZ);
-            }
-        }
-
-        System.out.println("Numărul total de pești unici pe banda din mijloc: " + middleLaneFishbones.size());
-        return middleLaneFishbones;
     }
-
 
     public int getCollectedCoinsNumber() throws Exception {
         AltObject character = getCharacter();
@@ -259,14 +244,8 @@ public class GamePlayPage extends BasePage {
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
         AltObject distance = getDriver().waitForObject(params);
 
-        /*System.out.println("DistanceText object found name: " + distance.getName());
-        System.out.println("DistanceText object found id: " + distance.getId());
-        System.out.println("DistanceText object found text: " + distance.getText());*/
-
-        // Eliminăm toate caracterele non-numerice din text
         String numericText = distance.getText().replaceAll("[^\\d]", "");
 
-        // Conversia textului numeric într-un număr întreg
         try {
             return Integer.parseInt(numericText);
         } catch (NumberFormatException e) {
