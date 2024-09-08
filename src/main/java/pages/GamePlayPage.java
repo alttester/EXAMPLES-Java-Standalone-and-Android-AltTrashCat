@@ -7,10 +7,8 @@ import com.alttester.AltObject;
 import com.alttester.Commands.FindObject.AltFindObjectsParams;
 import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
-import org.glassfish.grizzly.utils.Pair;
 
 import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
-import static org.apache.logging.log4j.core.util.Integers.parseInt;
 
 public class GamePlayPage extends BasePage {
 
@@ -198,24 +196,27 @@ public class GamePlayPage extends BasePage {
     }
 
 
-
-    public List<AltObject> findAllFish() throws Exception {
+    private int globalFishId = 1;
+    public Map<Integer, AltObject> findAllFishMap() throws Exception {
         AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
         List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
 
-        allFishbones.sort((x, y) -> {
-            int xZ = (int) x.worldZ;
-            int yZ = (int) y.worldZ;
-            return Integer.compare(xZ, yZ);
-        }); //Lista allFishbones va fi sortată în ordine crescătoare în funcție de coordonatele worldZ ale fiecărui obiect, ceea ce înseamnă că obiectele cu valorile worldZ cele mai mici vor fi la începutul listei, iar cele cu valorile worldZ mai mari vor fi la sfârșit.
+        Map<Integer, AltObject> fishMap = new HashMap<>();
 
-        List<AltObject> middleLaneFishbones = new ArrayList<>();
 
-        for (AltObject fish : allFishbones)
+        for (AltObject fish : allFishbones) {
             if (fish.worldX == 0.0f) { // Doar pești de pe banda din mijloc
-                middleLaneFishbones.add(fish);            }
-            return middleLaneFishbones;
+                boolean exists = fishMap.values().stream().anyMatch(existingFish ->
+                        existingFish.worldZ == fish.worldZ
+                );
 
+                if (!exists) {
+                    fishMap.put(globalFishId++, fish);
+                }
+            }
+        }
+
+        return fishMap;
     }
 
     public int getCollectedCoinsNumber() throws Exception {
