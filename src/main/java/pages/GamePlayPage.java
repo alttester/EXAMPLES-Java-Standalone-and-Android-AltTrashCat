@@ -32,10 +32,7 @@ public class GamePlayPage extends BasePage {
 
     @Override
     public boolean isDisplayed() {
-        if (getPauseButton() != null && getCharacter() != null) {
-            return true;
-        }
-        return false;
+        return (getPauseButton() != null && getCharacter() != null);
     }
 
     public void pressPause() {
