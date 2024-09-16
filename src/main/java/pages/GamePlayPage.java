@@ -10,6 +10,9 @@ import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
 
 import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
 
+import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
+import static org.apache.logging.log4j.core.util.Integers.parseInt;
+
 public class GamePlayPage extends BasePage {
 
 
@@ -23,6 +26,9 @@ public class GamePlayPage extends BasePage {
         return getDriver().waitForObject(params);
     }
 
+        // Returnăm lista de pești
+        return allFishbones;
+    }
 
     public AltObject getCharacter() {
         AltFindObjectsParams par = new Builder(AltDriver.By.NAME, "PlayerPivot").build();
@@ -59,11 +65,17 @@ public class GamePlayPage extends BasePage {
         boolean movedRight = false;
 
         for (int i = 0; i < nrOfObstacles; i++) {
+            System.out.println("i= " + i);
 
             AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Obstacle").build();
             List<AltObject> allObstacles = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+            System.out.println("   Toate obstacolele sunt in nr de " + allObstacles.size());
+            for (AltObject obs : allObstacles) {
+                System.out.println("   Obstacole inainte de filtrare: " + obs.name + ", z: " + obs.worldZ + ", x: " + obs.worldX);
+            }
 
 
+            // Sortare folosind expresii lambda
             allObstacles.sort((x, y) -> {
                 if (x.worldZ == y.worldZ) return 0;
                 return x.worldZ > y.worldZ ? 1 : -1;
@@ -77,8 +89,17 @@ public class GamePlayPage extends BasePage {
             }
             allObstacles.removeAll(toBeRemoved);
 
-            AltObject obstacle = allObstacles.get(0);
+            // Afișarea obstacolelor după filtrare
+            System.out.println("   Obstacole rămase după filtrare: " + allObstacles.size());
+            for (AltObject obs : allObstacles) {
+                System.out.println("    Obstacolele rămase după filtrare: " + obs.name + ", z: " + obs.worldZ + ", x: " + obs.worldX);
+            }
 
+            // Selectarea obstacolului cel mai apropiat
+            AltObject obstacle = allObstacles.get(0);
+            System.out.println("   Closest obstacle: " + obstacle.name + ", z:" + obstacle.worldZ + ", x:" + obstacle.worldX);
+
+            // Bucla de așteptare cu limitare de timp
             long startTime = System.currentTimeMillis();
             while (obstacle.worldZ - character1.worldZ > 5 && (System.currentTimeMillis() - startTime) < 15000) {
                 params = new AltFindObjectsParams.Builder(AltDriver.By.ID, "" + obstacle.id).build();
@@ -93,7 +114,11 @@ public class GamePlayPage extends BasePage {
                     throw new NullPointerException("PlayerPivot not found");
                 }
             }
-
+            if (character1 == null || obstacle == null) {
+                System.out.println("Character or obstacle is null, skipping this iteration.");
+                continue;
+            }
+            // Acțiuni pentru evitare obstacole
             // avoiding obstacles
             if (obstacle.name.contains("ObstacleHighBarrier")) {
                 character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Slide", "Assembly-CSharp", new Object[]{}).build(), Void.class);
@@ -156,6 +181,12 @@ public class GamePlayPage extends BasePage {
         }
     }
 
+            // Bucla suplimentară pentru a verifica trecerea obstacolului
+        // Sortare folosind expresii lambda
+        allFishbones.sort((x, y) -> {
+            if (x.worldZ == y.worldZ) return 0;
+            return x.worldZ > y.worldZ ? 1 : -1;
+        });
 
     public List<AltObject> findAllFish() throws Exception {
         AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
@@ -197,6 +228,11 @@ public class GamePlayPage extends BasePage {
 
         return middleLaneFishbones;
     }
+    public List<AltObject> findAllFish() throws Exception {
+        // Căutăm toate obiectele de tip Fishbone
+        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
+        List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+        System.out.println("Toți peștii sunt în număr de " + allFishbones.size());
 
     public int getCollectedCoinsNumber() throws Exception {
         AltObject character = getCharacter();
@@ -226,6 +262,51 @@ public class GamePlayPage extends BasePage {
 
         String numericText = distance.getText().replaceAll("[^\\d]", "");
 
+        try {
+            return Integer.parseInt(numericText);
+        } catch (NumberFormatException e) {
+            throw new Exception("Failed to parse distance text into an integer: " + distance.getText(), e);
+        }
+    }
+
+    public int getCollectedCoinsNumber() throws Exception {
+        AltObject character = getCharacter();
+        if (character == null) {
+            throw new NullPointerException("Character not found");
+        }
+
+        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/CoinZone/CoinText").build();
+        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
+        AltObject coinsUI = getDriver().waitForObject(params);
+
+        if (coinsUI == null) {
+            throw new NullPointerException("CoinText object not found");
+        }
+
+        System.out.println("CoinText object found name: " + coinsUI.getName());
+        System.out.println("CoinText object found id: " + coinsUI.getId());
+        System.out.println("CoinText object found text: " + coinsUI.getText());
+
+        return Integer.parseInt(coinsUI.getText());
+    }
+    public int getDistanceRun() throws Exception {
+        AltObject character = getCharacter();
+        if (character == null) {
+            throw new NullPointerException("Character not found");
+        }
+
+        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/DistanceZone/DistanceText").build();
+        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
+        AltObject distance = getDriver().waitForObject(params);
+
+        /*System.out.println("DistanceText object found name: " + distance.getName());
+        System.out.println("DistanceText object found id: " + distance.getId());
+        System.out.println("DistanceText object found text: " + distance.getText());*/
+
+        // Eliminăm toate caracterele non-numerice din text
+        String numericText = distance.getText().replaceAll("[^\\d]", "");
+
+        // Conversia textului numeric într-un număr întreg
         try {
             return Integer.parseInt(numericText);
         } catch (NumberFormatException e) {
