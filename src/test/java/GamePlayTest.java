@@ -3,16 +3,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.alttester.AltObject;
 import com.alttester.AltDriver;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import com.alttester.AltDriver;
+import org.junit.*;
 
 import pages.GamePlayPage;
 import pages.GetAnotherChancePage;
@@ -94,132 +91,141 @@ public class GamePlayTest {
     }
 
     @Test
-    public void testCollectFishesOnMiddleLane() throws Exception {
+    public void testDistanceRun() throws Exception {
         mainMenuPage.pressRun();
 
-        int collectedFishCount = 0;  // Contor pentru numărul de pești colectați manual
-        int noOfLives = gamePlayPage.getCurrentLife();
+        AltObject characterStart = gamePlayPage.getCharacter();
 
-        while (noOfLives > 0) {
-            noOfLives = gamePlayPage.getCurrentLife();
+        List<Float> zValues = new ArrayList<>();
+        long startTime = System.currentTimeMillis();
+        long duration = 25000;
+        long interval = 1000;
+        long nextTimestamp = startTime + interval;
 
-            AltObject character = gamePlayPage.getCharacter();
-            System.out.println("Pisica se află la Z: " + character.worldZ + ", X: " + character.worldX);
-
-            List<AltObject> allFishbones = gamePlayPage.findAllFish();
-
-            List<AltObject> toBeRemoved = new ArrayList<>();
-            for (AltObject fish : allFishbones) {
-                if (fish.worldZ < character.worldZ || fish.worldX != 0.0) {
-                    toBeRemoved.add(fish);
+        while (System.currentTimeMillis() - startTime < duration) {
+            try {
+                getAnotherChancePage.isDisplayed();
+                break;
+            } catch (Exception e) {
+                if (System.currentTimeMillis() >= nextTimestamp) {
+                    AltObject character = gamePlayPage.getCharacter();
+                    zValues.add(character.worldZ);
+                    nextTimestamp += interval;
                 }
             }
-            allFishbones.removeAll(toBeRemoved);
-
-            System.out.println("   Pesti rămasi după filtrare: " + allFishbones.size());
-            for (AltObject fish : allFishbones) {
-                System.out.println("    Pesti rămasi după filtrare: " + fish.name + ", z: " + fish.worldZ + ", x: " + fish.worldX);
-            }
-
-
-            AltObject closestFish = allFishbones.get(0);
-            System.out.println("   Closest fishbone: " + closestFish.name + ", z:" + closestFish.worldZ + ", x:" + closestFish.worldX);
-
-            if (closestFish.worldX == character.worldX && closestFish.worldZ == character.worldZ) {
-                collectedFishCount++;
-                System.out.println("Pește colectat la Z: " + closestFish.worldZ + ", X: " + closestFish.worldX);
-            }
-
         }
-        int collectedCoins = gamePlayPage.getCollectedCoinsNumber();
-        System.out.println("Numărul de pești colectați manual: " + collectedFishCount);
-        System.out.println("Numărul de pești raportat de joc: " + collectedCoins);
 
-        assertEquals("Numărul de pești colectați nu corespunde cu numărul raportat de joc!", collectedFishCount, collectedCoins);
+        AltObject characterFinal = gamePlayPage.getCharacter();
+
+        int distanceRun = gamePlayPage.getDistanceRun();
+
+        float resetValue1 = 100.0f;
+        float resetValue2 = 200.0f;
+
+        int resetCount = 0;
+        for (int i = 1; i < zValues.size(); i++) {
+            if (zValues.get(i) < zValues.get(i - 1)) {
+                resetCount++;
+            }
+        }
+
+        float zDistance = 0;
+        if (resetCount == 1) {
+            zDistance = resetValue1 + characterFinal.worldZ - 2;
+        } else if (resetCount == 2) {
+            zDistance = resetValue2 + characterFinal.worldZ - 2;
+        } else {
+
+            zDistance = characterFinal.worldZ - characterStart.worldZ;
+        }
+
+        assertEquals("There is a difference between the distance displayed and the calculated distance", distanceRun, Math.round(zDistance), 1);
     }
 
 
-     @Test
-     public void testDistanceRun() throws Exception {
-         mainMenuPage.pressRun();
+    @Test
+    public void testCollectFishBonesOnMiddleLane() throws Exception {
+        mainMenuPage.pressRun();
 
-         AltObject characterStart = gamePlayPage.getCharacter();
-         System.out.println("START: Pisica a pornit de la X: " + characterStart.worldX + ", Y: " + characterStart.worldY + ", Z: " + characterStart.worldZ);
+        int collectedFishCount = 0;  // counter for the number of fishbones collected
+        long startTime = System.currentTimeMillis();
+        long duration = 25000;
+        long interval = 20;
+        long nextTimestamp = startTime + interval;
 
-         List<Float> zValues = new ArrayList<>();
-         long startTime = System.currentTimeMillis();
-         long duration = 25000; // 25 secunde
-         long interval = 1000; // 1 secundă
-         long nextTimestamp = startTime + interval;
+        int lastCatZ = 0;
+        int catZOffset = 0;
+        int catResetCounter = 0;
 
-         while (System.currentTimeMillis() - startTime < duration) {
-             try {
-                 getAnotherChancePage.isDisplayed();
-                 break;
-             } catch (Exception e) {
-                 if (System.currentTimeMillis() >= nextTimestamp) {
-                     AltObject character = gamePlayPage.getCharacter();
-                     int distanceRun = gamePlayPage.getDistanceRun();
-                     System.out.println("   Timestamp= " + (System.currentTimeMillis() - startTime) + "ms: Distanța afișată în joc:" + distanceRun + "; Pisica se află la X: " + character.worldX + ", Y: " + character.worldY + ", Z: " + character.worldZ);
-                     zValues.add(character.worldZ);
-                     nextTimestamp += interval;
-                 }
-             }
-         }
+        int lastFishZ = 0;
+        int fishZOffset = 0;
+        int fishResetCounter = 0;
 
-         AltObject characterFinal = gamePlayPage.getCharacter();
-         System.out.println("STOP: Pisica s-a oprit la X: " + characterFinal.worldX + ", Y: " + characterFinal.worldY + ", Z: " + characterFinal.worldZ);
+        double tolerance = 0.3;  // tolerance for checking if the cat has passed the fishbone
+        List<Integer> collectedFishIds = new ArrayList<>();
+        Set<String> uniqueFishPairs = new HashSet<>();
+        List<AltObject> middleLaneFishbones = new ArrayList<>();
 
-         int distanceRun = gamePlayPage.getDistanceRun();
-         System.out.println("Distanța afișată în joc: " + distanceRun);
+        AltObject character = null;
 
-         // Presupunem că valoarea de reset este de 100 și 200 (sau o valoare pe care o stabilești tu)
-         float resetValue1 = 100.0f;
-         float resetValue2 = 200.0f;
+        while (System.currentTimeMillis() - startTime < duration) {
+            try {
+                getAnotherChancePage.isDisplayed();
+                break;
+            } catch (Exception e) {
+                if (System.currentTimeMillis() >= nextTimestamp) {
+                    character = gamePlayPage.getCharacter();
 
-         // Determinăm dacă au avut loc reseturi
-         int resetCount = 0;
-         for (int i = 1; i < zValues.size(); i++) {
-             if (zValues.get(i) < zValues.get(i - 1)) {
-                 resetCount++;
-                 System.out.println("Origin reset happened ");
-             }
-         }
+                    int currentCatZ = (int) character.worldZ;
 
-         // Calculăm diferența între Z final și Z inițial, ținând cont de reseturi
-         float zDistance = 0;
-         if (resetCount == 1) {
-             // Un singur reset
-             zDistance = resetValue1 + characterFinal.worldZ - 2;
-         } else if (resetCount == 2) {
-             // Două reseturi
-             zDistance = resetValue2 + characterFinal.worldZ - 2;
-         } else {
-             // Fără reset
-             zDistance = characterFinal.worldZ - characterStart.worldZ;
-         }
+                    //detect origin reset for the cat by checking if current Z is smaller than the last Z
+                    if (currentCatZ < lastCatZ) {
+                        catResetCounter++;
+                        catZOffset = catResetCounter * 100;
+                    }
+                    lastCatZ = currentCatZ;
 
-         System.out.println("Distanța calculată prin Z: " + zDistance);
+                    //update middleLaneFishbones by adding new fishbones spawned during the game
+                    List<AltObject> currentFishbones = gamePlayPage.findAllFish();
+                    for (AltObject fish : currentFishbones) {
+                        int fishZ = (int) fish.worldZ;
 
-         // Analizăm discrepanțele, dacă există
-         if (Math.abs(zDistance - distanceRun) > 1) { // Toleranță mică pentru eroare
-             System.out.println("Există o discrepanță între distanța calculată și cea afișată în joc.");
-             System.out.println("Z Values during run: " + zValues);
-         } else {
-             System.out.println("Distanțele corespund.");
-         }
+                    //detect reset for the fish by checking if current Z is smaller than the last Z
+                        if (fishZ < lastFishZ) {
+                            fishResetCounter++;
+                            fishZOffset = fishResetCounter * 100; //adjust offset by 100 for each reset
 
-         // Assert pentru a verifica distanța
-         assertEquals("!!!Discrepanță între distanța calculată și cea afișată în joc.", distanceRun, Math.round(zDistance), 1);
- }
+                        }
+                        lastFishZ = fishZ;
 
-  /*  @Test
-    public void testDistanceRunMultipleTimes() throws Exception {
+                        int adjustedFishZ = fishZ + fishZOffset;  //apply fish-specific Z correction
+                        String fishPair = fish.getId() + "-" + adjustedFishZ;
+                        if (uniqueFishPairs.add(fishPair)) { //add only unique fishbones based on (ID, Z) pair
+                            fish.worldZ = adjustedFishZ; //update Z with corrected value
+                            middleLaneFishbones.add(fish);
+                        }
+                    }
 
-        for (int i = 0; i < 10; i++) {
-            mainMenuPage.loadScene();
-            testDistanceRun();
+                    nextTimestamp += interval;
+                }
+            }
         }
-    }*/
+
+        //after the cat has died check how many fishbones were passed
+        for (AltObject fish : middleLaneFishbones) {
+            int fishZ = (int) fish.worldZ;  //this is already adjusted with Z offset
+            int adjustedCatZ = lastCatZ + catZOffset;
+            //use corrected Z for comparison
+            if (fishZ <= adjustedCatZ + tolerance && !collectedFishIds.contains(fish.id)) {
+                collectedFishCount++;
+                collectedFishIds.add(fish.id);
+            }
+        }
+
+        System.out.println("Total number of collected fishbones: " + collectedFishCount);
+        int collectedCoins = gamePlayPage.getCollectedCoinsNumber();
+        assertEquals("There is a difference between the number of collected fishbones and the number of coins", collectedFishCount, collectedCoins);
+    }
+
 
 }

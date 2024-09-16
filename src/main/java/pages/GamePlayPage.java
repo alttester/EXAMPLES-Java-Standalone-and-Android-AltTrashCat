@@ -11,7 +11,6 @@ import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
 import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
 
 import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
-import static org.apache.logging.log4j.core.util.Integers.parseInt;
 
 public class GamePlayPage extends BasePage {
 
@@ -26,8 +25,35 @@ public class GamePlayPage extends BasePage {
         return getDriver().waitForObject(params);
     }
 
-        // Returnăm lista de pești
-        return allFishbones;
+        Set<String> uniqueFishPairs = new HashSet<>(); //ensures that each fish added to the final list is unique, based on a combination of the fish's ID and its adjusted worldZ value
+
+        List<AltObject> middleLaneFishbones = new ArrayList<>(); //stores the filtered list of fish that are in the middle lane.
+        int lastFishZ = 0;
+        int fishZOffset = 0;
+        int fishResetCounter = 0;
+
+        for (AltObject fish : allFishbones) {
+            if (fish.worldX == 0.0f) { // add only the middle lane fishes
+                int currentFishZ = (int) fish.worldZ;
+
+                // Detect origin reset for the fish by checking if current Z is smaller than the last Z
+                if (currentFishZ < lastFishZ) {
+                    fishResetCounter++;
+                    fishZOffset = fishResetCounter * 100; // Adjust offset by 100 for each reset
+                }
+                lastFishZ = currentFishZ;
+
+                int adjustedFishZ = currentFishZ + fishZOffset;
+                fish.worldZ = adjustedFishZ; // Update fish Z to the adjusted value
+
+                String fishPair = fish.getId() + "-" + adjustedFishZ;
+                if (uniqueFishPairs.add(fishPair)) { // Add only unique fishbones based on (ID, Z) pair
+                    middleLaneFishbones.add(fish);
+                }
+            }
+        }
+
+        return middleLaneFishbones;
     }
 
     public AltObject getCharacter() {
@@ -65,17 +91,12 @@ public class GamePlayPage extends BasePage {
         boolean movedRight = false;
 
         for (int i = 0; i < nrOfObstacles; i++) {
-            System.out.println("i= " + i);
 
             AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Obstacle").build();
             List<AltObject> allObstacles = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
-            System.out.println("   Toate obstacolele sunt in nr de " + allObstacles.size());
-            for (AltObject obs : allObstacles) {
-                System.out.println("   Obstacole inainte de filtrare: " + obs.name + ", z: " + obs.worldZ + ", x: " + obs.worldX);
-            }
 
 
-            // Sortare folosind expresii lambda
+
             allObstacles.sort((x, y) -> {
                 if (x.worldZ == y.worldZ) return 0;
                 return x.worldZ > y.worldZ ? 1 : -1;
@@ -89,17 +110,8 @@ public class GamePlayPage extends BasePage {
             }
             allObstacles.removeAll(toBeRemoved);
 
-            // Afișarea obstacolelor după filtrare
-            System.out.println("   Obstacole rămase după filtrare: " + allObstacles.size());
-            for (AltObject obs : allObstacles) {
-                System.out.println("    Obstacolele rămase după filtrare: " + obs.name + ", z: " + obs.worldZ + ", x: " + obs.worldX);
-            }
-
-            // Selectarea obstacolului cel mai apropiat
             AltObject obstacle = allObstacles.get(0);
-            System.out.println("   Closest obstacle: " + obstacle.name + ", z:" + obstacle.worldZ + ", x:" + obstacle.worldX);
 
-            // Bucla de așteptare cu limitare de timp
             long startTime = System.currentTimeMillis();
             while (obstacle.worldZ - character1.worldZ > 5 && (System.currentTimeMillis() - startTime) < 15000) {
                 params = new AltFindObjectsParams.Builder(AltDriver.By.ID, "" + obstacle.id).build();
@@ -114,11 +126,8 @@ public class GamePlayPage extends BasePage {
                     throw new NullPointerException("PlayerPivot not found");
                 }
             }
-            if (character1 == null || obstacle == null) {
-                System.out.println("Character or obstacle is null, skipping this iteration.");
-                continue;
-            }
-            // Acțiuni pentru evitare obstacole
+
+            // avoiding obstacles
             // avoiding obstacles
             if (obstacle.name.contains("ObstacleHighBarrier")) {
                 character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Slide", "Assembly-CSharp", new Object[]{}).build(), Void.class);
@@ -228,11 +237,11 @@ public class GamePlayPage extends BasePage {
 
         return middleLaneFishbones;
     }
+
+
     public List<AltObject> findAllFish() throws Exception {
-        // Căutăm toate obiectele de tip Fishbone
         AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
         List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
-        System.out.println("Toți peștii sunt în număr de " + allFishbones.size());
 
     public int getCollectedCoinsNumber() throws Exception {
         AltObject character = getCharacter();
@@ -283,10 +292,6 @@ public class GamePlayPage extends BasePage {
             throw new NullPointerException("CoinText object not found");
         }
 
-        System.out.println("CoinText object found name: " + coinsUI.getName());
-        System.out.println("CoinText object found id: " + coinsUI.getId());
-        System.out.println("CoinText object found text: " + coinsUI.getText());
-
         return Integer.parseInt(coinsUI.getText());
     }
     public int getDistanceRun() throws Exception {
@@ -299,14 +304,8 @@ public class GamePlayPage extends BasePage {
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
         AltObject distance = getDriver().waitForObject(params);
 
-        /*System.out.println("DistanceText object found name: " + distance.getName());
-        System.out.println("DistanceText object found id: " + distance.getId());
-        System.out.println("DistanceText object found text: " + distance.getText());*/
-
-        // Eliminăm toate caracterele non-numerice din text
         String numericText = distance.getText().replaceAll("[^\\d]", "");
 
-        // Conversia textului numeric într-un număr întreg
         try {
             return Integer.parseInt(numericText);
         } catch (NumberFormatException e) {
