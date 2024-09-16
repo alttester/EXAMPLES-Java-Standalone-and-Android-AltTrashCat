@@ -4,10 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 
 import com.alttester.AltDriver;
 
@@ -21,38 +18,17 @@ public class ShopTest {
     private static MainMenuPage mainMenuPage;
     private static ShopPage shopPage;
 
-    private static void getAllObjectsShopPage(){
-        shopPage.getStoreTitle();
-        shopPage.getAccessoriesButton();
-        shopPage.getCharactersButton();
-        shopPage.getItemsButton();
-        shopPage.getCloseButton();
-        shopPage.getThemesButton();
-        shopPage.getPremiumButton();
-        shopPage.getCoinSection();
-    }
-
-    private static void getAllObjectsMainMenuPage(){
-        mainMenuPage.setStoreButton();
-        mainMenuPage.setThemeName();
-        mainMenuPage.setSettingsButton();
-        mainMenuPage.setRunButton();
-        mainMenuPage.setMissionButton();
-        mainMenuPage.setLeaderBoardButton();
-        mainMenuPage.setCharacterName();
-    }
-
     @BeforeClass
     public static void setUp() throws IOException {
-        PropFileReader properties = new PropFileReader();
         driver = new AltDriver();
+        mainMenuPage = new MainMenuPage(driver);
+        shopPage = new ShopPage(driver);
     }
 
     @Before
     public void loadLevel(){
-        mainMenuPage = new MainMenuPage(driver);
-        shopPage = new ShopPage(driver);
-        shopPage.loadScene();
+        mainMenuPage.loadScene(true);
+        shopPage.loadScene(false);
     }
 
     @AfterClass
@@ -62,36 +38,28 @@ public class ShopTest {
     }
 
     @Test
-    public void ShopPageLoadedCorrectly(){
-        getAllObjectsShopPage();
-        assertTrue(shopPage.isDisplayedCorrectly());
-        shopPage.pressClose();
+    public void testShopPageLoadedCorrectly(){
+        assertTrue(shopPage.isDisplayed());
     }
 
     @Test
     public void testShopPageCanBeClosed(){
-        getAllObjectsShopPage();
-        shopPage.pressClose();
-        mainMenuPage.loadScene();
-        getAllObjectsMainMenuPage();
+        shopPage.closeShopPage();
         assertTrue(mainMenuPage.isDisplayed());
     }
 
+
     @Test
     public void testPremiumPopUpOpen(){
-        shopPage.getPremiumButton();
         shopPage.pressPremiumPopUp();
-        shopPage.getPopup();
         assertTrue(shopPage.checkPopupOpen());
     }
 
     @Test
     public void testPremiumPopUpClosed(){
-        shopPage.getPremiumButton();
         shopPage.pressPremiumPopUp();
-        shopPage.getPopup();
-        shopPage.getClosePopupButton();
         shopPage.pressClosePremiumPopup();
         assertFalse(shopPage.checkPopupOpen());
+        assertTrue(shopPage.isDisplayed());
     }
 }

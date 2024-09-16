@@ -9,25 +9,21 @@ import org.junit.Test;
 
 import com.alttester.AltDriver;
 
-import configreader.PropFileReader;
 import pages.MainMenuPage;
-import pages.StartPage;
 
 public class MainMenuTest {
 
     private static AltDriver driver;
-    private static StartPage startPage;
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
     public static void setUp() throws IOException {
-        PropFileReader properties = new PropFileReader();
         driver = new AltDriver();
+        mainMenuPage = new MainMenuPage(driver);
     }
 
     @Before
     public void loadLevel(){
-        mainMenuPage = new MainMenuPage(driver);
         mainMenuPage.loadScene();
     }
 
@@ -37,17 +33,8 @@ public class MainMenuTest {
         Thread.sleep(1000);
     }
 
-
     @Test
     public void TestMainPageLoadedCorrectly(){
-
-        mainMenuPage.setCharacterName();
-        mainMenuPage.setLeaderBoardButton();
-        mainMenuPage.setMissionButton();
-        mainMenuPage.setRunButton();
-        mainMenuPage.setSettingsButton();
-        mainMenuPage.setStoreButton();
-        mainMenuPage.setThemeName();
         assertTrue(mainMenuPage.isDisplayed());
     }
 
