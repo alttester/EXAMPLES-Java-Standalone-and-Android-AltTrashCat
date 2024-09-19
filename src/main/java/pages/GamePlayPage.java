@@ -30,6 +30,12 @@ public class GamePlayPage extends BasePage {
         return getDriver().waitForObject(params);
     }
 
+    public AltObject getObstacle(int obstacleId) {
+        AltFindObjectsParams par = new Builder(AltDriver.By.ID, String.valueOf(obstacleId)).build();
+        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
+        return getDriver().waitForObject(params);
+    }
+
     @Override
     public boolean isDisplayed() {
         return (getPauseButton() != null && getCharacter() != null);
@@ -51,9 +57,6 @@ public class GamePlayPage extends BasePage {
 
     public void avoidObstacles(int nrOfObstacles) throws Exception {
         AltObject character1 = getCharacter();
-        if (character1 == null) {
-            throw new NullPointerException("Character not found at the start.");
-        }
 
         boolean movedLeft = false;
         boolean movedRight = false;
@@ -81,17 +84,12 @@ public class GamePlayPage extends BasePage {
 
             long startTime = System.currentTimeMillis();
             while (obstacle.worldZ - character1.worldZ > 5 && (System.currentTimeMillis() - startTime) < 15000) {
-                params = new AltFindObjectsParams.Builder(AltDriver.By.ID, "" + obstacle.id).build();
-                obstacle = getDriver().findObject(params);
+                obstacle = getObstacle(obstacle.id);
                 if (obstacle == null) {
                     System.out.println("Obstacle not found during update.");
                     break;
                 }
-                params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "PlayerPivot").build();
-                character1 = getDriver().findObject(params);
-                if (character1 == null) {
-                    throw new NullPointerException("PlayerPivot not found");
-                }
+                character1 = getCharacter();
             }
 
             // avoiding obstacles
@@ -132,17 +130,12 @@ public class GamePlayPage extends BasePage {
 
             startTime = System.currentTimeMillis();
             while (character1.worldZ - 3 < obstacle.worldZ && character1.worldX < 99 && (System.currentTimeMillis() - startTime) < 15000) {
-                params = new AltFindObjectsParams.Builder(AltDriver.By.ID, "" + obstacle.id).build();
-                obstacle = getDriver().findObject(params);
+                obstacle = getObstacle(obstacle.id);
                 if (obstacle == null) {
                     System.out.println("Obstacle not found during second update.");
                     break;
                 }
-                params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "PlayerPivot").build();
-                character1 = getDriver().findObject(params);
-                if (character1 == null) {
-                    throw new NullPointerException("PlayerPivot not found");
-                }
+                character1 = getCharacter();
             }
 
             if (movedRight) {
@@ -175,23 +168,25 @@ public class GamePlayPage extends BasePage {
         int fishResetCounter = 0;
 
         for (AltObject fish : allFishbones) {
-            if (fish.worldX == 0.0f) { // add only the middle lane fishes
-                int currentFishZ = (int) fish.worldZ;
+            if (fish.worldX != 0.0f) {
+                continue;
+            }
 
-                // Detect origin reset for the fish by checking if current Z is smaller than the last Z
-                if (currentFishZ < lastFishZ) {
-                    fishResetCounter++;
-                    fishZOffset = fishResetCounter * 100; // Adjust offset by 100 for each reset
-                }
-                lastFishZ = currentFishZ;
+            int currentFishZ = (int) fish.worldZ;
+            // Detect origin reset for the fish by checking if current Z is smaller than the last Z
+            if (currentFishZ < lastFishZ) {
+                fishResetCounter++;
+                fishZOffset = fishResetCounter * 100; // Adjust offset by 100 for each reset
+            }
 
-                int adjustedFishZ = currentFishZ + fishZOffset;
-                fish.worldZ = adjustedFishZ; // Update fish Z to the adjusted value
+            lastFishZ = currentFishZ;
 
-                String fishPair = fish.getId() + "-" + adjustedFishZ;
-                if (uniqueFishPairs.add(fishPair)) { // Add only unique fishbones based on (ID, Z) pair
-                    middleLaneFishbones.add(fish);
-                }
+            int adjustedFishZ = currentFishZ + fishZOffset;
+            fish.worldZ = adjustedFishZ; // Update fish Z to the adjusted value
+
+            String fishPair = fish.getId() + "-" + adjustedFishZ;
+            if (uniqueFishPairs.add(fishPair)) { // Add only unique fishbones based on (ID, Z) pair
+                middleLaneFishbones.add(fish);
             }
         }
 
@@ -215,10 +210,6 @@ public class GamePlayPage extends BasePage {
         return Integer.parseInt(coinsUI.getText());
     }
     public int getDistanceRun() throws Exception {
-        AltObject character = getCharacter();
-        if (character == null) {
-            throw new NullPointerException("Character not found");
-        }
 
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/DistanceZone/DistanceText").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
