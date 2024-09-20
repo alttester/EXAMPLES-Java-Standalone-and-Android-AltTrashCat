@@ -194,10 +194,6 @@ public class GamePlayPage extends BasePage {
     }
 
     public int getCollectedCoinsNumber() throws Exception {
-        AltObject character = getCharacter();
-        if (character == null) {
-            throw new NullPointerException("Character not found");
-        }
 
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/CoinZone/CoinText").build();
         AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();

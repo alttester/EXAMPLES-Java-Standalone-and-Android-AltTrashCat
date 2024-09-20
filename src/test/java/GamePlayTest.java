@@ -119,9 +119,6 @@ public class GamePlayTest {
 
         int distanceRun = gamePlayPage.getDistanceRun();
 
-        float resetValue1 = 100.0f;
-        float resetValue2 = 200.0f;
-
         int resetCount = 0;
         for (int i = 1; i < zValues.size(); i++) {
             if (zValues.get(i) < zValues.get(i - 1)) {
@@ -129,16 +126,7 @@ public class GamePlayTest {
             }
         }
 
-        float zDistance = 0;
-        if (resetCount == 1) {
-            zDistance = resetValue1 + characterFinal.worldZ - 2;
-        } else if (resetCount == 2) {
-            zDistance = resetValue2 + characterFinal.worldZ - 2;
-        } else {
-
-            zDistance = characterFinal.worldZ - characterStart.worldZ;
-        }
-
+        float zDistance = resetCount * 100 + characterFinal.worldZ - 2;
         assertEquals("There is a difference between the distance displayed and the calculated distance", distanceRun, Math.round(zDistance), 1);
     }
 

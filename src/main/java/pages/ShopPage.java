@@ -118,7 +118,7 @@ public class ShopPage extends BasePage {
     }
 
     public boolean checkPopupOpen(){
-            try{
+        try{
 
             AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup").build();
             AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
@@ -132,17 +132,7 @@ public class ShopPage extends BasePage {
 
     public void closeShopPage() {
         AltObject closeButton = getCloseButton();
-        if (closeButton != null) {
-            try {
-                closeButton.tap();
-                System.out.println("Close button tapped successfully.");
-            } catch (Exception e) {
-                e.printStackTrace();
-                throw new RuntimeException("Failed to tap close button");
-            }
-        } else {
-            throw new RuntimeException("Close button is not available for tapping");
-        }
+        closeButton.tap();
     }
 }
 
