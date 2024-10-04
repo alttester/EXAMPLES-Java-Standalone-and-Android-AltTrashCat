@@ -94,35 +94,33 @@ public class GamePlayPage extends BasePage {
 
             // avoiding obstacles
             if (obstacle.name.contains("ObstacleHighBarrier")) {
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Slide", "Assembly-CSharp", new Object[]{}).build(), Void.class);
-
+                slide(character1);
             } else if (obstacle.name.contains("ObstacleLowBarrier") || obstacle.name.contains("Rat")) {
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Jump", "Assembly-CSharp", new Object[]{}).build(), Void.class);
-
+                jump(character1);
             } else {
                 if (allObstacles.size() > 1 && obstacle.worldZ == allObstacles.get(1).worldZ) {
                     if (obstacle.worldX == character1.worldX) {
                         if (allObstacles.get(1).worldX == -1.5f) {
-                            character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{1}).build(), Void.class);
+                            changeLane(character1, 1);
                             movedRight = true;
                         } else {
-                            character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{-1}).build(), Void.class);
+                            changeLane(character1, -1);
                             movedLeft = true;
                         }
                     } else {
                         if (allObstacles.get(1).worldX == character1.worldX) {
                             if (obstacle.worldX == -1.5f) {
-                                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{1}).build(), Void.class);
+                                changeLane(character1, 1);
                                 movedRight = true;
                             } else {
-                                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{-1}).build(), Void.class);
+                                changeLane(character1, -1);
                                 movedLeft = true;
                             }
                         }
                     }
                 } else {
                     if (obstacle.worldX == character1.worldX) {
-                        character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{1}).build(), Void.class);
+                        changeLane(character1, -1);
                         movedRight = true;
                     }
                 }
@@ -139,11 +137,11 @@ public class GamePlayPage extends BasePage {
             }
 
             if (movedRight) {
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{-1}).build(), Void.class);
+                changeLane(character1, -1);
                 movedRight = false;
             }
             if (movedLeft) {
-                character1.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{1}).build(), Void.class);
+                changeLane(character1, 1);
                 movedLeft = false;
             }
         }
@@ -205,6 +203,7 @@ public class GamePlayPage extends BasePage {
 
         return Integer.parseInt(coinsUI.getText());
     }
+
     public int getDistanceRun() throws Exception {
 
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/DistanceZone/DistanceText").build();
@@ -218,6 +217,20 @@ public class GamePlayPage extends BasePage {
         } catch (NumberFormatException e) {
             throw new Exception("Failed to parse distance text into an integer: " + distance.getText(), e);
         }
+    }
+
+    private void jump(AltObject character) {
+        character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Jump", "Assembly-CSharp", new Object[]{}).build(), Void.class);
+
+    }
+
+    private void slide(AltObject character) {
+        character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Slide", "Assembly-CSharp", new Object[]{}).build(), Void.class);
+
+    }
+
+    private void changeLane(AltObject character, float direction) {
+        character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{direction}).build(), Void.class);
     }
 
 }
