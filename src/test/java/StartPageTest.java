@@ -1,7 +1,5 @@
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
-
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -18,7 +16,7 @@ public class StartPageTest {
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
-    public static void setUp()  {
+    public static void setUp() {
         driver = new AltDriver();
         startPage = new StartPage(driver);
         mainMenuPage = new MainMenuPage(driver);
