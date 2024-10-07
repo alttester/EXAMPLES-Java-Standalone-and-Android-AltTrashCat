@@ -6,7 +6,9 @@ import com.alttester.AltDriver;
 import com.alttester.AltObject;
 import com.alttester.Commands.FindObject.AltFindObjectsParams;
 import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
+import com.alttester.Commands.InputActions.AltSwipeParams;
 import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
+import com.alttester.position.Vector2;
 
 import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
 
@@ -63,22 +65,11 @@ public class GamePlayPage extends BasePage {
 
         for (int i = 0; i < nrOfObstacles; i++) {
 
-            AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Obstacle").build();
-            List<AltObject> allObstacles = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+            List<AltObject> allObstacles = getAllObstacles();
 
+            sortObstaclesByLane(allObstacles);
 
-            allObstacles.sort((x, y) -> {
-                if (x.worldZ == y.worldZ) return 0;
-                return x.worldZ > y.worldZ ? 1 : -1;
-            });
-
-            //remove obstacles behind the character
-            List<AltObject> toBeRemoved = new ArrayList<>();
-            for (AltObject obs : allObstacles) {
-                if (obs.worldZ < character1.worldZ)
-                    toBeRemoved.add(obs);
-            }
-            allObstacles.removeAll(toBeRemoved);
+            removeObstaclesBehindCharacter(allObstacles, character1);
 
             AltObject obstacle = allObstacles.get(0);
 
@@ -219,18 +210,166 @@ public class GamePlayPage extends BasePage {
         }
     }
 
+    public void surviveTimeByAvoidingObstacles(long seconds) {
+        boolean movedRight = false;
+        boolean movedLeft = false;
+        boolean inTheMiddle = true;
+        long startTime = System.currentTimeMillis();
+
+        while (System.currentTimeMillis() - startTime < seconds * 1000) {
+
+            List<AltObject> allObstacles = getAllObstacles();
+            AltObject character1 = getCharacter();
+            removeObstaclesBehindCharacter(allObstacles, character1);
+
+            for (AltObject obstacle : allObstacles) {
+                if (obstacle.getWorldZ() - 6.0f < character1.getWorldZ()) {
+                    if (obstacle.getWorldX() < 0) {
+                        // obstacle on the left
+                        if (isHighBarrier(obstacle)) {
+                            slide(character1);
+                        } else if (isLowBarrier(obstacle)) {
+                            jump(character1);
+                        } else if (movedLeft && !inTheMiddle) {
+                            changeLane(character1, 1);
+                            inTheMiddle = true;
+                            movedRight = true;
+                            movedLeft = false;
+                        }
+
+                    } else if (obstacle.getWorldX() > 0) {
+                        // obstacle on the right
+                        if (isHighBarrier(obstacle)) {
+                            slide(character1);
+                        } else if (isLowBarrier(obstacle)) {
+                            jump(character1);
+                        } else if (movedRight && !inTheMiddle) {
+                            changeLane(character1, -1);
+                            inTheMiddle = true;
+                            movedRight = false;
+                            movedLeft = true;
+                        }
+
+                    } else {
+                        // obstacle in the middle
+                        if (isHighBarrier(obstacle)) {
+                            slide(character1);
+                        } else if (isLowBarrier(obstacle)) {
+                            jump(character1);
+                        } else if (inTheMiddle && movedLeft) {
+                            changeLane(character1, -1);
+                            // don't move back right
+                            movedRight = true;
+                        } else if (inTheMiddle && movedRight) {
+                            changeLane(character1, 1);
+                            // don't move back left
+                            movedLeft = true;
+                        } else {
+                            changeLane(character1, 1);
+                            movedLeft = true;
+                            inTheMiddle = false;
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println(System.currentTimeMillis() - startTime);
+    }
+
+    private boolean isLowBarrier(AltObject obstacle) {
+        return obstacle.getName().contains("LowBarrier");
+    }
+
+    private boolean isHighBarrier(AltObject obstacle) {
+        return obstacle.getName().contains("HighBarrier");
+    }
+
+    private boolean isRat(AltObject obstacle) {
+        return obstacle.getName().contains("Rat");
+    }
+
+    private boolean isRoadworksCone(AltObject obstacle) {
+        return obstacle.getName().contains("RoadworksCone");
+    }
+
+    private boolean isRoadworksBarrier(AltObject obstacle) {
+        return obstacle.getName().contains("RoadworksBarrier");
+    }
+
+    private boolean isObstacleDog(AltObject obstacle) {
+        return obstacle.getName().contains("ObstacleDog");
+    }
+
+    private boolean isBin(AltObject obstacle) {
+        return obstacle.getName().contains("Bin");
+    }
+
     private void jump(AltObject character) {
         character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Jump", "Assembly-CSharp", new Object[]{}).build(), Void.class);
-
+        System.out.println("Jumping");
     }
 
     private void slide(AltObject character) {
         character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "Slide", "Assembly-CSharp", new Object[]{}).build(), Void.class);
+        System.out.println("Sliding");
+    }
+
+    private void changeLane(AltObject character, int direction) {
+        character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{direction}).build(), Void.class);
+        if (direction == 1)
+            System.out.println("Moving right");
+        else if (direction == -1)
+            System.out.println("Moving left");
+    }
+
+    private void slideSwipe(AltObject character) {
+        Vector2 endCharacterPosition = character.getScreenPosition();
+        Vector2 startCharacterPosition = new Vector2(character.getScreenPosition().getX(), character.getScreenPosition().getY() + 20f);
+
+        getDriver().swipe(new AltSwipeParams.Builder(startCharacterPosition, endCharacterPosition).withDuration(0.2167969f).build());
 
     }
 
-    private void changeLane(AltObject character, float direction) {
-        character.callComponentMethod(new AltCallComponentMethodParams.Builder("CharacterInputController", "ChangeLane", "Assembly-CSharp", new Object[]{direction}).build(), Void.class);
+    private void jumpSwipe(AltObject character) {
+        Vector2 startCharacterPosition = character.getScreenPosition();
+        Vector2 endCharacterPosition = new Vector2(character.getScreenPosition().getX(), character.getScreenPosition().getX() - 20f);
+
+        getDriver().swipe(new AltSwipeParams.Builder(startCharacterPosition, endCharacterPosition).withDuration(0.2167969f).build());
+    }
+
+    private void swipeRightSwipe(AltObject character) {
+        Vector2 startCharacterPosition = character.getScreenPosition();
+        Vector2 endCharacterPosition = new Vector2(character.getScreenPosition().getX() + 20f, character.getScreenPosition().getY());
+
+        getDriver().swipe(new AltSwipeParams.Builder(startCharacterPosition, endCharacterPosition).withDuration(0.2167969f).build());
+    }
+
+    private void swipeLeftSwipe(AltObject character) {
+        Vector2 startCharacterPosition = character.getScreenPosition();
+        Vector2 endCharacterPosition = new Vector2(character.getScreenPosition().getX() - 20f, character.getScreenPosition().getY());
+
+        getDriver().swipe(new AltSwipeParams.Builder(startCharacterPosition, endCharacterPosition).withDuration(0.2167969f).build());
+    }
+
+    private List<AltObject> getAllObstacles() {
+        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Obstacle").build();
+        return new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+    }
+
+    private void sortObstaclesByLane(List<AltObject> obstacles) {
+        obstacles.sort((x, y) -> {
+            if (x.worldZ == y.worldZ) return 0;
+            return x.worldZ > y.worldZ ? 1 : -1;
+        });
+    }
+
+    private void removeObstaclesBehindCharacter(List<AltObject> obstacles, AltObject character) {
+        List<AltObject> toBeRemoved = new ArrayList<>();
+        for (AltObject obstacle : obstacles) {
+            if (obstacle.worldZ < character.worldZ)
+                toBeRemoved.add(obstacle);
+        }
+        obstacles.removeAll(toBeRemoved);
     }
 
 }
