@@ -257,6 +257,119 @@ public class GamePlayPage extends BasePage {
         System.out.println(counterObstaclesPassed + " obstacles passed");
     }
 
+    public int getDistanceCovered(GetAnotherChancePage getAnotherChancePage) throws Exception {
+        List<Float> zValues = new ArrayList<>();
+        long startTime = System.currentTimeMillis();
+        long duration = 25000;
+        long interval = 1000;
+        long nextTimestamp = startTime + interval;
+
+        AltObject character = null;
+
+        while (System.currentTimeMillis() - startTime < duration) {
+            try {
+                getAnotherChancePage.isDisplayed();
+                break;
+            } catch (Exception e) {
+                if (System.currentTimeMillis() >= nextTimestamp) {
+                    character = getCharacter();
+                    zValues.add(character.worldZ);
+                    nextTimestamp += interval;
+                }
+            }
+        }
+
+        int distanceRun = getDistanceRun();
+        int resetCount = 0;
+
+        for (int i = 1; i < zValues.size(); i++) {
+            if (zValues.get(i) < zValues.get(i - 1)) {
+                resetCount++;
+            }
+        }
+
+        float zDistance = resetCount * 100 + character.worldZ - 2;
+        System.out.println("Distance covered: " + zDistance);
+        return distanceRun - Math.round(zDistance);
+    }
+
+    public int computeCollectedCoins(GetAnotherChancePage getAnotherChancePage) throws Exception {
+        int collectedFishCount = 0;  // counter for the number of fishbones collected
+        long startTime = System.currentTimeMillis();
+        long duration = 25000;
+        long interval = 20;
+        long nextTimestamp = startTime + interval;
+
+        int lastCatZ = 0;
+        int catZOffset = 0;
+        int catResetCounter = 0;
+
+        int lastFishZ = 0;
+        int fishZOffset = 0;
+        int fishResetCounter = 0;
+
+        double tolerance = 0.3;  // tolerance for checking if the cat has passed the fishbone
+        List<Integer> collectedFishIds = new ArrayList<>();
+        Set<String> uniqueFishPairs = new HashSet<>();
+        List<AltObject> middleLaneFishbones = new ArrayList<>();
+
+        AltObject character = null;
+
+        while (System.currentTimeMillis() - startTime < duration) {
+            try {
+                getAnotherChancePage.isDisplayed();
+                break;
+            } catch (Exception e) {
+                if (System.currentTimeMillis() >= nextTimestamp) {
+                    character = getCharacter();
+
+                    int currentCatZ = (int) character.worldZ;
+
+                    //detect origin reset for the cat by checking if current Z is smaller than the last Z
+                    if (currentCatZ < lastCatZ) {
+                        catResetCounter++;
+                        catZOffset = catResetCounter * 100;
+                    }
+                    lastCatZ = currentCatZ;
+
+                    //update middleLaneFishbones by adding new fishbones spawned during the game
+                    List<AltObject> currentFishbones = findAllFish();
+                    for (AltObject fish : currentFishbones) {
+                        int fishZ = (int) fish.worldZ;
+
+                        //detect reset for the fish by checking if current Z is smaller than the last Z
+                        if (fishZ < lastFishZ) {
+                            fishResetCounter++;
+                            fishZOffset = fishResetCounter * 100; //adjust offset by 100 for each reset
+
+                        }
+                        lastFishZ = fishZ;
+
+                        int adjustedFishZ = fishZ + fishZOffset;  //apply fish-specific Z correction
+                        String fishPair = fish.getId() + "-" + adjustedFishZ;
+                        if (uniqueFishPairs.add(fishPair)) { //add only unique fishbones based on (ID, Z) pair
+                            fish.worldZ = adjustedFishZ; //update Z with corrected value
+                            middleLaneFishbones.add(fish);
+                        }
+                    }
+                    nextTimestamp += interval;
+                }
+            }
+        }
+
+        //after the cat has died check how many fishbones were passed
+        for (AltObject fish : middleLaneFishbones) {
+            int fishZ = (int) fish.worldZ;  //this is already adjusted with Z offset
+            int adjustedCatZ = lastCatZ + catZOffset;
+            //use corrected Z for comparison
+            if (fishZ <= adjustedCatZ + tolerance && !collectedFishIds.contains(fish.id)) {
+                collectedFishCount++;
+                collectedFishIds.add(fish.id);
+            }
+        }
+        return collectedFishCount;
+    }
+
     private boolean isLowBarrier(AltObject obstacle) {
         return obstacle.getName().contains("LowBarrier");
     }
