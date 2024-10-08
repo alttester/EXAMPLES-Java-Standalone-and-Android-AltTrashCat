@@ -1,13 +1,3 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import com.alttester.AltObject;
 import com.alttester.AltDriver;
 import org.junit.*;
 
@@ -15,6 +5,9 @@ import pages.GamePlayPage;
 import pages.GetAnotherChancePage;
 import pages.MainMenuPage;
 import pages.PauseOverlayPage;
+
+import static java.lang.Thread.sleep;
+import static org.junit.Assert.*;
 
 public class GamePlayTest {
 
@@ -25,7 +18,7 @@ public class GamePlayTest {
     private static GamePlayPage gamePlayPage;
 
     @BeforeClass
-    public static void setUp() throws IOException {
+    public static void setUp() {
         driver = new AltDriver();
         mainMenuPage = new MainMenuPage(driver);
         gamePlayPage = new GamePlayPage(driver);
@@ -34,24 +27,24 @@ public class GamePlayTest {
     }
 
     @Before
-    public void loadLevel() throws Exception {
+    public void loadLevel() {
         mainMenuPage.loadScene();
     }
 
     @AfterClass
     public static void tearDown() throws Exception {
         driver.stop();
-        Thread.sleep(1000);
+        sleep(1000);
     }
 
     @Test
-    public void testGamePlayDisplayedCorrectly() {
+    public void testGamePlayDisplayedCorrectly() throws Exception {
         mainMenuPage.pressRun();
         assertTrue(gamePlayPage.isDisplayed());
     }
 
     @Test
-    public void testGameCanBePausedAndResumed() {
+    public void testGameCanBePausedAndResumed() throws Exception {
         mainMenuPage.pressRun();
         gamePlayPage.pressPause();
         assertTrue(pauseOverlayPage.isDisplayed());
@@ -61,7 +54,7 @@ public class GamePlayTest {
     }
 
     @Test
-    public void testGameCanBePausedAndStopped() {
+    public void testGameCanBePausedAndStopped() throws Exception {
         mainMenuPage.pressRun();
         gamePlayPage.pressPause();
         pauseOverlayPage.pressMainMenu();
@@ -73,7 +66,15 @@ public class GamePlayTest {
         mainMenuPage.pressRun();
         gamePlayPage.avoidObstacles(5);
         System.out.println("Current life after avoiding obstacles: " + gamePlayPage.getCurrentLife());
-        assertTrue(gamePlayPage.getCurrentLife() > 0);
+        assertTrue("The cat did not survive for the expected number of obstacles", gamePlayPage.getCurrentLife() > 0);
+    }
+
+    @Test
+    public void testSurviveTime() throws InterruptedException {
+        mainMenuPage.pressRun();
+        gamePlayPage.surviveTimeByAvoidingObstacles(20);
+        System.out.println("Current life after the preset number of seconds: " + gamePlayPage.getCurrentLife());
+        assertTrue("The cat did not survive for the expected number of seconds", gamePlayPage.getCurrentLife() > 0);
     }
 
     @Test
@@ -93,127 +94,17 @@ public class GamePlayTest {
     @Test
     public void testDistanceRun() throws Exception {
         mainMenuPage.pressRun();
-
-        AltObject characterStart = gamePlayPage.getCharacter();
-
-        List<Float> zValues = new ArrayList<>();
-        long startTime = System.currentTimeMillis();
-        long duration = 25000;
-        long interval = 1000;
-        long nextTimestamp = startTime + interval;
-
-        while (System.currentTimeMillis() - startTime < duration) {
-            try {
-                getAnotherChancePage.isDisplayed();
-                break;
-            } catch (Exception e) {
-                if (System.currentTimeMillis() >= nextTimestamp) {
-                    AltObject character = gamePlayPage.getCharacter();
-                    zValues.add(character.worldZ);
-                    nextTimestamp += interval;
-                }
-            }
-        }
-
-        AltObject characterFinal = gamePlayPage.getCharacter();
-
-        int distanceRun = gamePlayPage.getDistanceRun();
-
-        int resetCount = 0;
-        for (int i = 1; i < zValues.size(); i++) {
-            if (zValues.get(i) < zValues.get(i - 1)) {
-                resetCount++;
-            }
-        }
-
-        float zDistance = resetCount * 100 + characterFinal.worldZ - 2;
-        assertEquals("There is a difference between the distance displayed and the calculated distance", distanceRun, Math.round(zDistance), 1);
+        int distanceCovered = gamePlayPage.getDistanceCovered(getAnotherChancePage);
+        assertEquals("There is a difference between the distance displayed and the calculated distance", 0, distanceCovered);
     }
-
 
     @Test
     public void testCollectFishBonesOnMiddleLane() throws Exception {
         mainMenuPage.pressRun();
 
-        int collectedFishCount = 0;  // counter for the number of fishbones collected
-        long startTime = System.currentTimeMillis();
-        long duration = 25000;
-        long interval = 20;
-        long nextTimestamp = startTime + interval;
-
-        int lastCatZ = 0;
-        int catZOffset = 0;
-        int catResetCounter = 0;
-
-        int lastFishZ = 0;
-        int fishZOffset = 0;
-        int fishResetCounter = 0;
-
-        double tolerance = 0.3;  // tolerance for checking if the cat has passed the fishbone
-        List<Integer> collectedFishIds = new ArrayList<>();
-        Set<String> uniqueFishPairs = new HashSet<>();
-        List<AltObject> middleLaneFishbones = new ArrayList<>();
-
-        AltObject character = null;
-
-        while (System.currentTimeMillis() - startTime < duration) {
-            try {
-                getAnotherChancePage.isDisplayed();
-                break;
-            } catch (Exception e) {
-                if (System.currentTimeMillis() >= nextTimestamp) {
-                    character = gamePlayPage.getCharacter();
-
-                    int currentCatZ = (int) character.worldZ;
-
-                    //detect origin reset for the cat by checking if current Z is smaller than the last Z
-                    if (currentCatZ < lastCatZ) {
-                        catResetCounter++;
-                        catZOffset = catResetCounter * 100;
-                    }
-                    lastCatZ = currentCatZ;
-
-                    //update middleLaneFishbones by adding new fishbones spawned during the game
-                    List<AltObject> currentFishbones = gamePlayPage.findAllFish();
-                    for (AltObject fish : currentFishbones) {
-                        int fishZ = (int) fish.worldZ;
-
-                    //detect reset for the fish by checking if current Z is smaller than the last Z
-                        if (fishZ < lastFishZ) {
-                            fishResetCounter++;
-                            fishZOffset = fishResetCounter * 100; //adjust offset by 100 for each reset
-
-                        }
-                        lastFishZ = fishZ;
-
-                        int adjustedFishZ = fishZ + fishZOffset;  //apply fish-specific Z correction
-                        String fishPair = fish.getId() + "-" + adjustedFishZ;
-                        if (uniqueFishPairs.add(fishPair)) { //add only unique fishbones based on (ID, Z) pair
-                            fish.worldZ = adjustedFishZ; //update Z with corrected value
-                            middleLaneFishbones.add(fish);
-                        }
-                    }
-
-                    nextTimestamp += interval;
-                }
-            }
-        }
-
-        //after the cat has died check how many fishbones were passed
-        for (AltObject fish : middleLaneFishbones) {
-            int fishZ = (int) fish.worldZ;  //this is already adjusted with Z offset
-            int adjustedCatZ = lastCatZ + catZOffset;
-            //use corrected Z for comparison
-            if (fishZ <= adjustedCatZ + tolerance && !collectedFishIds.contains(fish.id)) {
-                collectedFishCount++;
-                collectedFishIds.add(fish.id);
-            }
-        }
-
-        System.out.println("Total number of collected fishbones: " + collectedFishCount);
+        int computedCollectedCoins = gamePlayPage.computeCollectedCoins(getAnotherChancePage);
+        System.out.println("Total number of collected fishbones: " + computedCollectedCoins);
         int collectedCoins = gamePlayPage.getCollectedCoinsNumber();
-        assertEquals("There is a difference between the number of collected fishbones and the number of coins", collectedFishCount, collectedCoins);
+        assertEquals("There is a difference between the number of collected fishbones and the number of coins", computedCollectedCoins, collectedCoins);
     }
-
-
 }

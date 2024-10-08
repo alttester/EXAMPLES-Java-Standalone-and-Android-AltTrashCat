@@ -2,60 +2,41 @@ package pages;
 
 import com.alttester.AltDriver;
 import com.alttester.AltObject;
-import com.alttester.Commands.FindObject.AltFindObjectsParams;
-import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
 
-public class MainMenuPage extends BasePage{
-
-    public AltObject storeButton;
+public class MainMenuPage extends BasePage {
 
     public MainMenuPage(AltDriver driver) {
         super(driver);
     }
 
     public AltObject getStoreButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/StoreButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.storeButton));
     }
 
     public AltObject getLeaderBoardButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/OpenLeaderboard").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.openLeaderboard));
     }
 
     public AltObject getSettingsButton() {
-        AltFindObjectsParams par= new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/SettingButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.settingsButton));
     }
 
     public AltObject getMissionButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/MissionButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.missionButton));
     }
 
     public AltObject getRunButton() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/StartButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.startButton));
     }
 
     public AltObject getCharacterName() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/CharZone/CharName").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.charName));
     }
 
     public AltObject getThemeName() {
-        AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//UICamera/Loadout/ThemeZone").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
-
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.themeZone));
     }
 
     public void loadScene() {
@@ -68,17 +49,24 @@ public class MainMenuPage extends BasePage{
     }
 
     @Override
-    public boolean isDisplayed(){
-        return getStoreButton()!= null && getLeaderBoardButton() != null &&
+    public boolean isDisplayed() {
+        return getStoreButton() != null && getLeaderBoardButton() != null &&
                 getSettingsButton() != null && getMissionButton() != null &&
                 getRunButton() != null && getCharacterName() != null && getThemeName() != null;
     }
 
-    public void pressRun(){
+    public void pressRun() throws InterruptedException {
+        while (!isRunButtonReady()) {
+            Thread.sleep(100);
+        }
         getRunButton().tap();
     }
 
-    public void pressStore(){ storeButton.tap();}
+    public void pressStore() {
+        getStoreButton().tap();
+    }
 
-
+    public boolean isRunButtonReady() {
+        return "Run!".equals(getRunButton().getText());
+    }
 }

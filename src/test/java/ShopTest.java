@@ -2,13 +2,10 @@
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
-
 import org.junit.*;
 
 import com.alttester.AltDriver;
 
-import configreader.PropFileReader;
 import pages.MainMenuPage;
 import pages.ShopPage;
 
@@ -19,14 +16,14 @@ public class ShopTest {
     private static ShopPage shopPage;
 
     @BeforeClass
-    public static void setUp() throws IOException {
+    public static void setUp() {
         driver = new AltDriver();
         mainMenuPage = new MainMenuPage(driver);
         shopPage = new ShopPage(driver);
     }
 
     @Before
-    public void loadLevel(){
+    public void loadLevel() {
         mainMenuPage.loadScene(true);
         shopPage.loadScene(false);
     }
@@ -38,25 +35,24 @@ public class ShopTest {
     }
 
     @Test
-    public void testShopPageLoadedCorrectly(){
+    public void testShopPageLoadedCorrectly() {
         assertTrue(shopPage.isDisplayed());
     }
 
     @Test
-    public void testShopPageCanBeClosed(){
+    public void testShopPageCanBeClosed() {
         shopPage.closeShopPage();
         assertTrue(mainMenuPage.isDisplayed());
     }
 
-
     @Test
-    public void testPremiumPopUpOpen(){
+    public void testPremiumPopUpOpen() {
         shopPage.pressPremiumPopUp();
         assertTrue(shopPage.checkPopupOpen());
     }
 
     @Test
-    public void testPremiumPopUpClosed(){
+    public void testPremiumPopUpClosed() {
         shopPage.pressPremiumPopUp();
         shopPage.pressClosePremiumPopup();
         assertFalse(shopPage.checkPopupOpen());
