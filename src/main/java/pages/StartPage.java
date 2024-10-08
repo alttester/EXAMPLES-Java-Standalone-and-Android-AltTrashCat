@@ -2,8 +2,6 @@ package pages;
 
 import com.alttester.AltDriver;
 import com.alttester.AltObject;
-import com.alttester.Commands.FindObject.AltFindObjectsParams;
-import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
 public class StartPage extends BasePage {
@@ -24,31 +22,19 @@ public class StartPage extends BasePage {
         getStartButton().tap();
     }
 
-    public String getStartButtonText() {
-        return getStartButton().getText();
-    }
-
     public AltObject getStartButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "StartButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByNameWithTimeout(paths.startBtn, 2));
     }
 
     public AltObject getStartText() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "StartText").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByNameWithTimeout(paths.startTxt, 2));
     }
 
     public AltObject getLogoImage() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "LogoImage").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByNameWithTimeout(paths.logoImage, 2));
     }
 
     public AltObject getUnityUrlButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "UnityURLButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByNameWithTimeout(paths.unityUrlBtn, 2));
     }
 }

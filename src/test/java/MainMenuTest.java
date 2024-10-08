@@ -1,7 +1,5 @@
 import static org.junit.Assert.assertTrue;
 
-import java.io.IOException;
-
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -17,7 +15,7 @@ public class MainMenuTest {
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
-    public static void setUp() throws IOException {
+    public static void setUp() {
         driver = new AltDriver();
         mainMenuPage = new MainMenuPage(driver);
     }
@@ -37,5 +35,4 @@ public class MainMenuTest {
     public void TestMainPageLoadedCorrectly(){
         assertTrue(mainMenuPage.isDisplayed());
     }
-
 }

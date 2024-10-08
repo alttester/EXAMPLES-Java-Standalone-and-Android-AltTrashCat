@@ -1,7 +1,3 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -16,6 +12,8 @@ import pages.GetAnotherChancePage;
 import pages.MainMenuPage;
 import pages.PauseOverlayPage;
 
+import static org.junit.Assert.*;
+
 public class GamePlayTest {
 
     private static AltDriver driver;
@@ -25,7 +23,7 @@ public class GamePlayTest {
     private static GamePlayPage gamePlayPage;
 
     @BeforeClass
-    public static void setUp() throws IOException {
+    public static void setUp() {
         driver = new AltDriver();
         mainMenuPage = new MainMenuPage(driver);
         gamePlayPage = new GamePlayPage(driver);
@@ -34,7 +32,7 @@ public class GamePlayTest {
     }
 
     @Before
-    public void loadLevel() throws Exception {
+    public void loadLevel() {
         mainMenuPage.loadScene();
     }
 
@@ -77,7 +75,15 @@ public class GamePlayTest {
     }
 
     @Test
-    public void testPlayerDiesWhenObstacleNotAvoided() throws Exception {
+    public void testSurviveTime() {
+        mainMenuPage.pressRun();
+        gamePlayPage.surviveTimeByAvoidingObstacles(20);
+        System.out.println("Current life after avoiding obstacles: " + gamePlayPage.getCurrentLife());
+        assertTrue(gamePlayPage.getCurrentLife() > 0);
+    }
+
+    @Test
+    public void testPlayerDiesWhenObstacleNotAvoided() {
         mainMenuPage.pressRun();
         float timeout = 20;
         while (timeout > 0) {
@@ -93,8 +99,6 @@ public class GamePlayTest {
     @Test
     public void testDistanceRun() throws Exception {
         mainMenuPage.pressRun();
-
-        AltObject characterStart = gamePlayPage.getCharacter();
 
         List<Float> zValues = new ArrayList<>();
         long startTime = System.currentTimeMillis();
@@ -116,10 +120,9 @@ public class GamePlayTest {
         }
 
         AltObject characterFinal = gamePlayPage.getCharacter();
-
         int distanceRun = gamePlayPage.getDistanceRun();
-
         int resetCount = 0;
+
         for (int i = 1; i < zValues.size(); i++) {
             if (zValues.get(i) < zValues.get(i - 1)) {
                 resetCount++;
@@ -129,7 +132,6 @@ public class GamePlayTest {
         float zDistance = resetCount * 100 + characterFinal.worldZ - 2;
         assertEquals("There is a difference between the distance displayed and the calculated distance", distanceRun, Math.round(zDistance), 1);
     }
-
 
     @Test
     public void testCollectFishBonesOnMiddleLane() throws Exception {
@@ -214,6 +216,4 @@ public class GamePlayTest {
         int collectedCoins = gamePlayPage.getCollectedCoinsNumber();
         assertEquals("There is a difference between the number of collected fishbones and the number of coins", collectedFishCount, collectedCoins);
     }
-
-
 }

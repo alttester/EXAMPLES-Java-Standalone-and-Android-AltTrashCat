@@ -5,37 +5,26 @@ import java.util.*;
 import com.alttester.AltDriver;
 import com.alttester.AltObject;
 import com.alttester.Commands.FindObject.AltFindObjectsParams;
-import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 import com.alttester.Commands.InputActions.AltSwipeParams;
 import com.alttester.Commands.ObjectCommand.AltCallComponentMethodParams;
 import com.alttester.position.Vector2;
 
-import static com.alttester.Commands.FindObject.AltFindObjectsParams.*;
-
 public class GamePlayPage extends BasePage {
-
 
     public GamePlayPage(AltDriver driver) {
         super(driver);
     }
 
     public AltObject getPauseButton() {
-        AltFindObjectsParams par = new Builder(AltDriver.By.PATH, "//Game/WholeUI/pauseButton").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.pauseButtonPath));
     }
 
-
     public AltObject getCharacter() {
-        AltFindObjectsParams par = new Builder(AltDriver.By.NAME, "PlayerPivot").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByName(paths.playerName));
     }
 
     public AltObject getObstacle(int obstacleId) {
-        AltFindObjectsParams par = new Builder(AltDriver.By.ID, String.valueOf(obstacleId)).build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementById(String.valueOf(obstacleId)));
     }
 
     @Override
@@ -84,9 +73,9 @@ public class GamePlayPage extends BasePage {
             }
 
             // avoiding obstacles
-            if (obstacle.name.contains("ObstacleHighBarrier")) {
+            if (isHighBarrier(obstacle)) {
                 slide(character1);
-            } else if (obstacle.name.contains("ObstacleLowBarrier") || obstacle.name.contains("Rat")) {
+            } else if (isLowBarrier(obstacle) || isRat(obstacle)) {
                 jump(character1);
             } else {
                 if (allObstacles.size() > 1 && obstacle.worldZ == allObstacles.get(1).worldZ) {
@@ -138,10 +127,8 @@ public class GamePlayPage extends BasePage {
         }
     }
 
-
     public List<AltObject> findAllFish() throws Exception {
-        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.NAME, "Fishbone").build();
-        List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+        List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(elementsHelper.getFindElementByName(paths.fishbone))));
 
         allFishbones.sort((x, y) -> { // sort the list based on the elements' worldZ positions in ascending order
             int xZ = (int) x.worldZ;
@@ -183,30 +170,22 @@ public class GamePlayPage extends BasePage {
     }
 
     public int getCollectedCoinsNumber() throws Exception {
-
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/CoinZone/CoinText").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        AltObject coinsUI = getDriver().waitForObject(params);
+        AltObject coinsUI = getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.coinText));
 
         if (coinsUI == null) {
             throw new NullPointerException("CoinText object not found");
         }
-
         return Integer.parseInt(coinsUI.getText());
     }
 
     public int getDistanceRun() throws Exception {
-
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "/UICamera/Game/WholeUI/DistanceZone/DistanceText").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
-        AltObject distance = getDriver().waitForObject(params);
-
-        String numericText = distance.getText().replaceAll("[^\\d]", "");
+        String distance = getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.distanceText))
+                .getText().replaceAll("[^\\d]", "");
 
         try {
-            return Integer.parseInt(numericText);
+            return Integer.parseInt(distance);
         } catch (NumberFormatException e) {
-            throw new Exception("Failed to parse distance text into an integer: " + distance.getText(), e);
+            throw new Exception("Failed to parse distance text into an integer: " + distance, e);
         }
     }
 
@@ -215,12 +194,13 @@ public class GamePlayPage extends BasePage {
         boolean movedLeft = false;
         boolean inTheMiddle = true;
         long startTime = System.currentTimeMillis();
+        int counterObstaclesPassed = 0;
 
         while (System.currentTimeMillis() - startTime < seconds * 1000) {
 
             List<AltObject> allObstacles = getAllObstacles();
             AltObject character1 = getCharacter();
-            removeObstaclesBehindCharacter(allObstacles, character1);
+            counterObstaclesPassed += removeObstaclesBehindCharacter(allObstacles, character1);
 
             for (AltObject obstacle : allObstacles) {
                 if (obstacle.getWorldZ() - 6.0f < character1.getWorldZ()) {
@@ -228,7 +208,7 @@ public class GamePlayPage extends BasePage {
                         // obstacle on the left
                         if (isHighBarrier(obstacle)) {
                             slide(character1);
-                        } else if (isLowBarrier(obstacle)) {
+                        } else if (isLowBarrier(obstacle) || isRat(obstacle)) {
                             jump(character1);
                         } else if (movedLeft && !inTheMiddle) {
                             changeLane(character1, 1);
@@ -241,7 +221,7 @@ public class GamePlayPage extends BasePage {
                         // obstacle on the right
                         if (isHighBarrier(obstacle)) {
                             slide(character1);
-                        } else if (isLowBarrier(obstacle)) {
+                        } else if (isLowBarrier(obstacle) || isRat(obstacle)) {
                             jump(character1);
                         } else if (movedRight && !inTheMiddle) {
                             changeLane(character1, -1);
@@ -254,7 +234,7 @@ public class GamePlayPage extends BasePage {
                         // obstacle in the middle
                         if (isHighBarrier(obstacle)) {
                             slide(character1);
-                        } else if (isLowBarrier(obstacle)) {
+                        } else if (isLowBarrier(obstacle) || isRat(obstacle)) {
                             jump(character1);
                         } else if (inTheMiddle && movedLeft) {
                             changeLane(character1, -1);
@@ -265,7 +245,7 @@ public class GamePlayPage extends BasePage {
                             // don't move back left
                             movedLeft = true;
                         } else {
-                            changeLane(character1, 1);
+                            changeLane(character1, -1);
                             movedLeft = true;
                             inTheMiddle = false;
                         }
@@ -273,7 +253,8 @@ public class GamePlayPage extends BasePage {
                 }
             }
         }
-        System.out.println(System.currentTimeMillis() - startTime);
+        System.out.println("lived for: " + (System.currentTimeMillis() - startTime)/1000 + " seconds");
+        System.out.println(counterObstaclesPassed + " obstacles passed");
     }
 
     private boolean isLowBarrier(AltObject obstacle) {
@@ -363,14 +344,16 @@ public class GamePlayPage extends BasePage {
         });
     }
 
-    private void removeObstaclesBehindCharacter(List<AltObject> obstacles, AltObject character) {
-        List<AltObject> toBeRemoved = new ArrayList<>();
+    private int removeObstaclesBehindCharacter(List<AltObject> obstacles, AltObject character) {
+        Set<AltObject> toBeRemoved = new LinkedHashSet<>();
+        int counterObstaclesPassed = 0;
         for (AltObject obstacle : obstacles) {
-            if (obstacle.worldZ < character.worldZ)
+            if (obstacle.worldZ < character.worldZ) {
                 toBeRemoved.add(obstacle);
+                counterObstaclesPassed++;
+            }
         }
         obstacles.removeAll(toBeRemoved);
+        return counterObstaclesPassed;
     }
-
 }
-
