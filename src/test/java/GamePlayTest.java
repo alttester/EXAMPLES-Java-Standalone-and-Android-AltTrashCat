@@ -6,6 +6,7 @@ import pages.GetAnotherChancePage;
 import pages.MainMenuPage;
 import pages.PauseOverlayPage;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.*;
 
 public class GamePlayTest {
@@ -33,17 +34,17 @@ public class GamePlayTest {
     @AfterClass
     public static void tearDown() throws Exception {
         driver.stop();
-        Thread.sleep(1000);
+        sleep(1000);
     }
 
     @Test
-    public void testGamePlayDisplayedCorrectly() {
+    public void testGamePlayDisplayedCorrectly() throws Exception {
         mainMenuPage.pressRun();
         assertTrue(gamePlayPage.isDisplayed());
     }
 
     @Test
-    public void testGameCanBePausedAndResumed() {
+    public void testGameCanBePausedAndResumed() throws Exception {
         mainMenuPage.pressRun();
         gamePlayPage.pressPause();
         assertTrue(pauseOverlayPage.isDisplayed());
@@ -53,7 +54,7 @@ public class GamePlayTest {
     }
 
     @Test
-    public void testGameCanBePausedAndStopped() {
+    public void testGameCanBePausedAndStopped() throws Exception {
         mainMenuPage.pressRun();
         gamePlayPage.pressPause();
         pauseOverlayPage.pressMainMenu();
@@ -65,19 +66,19 @@ public class GamePlayTest {
         mainMenuPage.pressRun();
         gamePlayPage.avoidObstacles(5);
         System.out.println("Current life after avoiding obstacles: " + gamePlayPage.getCurrentLife());
-        assertTrue(gamePlayPage.getCurrentLife() > 0);
+        assertTrue("The cat did not survive for the expected number of obstacles", gamePlayPage.getCurrentLife() > 0);
     }
 
     @Test
-    public void testSurviveTime() {
+    public void testSurviveTime() throws InterruptedException {
         mainMenuPage.pressRun();
         gamePlayPage.surviveTimeByAvoidingObstacles(20);
-        System.out.println("Current life after avoiding obstacles: " + gamePlayPage.getCurrentLife());
-        assertTrue(gamePlayPage.getCurrentLife() > 0);
+        System.out.println("Current life after the preset number of seconds: " + gamePlayPage.getCurrentLife());
+        assertTrue("The cat did not survive for the expected number of seconds", gamePlayPage.getCurrentLife() > 0);
     }
 
     @Test
-    public void testPlayerDiesWhenObstacleNotAvoided() {
+    public void testPlayerDiesWhenObstacleNotAvoided() throws Exception {
         mainMenuPage.pressRun();
         float timeout = 20;
         while (timeout > 0) {

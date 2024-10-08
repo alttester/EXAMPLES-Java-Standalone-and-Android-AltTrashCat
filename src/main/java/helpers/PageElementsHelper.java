@@ -4,9 +4,6 @@ import com.alttester.AltDriver;
 import com.alttester.Commands.FindObject.AltFindObjectsParams;
 import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class PageElementsHelper {
     public AltWaitForObjectsParams getWaitForElementByPath(String path) {
         AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, path).build();
@@ -40,6 +37,4 @@ public class PageElementsHelper {
     public AltFindObjectsParams getFindElementByPath(String path){
         return new AltFindObjectsParams.Builder(AltDriver.By.PATH, path).build();
     }
-
-
 }

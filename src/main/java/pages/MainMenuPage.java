@@ -5,7 +5,7 @@ import com.alttester.AltObject;
 import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
 
-public class MainMenuPage extends BasePage{
+public class MainMenuPage extends BasePage {
 
     public MainMenuPage(AltDriver driver) {
         super(driver);
@@ -49,17 +49,24 @@ public class MainMenuPage extends BasePage{
     }
 
     @Override
-    public boolean isDisplayed(){
-        return getStoreButton()!= null && getLeaderBoardButton() != null &&
+    public boolean isDisplayed() {
+        return getStoreButton() != null && getLeaderBoardButton() != null &&
                 getSettingsButton() != null && getMissionButton() != null &&
                 getRunButton() != null && getCharacterName() != null && getThemeName() != null;
     }
 
-    public void pressRun(){
+    public void pressRun() throws InterruptedException {
+        while (!isRunButtonReady()) {
+            Thread.sleep(100);
+        }
         getRunButton().tap();
     }
 
-    public void pressStore(){
+    public void pressStore() {
         getStoreButton().tap();
+    }
+
+    public boolean isRunButtonReady() {
+        return "Run!".equals(getRunButton().getText());
     }
 }

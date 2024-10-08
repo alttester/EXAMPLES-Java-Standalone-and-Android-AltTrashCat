@@ -18,7 +18,7 @@ public class PageElementsIdentifiers {
     public String openLeaderboard = "//OpenLeaderboard";
     public String settingsButton = "//SettingButton";
     public String missionButton = "//MissionButton";
-    public String startButton = "//StartButton";
+    public String startButton = "//StartButton/Text";
     public String charName = "//CharZone/CharName";
     public String themeZone = "//ThemeZone";
 
@@ -46,7 +46,5 @@ public class PageElementsIdentifiers {
     public String startTxt = "StartText";
     public String logoImage = "LogoImage";
     public String unityUrlBtn = "UnityURLButton";
-
-
 
 }

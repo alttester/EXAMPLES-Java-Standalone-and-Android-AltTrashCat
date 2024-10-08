@@ -46,7 +46,7 @@ public class GamePlayPage extends BasePage {
                 "get_currentLife", "Assembly-CSharp", new Object[]{}).build(), Integer.class);
     }
 
-    public void avoidObstacles(int nrOfObstacles) throws Exception {
+    public void avoidObstacles(int nrOfObstacles) {
         AltObject character1 = getCharacter();
 
         boolean movedLeft = false;
@@ -127,7 +127,7 @@ public class GamePlayPage extends BasePage {
         }
     }
 
-    public List<AltObject> findAllFish() throws Exception {
+    public List<AltObject> findAllFish() {
         List<AltObject> allFishbones = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(elementsHelper.getFindElementByName(paths.fishbone))));
 
         allFishbones.sort((x, y) -> { // sort the list based on the elements' worldZ positions in ascending order
@@ -169,7 +169,7 @@ public class GamePlayPage extends BasePage {
         return middleLaneFishbones;
     }
 
-    public int getCollectedCoinsNumber() throws Exception {
+    public int getCollectedCoinsNumber() {
         AltObject coinsUI = getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.coinText));
 
         if (coinsUI == null) {
@@ -178,15 +178,10 @@ public class GamePlayPage extends BasePage {
         return Integer.parseInt(coinsUI.getText());
     }
 
-    public int getDistanceRun() throws Exception {
+    public int getDistanceRun() {
         String distance = getDriver().waitForObject(elementsHelper.getWaitForElementByPath(paths.distanceText))
                 .getText().replaceAll("[^\\d]", "");
-
-        try {
-            return Integer.parseInt(distance);
-        } catch (NumberFormatException e) {
-            throw new Exception("Failed to parse distance text into an integer: " + distance, e);
-        }
+        return Integer.parseInt(distance);
     }
 
     public void surviveTimeByAvoidingObstacles(long seconds) {
@@ -264,16 +259,13 @@ public class GamePlayPage extends BasePage {
         long interval = 1000;
         long nextTimestamp = startTime + interval;
 
-        AltObject character = null;
-
         while (System.currentTimeMillis() - startTime < duration) {
             try {
                 getAnotherChancePage.isDisplayed();
                 break;
             } catch (Exception e) {
                 if (System.currentTimeMillis() >= nextTimestamp) {
-                    character = getCharacter();
-                    zValues.add(character.worldZ);
+                    zValues.add(getCharacter().getWorldZ());
                     nextTimestamp += interval;
                 }
             }
@@ -288,12 +280,12 @@ public class GamePlayPage extends BasePage {
             }
         }
 
-        float zDistance = resetCount * 100 + character.worldZ - 2;
+        float zDistance = resetCount * 100 + getCharacter().getWorldZ() - 2;
         System.out.println("Distance covered: " + zDistance);
         return distanceRun - Math.round(zDistance);
     }
 
-    public int computeCollectedCoins(GetAnotherChancePage getAnotherChancePage) throws Exception {
+    public int computeCollectedCoins(GetAnotherChancePage getAnotherChancePage) {
         int collectedFishCount = 0;  // counter for the number of fishbones collected
         long startTime = System.currentTimeMillis();
         long duration = 25000;
@@ -323,7 +315,7 @@ public class GamePlayPage extends BasePage {
                 if (System.currentTimeMillis() >= nextTimestamp) {
                     character = getCharacter();
 
-                    int currentCatZ = (int) character.worldZ;
+                    int currentCatZ = (int) character.getWorldZ();
 
                     //detect origin reset for the cat by checking if current Z is smaller than the last Z
                     if (currentCatZ < lastCatZ) {
@@ -335,7 +327,7 @@ public class GamePlayPage extends BasePage {
                     //update middleLaneFishbones by adding new fishbones spawned during the game
                     List<AltObject> currentFishbones = findAllFish();
                     for (AltObject fish : currentFishbones) {
-                        int fishZ = (int) fish.worldZ;
+                        int fishZ = (int) fish.getWorldZ();
 
                         //detect reset for the fish by checking if current Z is smaller than the last Z
                         if (fishZ < lastFishZ) {
@@ -359,12 +351,12 @@ public class GamePlayPage extends BasePage {
 
         //after the cat has died check how many fishbones were passed
         for (AltObject fish : middleLaneFishbones) {
-            int fishZ = (int) fish.worldZ;  //this is already adjusted with Z offset
+            int fishZ = (int) fish.getWorldZ();  //this is already adjusted with Z offset
             int adjustedCatZ = lastCatZ + catZOffset;
             //use corrected Z for comparison
-            if (fishZ <= adjustedCatZ + tolerance && !collectedFishIds.contains(fish.id)) {
+            if (fishZ <= adjustedCatZ + tolerance && !collectedFishIds.contains(fish.getId())) {
                 collectedFishCount++;
-                collectedFishIds.add(fish.id);
+                collectedFishIds.add(fish.getId());
             }
         }
         return collectedFishCount;
