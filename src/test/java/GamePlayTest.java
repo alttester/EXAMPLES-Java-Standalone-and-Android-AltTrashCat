@@ -105,6 +105,7 @@ public class GamePlayTest {
         long duration = 25000;
         long interval = 1000;
         long nextTimestamp = startTime + interval;
+        AltObject character = gamePlayPage.getCharacter();
 
         while (System.currentTimeMillis() - startTime < duration) {
             try {
@@ -112,14 +113,13 @@ public class GamePlayTest {
                 break;
             } catch (Exception e) {
                 if (System.currentTimeMillis() >= nextTimestamp) {
-                    AltObject character = gamePlayPage.getCharacter();
+                    character = gamePlayPage.getCharacter();
                     zValues.add(character.worldZ);
                     nextTimestamp += interval;
                 }
             }
         }
 
-        AltObject characterFinal = gamePlayPage.getCharacter();
         int distanceRun = gamePlayPage.getDistanceRun();
         int resetCount = 0;
 
@@ -129,7 +129,8 @@ public class GamePlayTest {
             }
         }
 
-        float zDistance = resetCount * 100 + characterFinal.worldZ - 2;
+        float zDistance = resetCount * 100 + character.worldZ - 2;
+        System.out.println("Distance covered: " + zDistance);
         assertEquals("There is a difference between the distance displayed and the calculated distance", distanceRun, Math.round(zDistance), 1);
     }
 
