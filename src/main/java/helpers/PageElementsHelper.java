@@ -30,11 +30,11 @@ public class PageElementsHelper {
         return new AltWaitForObjectsParams.Builder(par).withTimeout(10).build();
     }
 
-    public AltFindObjectsParams getFindElementByName(String name){
+    public AltFindObjectsParams getFindElementByName(String name) {
         return new AltFindObjectsParams.Builder(AltDriver.By.NAME, name).build();
     }
 
-    public AltFindObjectsParams getFindElementByPath(String path){
+    public AltFindObjectsParams getFindElementByPath(String path) {
         return new AltFindObjectsParams.Builder(AltDriver.By.PATH, path).build();
     }
 }

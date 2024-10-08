@@ -248,7 +248,7 @@ public class GamePlayPage extends BasePage {
                 }
             }
         }
-        System.out.println("lived for: " + (System.currentTimeMillis() - startTime)/1000 + " seconds");
+        System.out.println("lived for: " + (System.currentTimeMillis() - startTime) / 1000 + " seconds");
         System.out.println(counterObstaclesPassed + " obstacles passed");
     }
 

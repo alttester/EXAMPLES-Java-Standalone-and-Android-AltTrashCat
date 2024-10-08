@@ -21,7 +21,7 @@ public class MainMenuTest {
     }
 
     @Before
-    public void loadLevel(){
+    public void loadLevel() {
         mainMenuPage.loadScene();
     }
 
@@ -32,7 +32,7 @@ public class MainMenuTest {
     }
 
     @Test
-    public void TestMainPageLoadedCorrectly(){
+    public void TestMainPageLoadedCorrectly() {
         assertTrue(mainMenuPage.isDisplayed());
     }
 }

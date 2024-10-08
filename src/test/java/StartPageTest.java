@@ -16,7 +16,7 @@ public class StartPageTest {
     private static MainMenuPage mainMenuPage;
 
     @BeforeClass
-    public static void setUp()  {
+    public static void setUp() {
         driver = new AltDriver();
         startPage = new StartPage(driver);
         mainMenuPage = new MainMenuPage(driver);

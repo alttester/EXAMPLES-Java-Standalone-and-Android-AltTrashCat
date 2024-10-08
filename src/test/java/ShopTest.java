@@ -23,7 +23,7 @@ public class ShopTest {
     }
 
     @Before
-    public void loadLevel(){
+    public void loadLevel() {
         mainMenuPage.loadScene(true);
         shopPage.loadScene(false);
     }
@@ -35,24 +35,24 @@ public class ShopTest {
     }
 
     @Test
-    public void testShopPageLoadedCorrectly(){
+    public void testShopPageLoadedCorrectly() {
         assertTrue(shopPage.isDisplayed());
     }
 
     @Test
-    public void testShopPageCanBeClosed(){
+    public void testShopPageCanBeClosed() {
         shopPage.closeShopPage();
         assertTrue(mainMenuPage.isDisplayed());
     }
 
     @Test
-    public void testPremiumPopUpOpen(){
+    public void testPremiumPopUpOpen() {
         shopPage.pressPremiumPopUp();
         assertTrue(shopPage.checkPopupOpen());
     }
 
     @Test
-    public void testPremiumPopUpClosed(){
+    public void testPremiumPopUpClosed() {
         shopPage.pressPremiumPopUp();
         shopPage.pressClosePremiumPopup();
         assertFalse(shopPage.checkPopupOpen());
