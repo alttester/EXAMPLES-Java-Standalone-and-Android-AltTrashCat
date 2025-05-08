@@ -317,10 +317,7 @@ public class GamePlayPage extends BasePage {
     }
 
     private List<AltObject> sortObstaclesByLane(List<AltObject> obstacles) {
-        obstacles.sort(
-//            if (x.worldZ == y.worldZ) return 0;
-//            return x.worldZ > y.worldZ ? 1 : -1;
-        	Comparator.comparingDouble(AltObject::getWorldZ));
+        obstacles.sort(Comparator.comparingDouble(AltObject::getWorldZ));
         return obstacles;
     }
 
