@@ -1,9 +1,13 @@
 package pages;
 
 import com.alttester.AltDriver;
+import helpers.PageElementsHelper;
+import helpers.PageElementsIdentifiers;
 
 public abstract class BasePage {
     private AltDriver driver;
+    PageElementsIdentifiers paths = new PageElementsIdentifiers();
+    PageElementsHelper elementsHelper = new PageElementsHelper();
 
     public BasePage(AltDriver driver) {
         this.driver = driver;

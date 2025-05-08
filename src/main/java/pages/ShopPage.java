@@ -6,8 +6,6 @@ import java.util.List;
 
 import com.alttester.AltDriver;
 import com.alttester.AltObject;
-import com.alttester.Commands.FindObject.AltFindObjectsParams;
-import com.alttester.Commands.FindObject.AltWaitForObjectsParams;
 import com.alttester.Commands.UnityCommand.AltLoadSceneParams;
 
 public class ShopPage extends BasePage {
@@ -27,53 +25,37 @@ public class ShopPage extends BasePage {
     }
 
     public AltObject getStoreTitle() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/StoreTitle").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.storeTitle, 2));
     }
 
     public AltObject getItemsButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Item").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.itemButton, 2));
     }
 
     public AltObject getCharactersButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Character").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.character, 2));
     }
 
     public AltObject getAccessoriesButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Accesories").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.accessories, 2));
     }
 
     public AltObject getThemesButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/TabsSwitch/Themes").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.themes, 2));
     }
 
     public AltObject getPremiumButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Premium/Button").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.premiumShopButton, 2));
     }
 
     public AltObject getCoinSection() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Premium").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.backgroundPremium, 2));
     }
 
     public AltObject getCloseButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/Button").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(5).build();
-        AltObject closeButton = getDriver().waitForObject(params);
-        return closeButton;
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.backgroundClose, 5));
     }
+
     @Override
     public boolean isDisplayed() {
         if (getStoreTitle() != null && getItemsButton() != null && getCharactersButton() != null &&
@@ -84,29 +66,21 @@ public class ShopPage extends BasePage {
     }
 
     public Integer getShopItemCount(int itemIndex) {
-
-        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Icon/Count").build();
-        List<AltObject> shopItemsCounts = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
-
+        List<AltObject> shopItemsCounts = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(elementsHelper.getFindElementByPath(paths.itemCount))));
         return Integer.parseInt(shopItemsCounts.get(itemIndex).getText());
     }
 
     public void clickBuyButton(int index) {
-        AltFindObjectsParams params = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//NamePriceButtonZone/PriceButtonZone/BuyButton").build();
-        List<AltObject> itemsBuyButtons = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(params)));
+        List<AltObject> itemsBuyButtons = new ArrayList<>(Arrays.asList(getDriver().findObjectsWhichContain(elementsHelper.getFindElementByPath(paths.buyButton))));
         itemsBuyButtons.get(index).tap();
     }
 
     public AltObject getPopup() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.iapPopup, 2));
     }
 
     public AltObject getClosePopupButton() {
-        AltFindObjectsParams par = new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup/Image/Close").build();
-        AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-        return getDriver().waitForObject(params);
+        return getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.closePopup, 2));
     }
 
     public void pressPremiumPopUp() {
@@ -117,22 +91,17 @@ public class ShopPage extends BasePage {
         getClosePopupButton().tap();
     }
 
-    public boolean checkPopupOpen(){
-        try{
-
-            AltFindObjectsParams par=new AltFindObjectsParams.Builder(AltDriver.By.PATH, "//Background/IAPPopup").build();
-            AltWaitForObjectsParams params = new AltWaitForObjectsParams.Builder(par).withTimeout(2).build();
-            AltObject  getPremiumPopup = getDriver().waitForObject(params);
+    public boolean checkPopupOpen() {
+        try {
+            getDriver().waitForObject(elementsHelper.getWaitForElementByPathWithTimeout(paths.iapPopup, 2));
             return true;
-
-        }catch(Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
     public void closeShopPage() {
-        AltObject closeButton = getCloseButton();
-        closeButton.tap();
+        getCloseButton().tap();
     }
 }
 

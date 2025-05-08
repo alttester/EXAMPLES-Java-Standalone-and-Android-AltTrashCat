@@ -42,3 +42,8 @@ buildNumber.properties
 /android/
 /allure-results/
 bash.exe.stackdump
+
+.classpath
+.project
+.settings
+bin/*

@@ -13,7 +13,6 @@ echo " Start the app "
 adb shell am start -n com.Altom.TrashCat/com.unity3d.player.UnityPlayerActivity
 
 echo "==> Run the tests ..."
-cd "/src"
 mvn test
 
 echo "Starting the Allure report..."
